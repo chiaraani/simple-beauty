@@ -1,0 +1,32 @@
+{
+  "name": "simple-beauty",
+  "version": "0.0.0",
+  "description": "Framework for super fast, easy and beautiful web layout development.",
+  "main": "src/index.sass",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiaraani/simple-beauty.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "framework",
+    "web",
+    "layout"
+  ],
+  "author": "Chiara Nunez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chiaraani/simple-beauty/issues"
+  },
+  "homepage": "https://github.com/chiaraani/simple-beauty#readme",
+  "devDependencies": {
+    "sass": "^1.63.5"
+  }
+}
