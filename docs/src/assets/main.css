@@ -1,9 +1,0 @@
-@import '../../../build/index.css';
-
-.namespace {
-  color: #7b0091;
-}
-
-.namespace span:last-child {
-  color: #007046;
-}
