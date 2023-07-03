@@ -9,6 +9,7 @@ export function useMarkdownFile(path) {
     .then((text) => marked(text))
     .then((transpiled) => addSnippets(transpiled))
     .then((withSnippets) => (result.value = withSnippets))
+    .then(() => iframeResizing())
 
   return result
 }
@@ -17,11 +18,28 @@ export function addSnippets(page) {
   const wrapper = document.createElement('div')
   wrapper.innerHTML = page
 
-  for (let codeExample of wrapper.querySelectorAll('pre:has(.language-HTML)')) {
-    const example = `<div class="example">${codeExample.textContent}</div>`
-    codeExample.insertAdjacentHTML('afterend', example)
-    console.log(wrapper)
+  for (let codeExample of wrapper.getElementsByClassName('language-HTML')) {
+    const example = document.createElement('iframe')
+
+    // Building iframe source URL
+    const url = new URL('../example.html', document.baseURI)
+    url.searchParams.append('code', codeExample.textContent)
+    example.src = url.href
+
+    example.classList.add('example')
+
+    codeExample.parentNode.after(example)
   }
 
   return wrapper.innerHTML
+}
+
+export function iframeResizing() {
+  for (let example of document.getElementsByClassName('example')) {
+    // Automatic resizing of iframes
+    example.onload = () => {
+      example.style.height =
+        example.contentWindow.document.documentElement.offsetHeight + 10 + 'px'
+    }
+  }
 }
