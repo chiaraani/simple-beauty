@@ -15,7 +15,9 @@ export function useMarkdownFile(path) {
 function useMarkdown(raw) {
   const processed = ref()
   watch(raw, () => {
-    new Promise((resolve) => resolve(marked(raw.value)))
+    new Promise((resolve) => {
+      resolve(marked(raw.value, { mangle: false, headerIds: false }))
+    })
       .then((transpiled) => addSnippets(transpiled))
       .then((withSnippets) => (processed.value = withSnippets))
       .then(() => iframeResizing())
