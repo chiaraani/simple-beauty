@@ -1,7 +1,12 @@
+@import './theme.sass'
 @import '../../../src/index.sass'
 
 .brand
-  color: #7b0091
+  color: var(--primary-color)
+  span:last-child 
+    color: var(--secondary-color)
 
-.brand span:last-child 
-  color: #007046
+.example 
+  border: solid 3px #aaa
+  border-radius: 10px 10px 0 0
+  padding: 10px
