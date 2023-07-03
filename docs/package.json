@@ -11,6 +11,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "marked": "^5.1.0",
     "vue": "^3.3.4",
     "vue-router": "^4.2.2"
   },
@@ -27,7 +28,6 @@
     "sass": "^1.63.5",
     "sass-loader": "^13.3.2",
     "vite": "^4.3.9",
-    "vite-plugin-vue-markdown": "^0.23.5",
     "vitest": "^0.32.0"
   }
 }
