@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, vi } from 'vitest'
 import { render } from '@testing-library/vue'
 import { flushPromises } from '@vue/test-utils'
 import { nextTick } from 'vue'
