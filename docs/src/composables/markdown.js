@@ -1,20 +1,30 @@
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { marked } from 'marked'
 
 export function useMarkdownFile(path) {
-  const result = ref('Loading...')
+  const raw = ref()
+  const processed = useMarkdown(raw)
 
   fetch(`${path}.md`)
     .then((response) => response.text())
-    .then((text) => marked(text))
-    .then((transpiled) => addSnippets(transpiled))
-    .then((withSnippets) => (result.value = withSnippets))
-    .then(() => iframeResizing())
+    .then((text) => (raw.value = text))
 
-  return result
+  return processed
 }
 
-export function addSnippets(page) {
+function useMarkdown(raw) {
+  const processed = ref()
+  watch(raw, () => {
+    new Promise((resolve) => resolve(marked(raw.value)))
+      .then((transpiled) => addSnippets(transpiled))
+      .then((withSnippets) => (processed.value = withSnippets))
+      .then(() => iframeResizing())
+  })
+
+  return processed
+}
+
+function addSnippets(page) {
   const wrapper = document.createElement('div')
   wrapper.innerHTML = page
 
@@ -34,7 +44,7 @@ export function addSnippets(page) {
   return wrapper.innerHTML
 }
 
-export function iframeResizing() {
+function iframeResizing() {
   for (let example of document.getElementsByClassName('example')) {
     // Automatic resizing of iframes
     example.onload = () => {

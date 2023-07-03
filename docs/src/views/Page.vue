@@ -1,5 +1,5 @@
 <template>
-  <div v-html="pageContent"></div>
+  <div v-html="pageContent || 'Loading..'"></div>
 </template>
 
 <script setup>
