@@ -8,12 +8,12 @@ export function useMetaTags(options = {}) {
   const reload = () => {
     if (!options.title) {
       const h1 = document.getElementsByTagName('h1')[0]
-      options.title = h1.textContent
+      if (h1) options.title = h1.textContent
     }
 
     if (!options.description) {
       const p = document.getElementsByTagName('p')[0]
-      options.description = p.textContent
+      if (p) options.description = p.textContent
     }
 
     if (options.title) document.title = options.title + ' - ' + titleBase
