@@ -3,4 +3,5 @@ export default [
   { title: 'Colors', path: 'colors' },
   { title: 'Navbar', path: 'navbar' },
   { title: 'Theme: Make your theme!', path: 'theme' },
+  { title: 'Configuration', path: 'configuration' },
 ]

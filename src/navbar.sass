@@ -1,5 +1,21 @@
+@use "sass:map"
+
 .brand
   color: var(--primary-color)
   padding: 10px
   font-size: xxx-large
   text-decoration: none
+  background-color: var(--canvas-color)
+
+nav
+  --padding: #{$navbar-padding}
+  --text-decoration: #{$navbar-text-decoration}
+  display: flex
+  flex-direction: column
+  a
+    padding: var(--padding)
+    text-decoration: var(--text-decoration)
+    
+@media only screen and (min-width: map.get($breakpoints, 'md'))
+  nav
+    display: block

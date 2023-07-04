@@ -26,3 +26,21 @@ Color variables in CSS:
   --secondary-color: ...;
 }
 ```
+
+## Navbar
+
+Customise using SASS variables:
+
+```SASS
+$navbar-padding: ...
+$navbar-text-decoration: ...
+```
+
+Or, customise using CSS variables:
+
+```CSS
+nav {
+  --padding: ...;
+  --text-decoration: ...;
+}
+```
