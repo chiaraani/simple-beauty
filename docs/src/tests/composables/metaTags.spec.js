@@ -10,6 +10,10 @@ describe('useMetaTags', () => {
     template: '<h1>Title</h1><p>Decription.</p>',
     setup: () => useMetaTags(),
   }
+  const wrapperComponent2 = {
+    template: '<h1>Title2</h1><p>Decription.</p>',
+    setup: () => useMetaTags(),
+  }
 
   beforeAll(() => render(wrapperComponent))
 
@@ -21,5 +25,11 @@ describe('useMetaTags', () => {
     expect(document.querySelector('meta[name=description]').content).toEqual(
       'Decription.'
     )
+  })
+
+  it('switches meta title when other component calls it', async () => {
+    document.body.innerHTML = ''
+    render(wrapperComponent2)
+    expect(document.title).toEqual('Title2 - Base')
   })
 })
