@@ -13,6 +13,11 @@ const router = createRouter({
       name: 'page',
       component: () => import('../views/Page.vue'),
     },
+    {
+      path: '/docs',
+      name: 'index',
+      component: () => import('../views/Index.vue'),
+    },
   ],
 })
 

@@ -8,6 +8,6 @@ import css from 'highlight.js/lib/languages/css'
 hljs.registerLanguage('css', css)
 
 import scss from 'highlight.js/lib/languages/scss'
-hljs.registerLanguage('scss', scss)
+hljs.registerLanguage('sass', scss)
 
 export default hljs
