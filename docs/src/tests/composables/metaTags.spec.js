@@ -14,6 +14,10 @@ describe('useMetaTags', () => {
     template: '<h1>Title2</h1><p>Decription.</p>',
     setup: () => useMetaTags(),
   }
+  const wrapperComponent3 = {
+    template: '<h1>Title3</h1><p>Decription.</p>',
+    setup: () => useMetaTags({ title: 'Fruit', description: 'Apple' }),
+  }
 
   let wrapper
   beforeAll(() => (wrapper = render(wrapperComponent)))
@@ -32,5 +36,14 @@ describe('useMetaTags', () => {
     wrapper.unmount()
     render(wrapperComponent2)
     expect(document.title).toEqual('Title2 - Base')
+  })
+
+  it('sets meta title and meta tag from options', async () => {
+    wrapper.unmount()
+    render(wrapperComponent3)
+    expect(document.title).toEqual('Fruit - Base')
+    expect(document.querySelector('meta[name=description]').content).toEqual(
+      'Apple'
+    )
   })
 })
