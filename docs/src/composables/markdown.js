@@ -1,5 +1,6 @@
 import { ref, watch } from 'vue'
 import { marked } from 'marked'
+import hljs from '@/hljs.config.js'
 
 export function useMarkdownFile(path) {
   const raw = ref()
