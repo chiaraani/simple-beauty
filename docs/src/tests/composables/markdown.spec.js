@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest'
 import { flushPromises } from '@vue/test-utils'
 import { render } from '@testing-library/vue'
 
-vi.mock('marked', () => {
+vi.mock('@/config/marked', () => {
   return {
     marked: vi.fn(
       () =>
@@ -10,11 +10,12 @@ vi.mock('marked', () => {
     ),
   }
 })
-import { marked } from 'marked'
+import { marked } from '@/config/marked'
+
+vi.mock('@/config/hljs', () => ({ default: { highlightAll: vi.fn() } }))
+import hljs from '@/config/hljs'
 
 global.fetch = vi.fn(async () => ({ text: () => 'markdown' }))
-global.hljs = { highlightAll: vi.fn() }
-
 import { useMarkdownFile } from '@/composables/markdown.js'
 
 describe('useMarkdownFile', () => {
@@ -25,10 +26,7 @@ describe('useMarkdownFile', () => {
   it('transpiles markdown', async () => {
     useMarkdownFile('README')
     await flushPromises()
-    expect(marked).toHaveBeenCalledWith('markdown', {
-      mangle: false,
-      headerIds: false,
-    })
+    expect(marked).toHaveBeenCalledWith('markdown')
   })
 
   const wrapperComponent = {

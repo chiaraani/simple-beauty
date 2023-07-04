@@ -1,6 +1,6 @@
 import { ref, watch } from 'vue'
-import { marked } from 'marked'
-import hljs from '@/hljs.config.js'
+import { marked } from '@/config/marked'
+import hljs from '@/config/hljs'
 
 export function useMarkdownFile(path) {
   const raw = ref()
@@ -17,7 +17,7 @@ function useMarkdown(raw) {
   const processed = ref()
   watch(raw, () => {
     new Promise((resolve) => {
-      resolve(marked(raw.value, { mangle: false, headerIds: false }))
+      resolve(marked(raw.value))
     })
       .then((transpiled) => addSnippets(transpiled))
       .then((withSnippets) => (processed.value = withSnippets))
