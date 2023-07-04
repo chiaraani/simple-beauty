@@ -5,6 +5,15 @@ let titleBase
 export function useMetaTags(options = {}) {
   titleBase ||= document.title
 
+  const setMetaTags = () => {
+    if (options.title) document.title = options.title + ' - ' + titleBase
+    if (options.description)
+      document.querySelector('meta[name=description]').content =
+        options.description
+  }
+
+  setMetaTags()
+
   const reload = () => {
     if (!options.title) {
       const h1 = document.getElementsByTagName('h1')[0]
@@ -16,11 +25,9 @@ export function useMetaTags(options = {}) {
       if (p) options.description = p.textContent
     }
 
-    if (options.title) document.title = options.title + ' - ' + titleBase
-    if (options.description)
-      document.querySelector('meta[name=description]').content =
-        options.description
+    setMetaTags()
   }
+
   onMounted(reload)
   onUpdated(reload)
 }
