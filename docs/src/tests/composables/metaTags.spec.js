@@ -15,7 +15,8 @@ describe('useMetaTags', () => {
     setup: () => useMetaTags(),
   }
 
-  beforeAll(() => render(wrapperComponent))
+  let wrapper
+  beforeAll(() => (wrapper = render(wrapperComponent)))
 
   it('sets meta title from first h1', () => {
     expect(document.title).toEqual('Title - Base')
@@ -28,7 +29,7 @@ describe('useMetaTags', () => {
   })
 
   it('switches meta title when other component calls it', async () => {
-    document.body.innerHTML = ''
+    wrapper.unmount()
     render(wrapperComponent2)
     expect(document.title).toEqual('Title2 - Base')
   })
