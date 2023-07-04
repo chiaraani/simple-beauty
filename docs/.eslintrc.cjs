@@ -13,6 +13,7 @@ module.exports = {
   },
   globals: {
     global: 'writable',
+    hljs: 'readonly',
   },
   rules: {
     'vue/multi-word-component-names': [

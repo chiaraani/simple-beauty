@@ -13,13 +13,14 @@ vi.mock('marked', () => {
 import { marked } from 'marked'
 
 global.fetch = vi.fn(async () => ({ text: () => 'markdown' }))
+global.hljs = { highlightAll: vi.fn() }
 
 import { useMarkdownFile } from '@/composables/markdown.js'
 
 describe('useMarkdownFile', () => {
   it('fetches markdown file', () => {
     useMarkdownFile('README')
-    expect(global.fetch).toHaveBeenCalledWith('README.md')
+    expect(fetch).toHaveBeenCalledWith('README.md')
   })
   it('transpiles markdown', async () => {
     useMarkdownFile('README')
@@ -41,5 +42,9 @@ describe('useMarkdownFile', () => {
     expect(document.body.innerHTML).toContain(
       '<iframe src="http://localhost:3000/example.html?code=%3Ci%3EItalic%3C%2Fi%3E" class="example"></iframe>'
     )
+  })
+
+  it('highlights pre code', () => {
+    expect(hljs.highlightAll).toHaveBeenCalled()
   })
 })

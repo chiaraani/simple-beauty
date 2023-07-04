@@ -20,7 +20,10 @@ function useMarkdown(raw) {
     })
       .then((transpiled) => addSnippets(transpiled))
       .then((withSnippets) => (processed.value = withSnippets))
-      .then(() => iframeResizing())
+      .then(() => {
+        iframeResizing()
+        hljs.highlightAll()
+      })
   })
 
   return processed
