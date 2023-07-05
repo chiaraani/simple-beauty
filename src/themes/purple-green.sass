@@ -1,6 +1,34 @@
-// Colors
+// Colors //
 $colors: ("canvas": #fff, "primary": #7b0091, "secondary": #007046 )
 
-// Navbar
-$navbar-padding: 1em
-$navbar-text-decoration: none
+//// $colors will generate:
+// :root 
+//   --canvas-color: ...
+//   --primary-color: ...
+//   --secondary-color: ...
+
+// Compontents //
+.component
+  padding: 1em
+  border: solid 2px #aaa
+  border-radius: 1em
+
+// Typography //
+.link, a
+  color: var(--primary-color)
+  text-decoration: underline
+  font: inherit
+
+:not(pre) > code 
+  padding: 0.1em 0.2em
+  border-radius: 0.5em
+  border-style: dotted
+
+// Navbar //
+.brand
+  padding: 0.2em
+  text-decoration: none
+  background-color: var(--canvas-color)
+nav a
+  border: none
+  text-decoration: none

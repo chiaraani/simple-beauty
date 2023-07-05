@@ -1,7 +1,8 @@
 # Theme
 
 If you use SASS, you can change SASS variables how you fancy to get a new theme.
-Otherwise, you also could change CSS variables, but they are more limited.
+It is worth to note that _many variables are only in CSS_, and they work differently to SASS variables.
+Some parts of the theme are hard coded, for there is not a useful reason to encapsulate them in variables.
 
 ## Colors
 
@@ -27,20 +28,27 @@ Color variables in CSS:
 }
 ```
 
-## Navbar
+## Components
 
-Customise using SASS variables:
+`.component` is extended using SASS to many elements: `code`, `nav a`...
 
 ```SASS
-$navbar-padding: ...
-$navbar-text-decoration: ...
+.component
+  padding: ...
+  border: ...
+  border-radius: ...
 ```
 
-Or, customise using CSS variables:
+## Typography
+
+### Links
+
+Below there is a typical example of styling links. Text color is set to `---primary-color` to make it match the rest of the website.
 
 ```CSS
-nav {
-  --padding: ...;
-  --text-decoration: ...;
+.link, a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  font: inherit;
 }
 ```

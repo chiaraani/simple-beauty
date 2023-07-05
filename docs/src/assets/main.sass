@@ -5,15 +5,15 @@
   color: var(--secondary-color)
 
 .example
-  border: solid 2px #aaa
-  border-radius: 0 0 10px 10px
+  @extend .component
+  padding: 0
+  border-top-left-radius: 0
+  border-top-right-radius: 0
   width: 100%
   overflow: auto
   margin-top: -1em
   resize: both
 
-pre 
-  border: solid 2px #aaa
-  border-radius: 10px 10px 0 0
-  overflow: auto
-  margin-bottom: 1em
+.language-HTML
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0

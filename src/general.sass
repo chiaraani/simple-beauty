@@ -6,12 +6,20 @@ body
   background-color: var(--canvas-color)
 
 // Links
-a, .link
-  color: var(--primary-color)
 .link
   display: inline
   background: none
   border: none
   cursor: pointer
-  text-decoration: underline
-  font: inherit
+  padding: 0
+
+// Pre code
+code
+  @extend .component
+  display: inline-block
+
+pre 
+  overflow: auto
+  margin-bottom: 1em
+  code
+    display: block
