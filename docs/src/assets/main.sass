@@ -9,11 +9,30 @@
   padding: 0
   border-top-left-radius: 0
   border-top-right-radius: 0
-  width: 100%
   overflow: auto
   margin-top: -1em
   resize: both
+  width: 100%
 
-.language-HTML
+pre:has(.language-HTML)
   border-bottom-left-radius: 0
   border-bottom-right-radius: 0
+
+pre:has(.language-HTML)::before
+    content: 'HTML'
+pre:has(.language-CSS)::before
+  content: 'CSS'
+pre:has(.language-SASS)::before
+  content: 'SASS'
+
+pre 
+  position: relative
+  code
+    margin-right: 4em
+
+pre::before
+  position: absolute
+  right: 1em
+  font-weight: bold
+  background-color: var(--canvas-color)
+  padding: 0.2em
