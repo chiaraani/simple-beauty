@@ -1,8 +1,10 @@
 # Theme
 
 If you use SASS, you can change SASS variables how you fancy to get a new theme.
-It is worth to note that _many variables are only in CSS_, and they work differently to SASS variables.
+It is worth to note that many variables are only in CSS, and they work differently to SASS variables.
 Some parts of the theme are hard coded, for there is not a useful reason to encapsulate them in variables.
+
+You must import _config.sass_ to your theme first to be able work well.
 
 ## Colors
 
@@ -30,10 +32,10 @@ Color variables in CSS:
 
 ## Components
 
-`.component` is extended using SASS to many elements: `code`, `nav a`...
+`$component-selectors` is a SASS variable defined in configuration. It is a list of selectors of components that includes: `code`, `nav a`... There you can define style that components share.
 
 ```SASS
-.component
+#{$component-selectors}
   padding: ...
   border: ...
   border-radius: ...

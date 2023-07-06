@@ -1,3 +1,6 @@
+// Configuration must be imported before theme.
+@import '../config'
+
 // Colors //
 $colors: ("canvas": #fff, "primary": #7b0091, "secondary": #007046 )
 
@@ -8,12 +11,18 @@ $colors: ("canvas": #fff, "primary": #7b0091, "secondary": #007046 )
 //   --secondary-color: ...
 
 // Compontents //
-.component
+#{$component-selectors}
   padding: 1em
   border: solid 2px #aaa
   border-radius: 1em
 
 // Typography //
+body 
+  line-height: 1.5em
+
+p
+  font-family: sans-serif
+
 .link, a
   color: var(--primary-color)
   text-decoration: underline
