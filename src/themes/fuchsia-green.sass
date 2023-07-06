@@ -4,6 +4,10 @@
 // Colors //
 $colors: ("canvas": #fff, "primary": #a6005a, "secondary": #007046 )
 
+:root
+  --light-text: #fff
+  --dark-text: #000
+
 //// $colors will generate:
 // :root 
 //   --canvas-color: ...
@@ -19,9 +23,10 @@ $colors: ("canvas": #fff, "primary": #a6005a, "secondary": #007046 )
 // Typography //
 body 
   line-height: 1.5em
-
-p
   font-family: sans-serif
+
+.brand, h1, h2, h3, h4, h5, h6
+  font-family: serif
 
 .link, a
   color: var(--primary-color)

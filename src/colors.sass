@@ -1,3 +1,25 @@
-:root
-  @each $color-name, $color-code in $colors
+@function is-light-or-dark($color-code)
+  @return lightness($color-code) > 50%
+
+@function is-light($color-code)
+  @return lightness($color-code) > 70%
+
+@function is-dark($color-code)
+  @return lightness($color-code) < 30%
+
+@each $color-name, $color-code in $colors
+  $contrast: if(is-light-or-dark($color-code), dark, light)
+
+  :root
     --#{$color-name}-color: #{$color-code}
+    --light-#{$color-name}-color: #{if(is-light($color-code), $color-code, change-color($color-code, $lightness: 70%))}
+    --dark-#{$color-name}-color: #{if(is-dark($color-code), $color-code, change-color($color-code, $lightness: 30%))}
+
+  .#{$color-name}-bg
+    background-color: var(--#{$color-name}-color)
+    color: var(--#{$contrast}-text)
+    @each $color-name2, $color-code2 in $colors
+      --text-#{$color-name2}-color: var(--#{$contrast}-#{$color-name2}-color)
+
+  .#{$color-name}-text
+    color: var(--text-#{$color-name}-color)
