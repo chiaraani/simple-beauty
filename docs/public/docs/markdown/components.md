@@ -16,5 +16,5 @@ You can give a component any color you wish by simply adding that color's class.
 <div class="canvas component">Canvas component</div>
 <div class="primary component">Primary component</div>
 <div class="secondary component">Secondary component</div>
-<div class="info component">Secondary component</div>
+<div class="info component">Info component</div>
 ```
