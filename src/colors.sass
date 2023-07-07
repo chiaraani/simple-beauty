@@ -1,25 +1,35 @@
-@function is-light-or-dark($color-code)
+@function is-light($color-code)
   @return lightness($color-code) > 50%
 
-@function is-light($color-code)
-  @return lightness($color-code) > 70%
+@function text-contrast-color($background, $text-base)
+  @if is-light($background)
+    @if lightness($background) - lightness($text-base) >= 60%
+      @return  $text-base
+    @else
+      @return darken($text-base, 60%)
+  @else
+    @if lightness($text-base) - lightness($background) >= 60%
+      @return $text-base
+    @else
+      @return lighten($text-base, 60%)
 
-@function is-dark($color-code)
-  @return lightness($color-code) < 30%
+@mixin text-contrast-colors($color-name)
+  color: var(--text-contrast-#{$color-name}-color)
+  @each $color-name2, $color-code2 in $colors
+    --#{$color-name2}-text-color: var(--#{$color-name2}-text-contrast-#{$color-name}-color)
 
 @each $color-name, $color-code in $colors
-  $contrast: if(is-light-or-dark($color-code), dark, light)
+  $contrast: if(is-light($color-code), dark, light)
 
   :root
     --#{$color-name}-color: #{$color-code}
-    --light-#{$color-name}-color: #{if(is-light($color-code), $color-code, change-color($color-code, $lightness: 70%))}
-    --dark-#{$color-name}-color: #{if(is-dark($color-code), $color-code, change-color($color-code, $lightness: 30%))}
+    --text-contrast-#{$color-name}-color: #{if(is-light($color-code), black, white)}
+    @each $color-name2, $color-code2 in $colors
+      --#{$color-name2}-text-contrast-#{$color-name}-color: #{text-contrast-color($color-code, $color-code2)}
 
   .#{$color-name}-bg
     background-color: var(--#{$color-name}-color)
-    color: var(--#{$contrast}-text)
-    @each $color-name2, $color-code2 in $colors
-      --text-#{$color-name2}-color: var(--#{$contrast}-#{$color-name2}-color)
+    @include text-contrast-colors($color-name)
 
   .#{$color-name}-text
-    color: var(--text-#{$color-name}-color)
+    color: var(--#{$color-name}-text-color)

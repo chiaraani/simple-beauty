@@ -20,32 +20,3 @@ When you set a color to a text, the color would contrast its background.
 <span class="primary-text">Primary</span>
 <span class="secondary-text">Secondary</span>
 ```
-
-## CSS varibles
-
-Theme colors are enveloped in CSS variables.
-
-```HTML
-<style> div { width: 3em; height: 3em; display: inline-block; }</style>
-<div style="background-color: var(--canvas-color)"></div>
-<div style="background-color: var(--primary-color)"></div>
-<div style="background-color: var(--secondary-color)"></div>
-```
-
-### Light versions of the colors
-
-```HTML
-<style> div { width: 3em; height: 3em; display: inline-block; }</style>
-<div style="background-color: var(--light-canvas-color)"></div>
-<div style="background-color: var(--light-primary-color)"></div>
-<div style="background-color: var(--light-secondary-color)"></div>
-```
-
-### Dark versions of the colors
-
-```HTML
-<style> div { width: 3em; height: 3em; display: inline-block; }</style>
-<div style="background-color: var(--dark-canvas-color)"></div>
-<div style="background-color: var(--dark-primary-color)"></div>
-<div style="background-color: var(--dark-secondary-color)"></div>
-```

@@ -5,6 +5,7 @@ It is worth to note that many variables are only in CSS, and they work different
 Some parts of the theme are hard coded, for there is not a useful reason to encapsulate them in variables.
 
 You must import _config.sass_ to your theme first to be able work well.
+CSS is separated in mixin `last-declared`, because last declared CSS has priority over first declared, and the CSS of the theme must have priority over other CSS. Therefore, whatever you write in this mixin would be declared last in the resulting CSS transpiled from SASS.
 
 ## Colors
 
@@ -30,6 +31,38 @@ Color variables in CSS:
 }
 ```
 
+### Text contrast colors
+
+`$colors` would also generate CSS variables to let text color contrast background color. You can change these as you fancy to create cool results!
+
+```CSS
+:root {
+  --text-contrast-canvas-color: ...;
+  --text-contrast-primary-color: ...;
+  ...
+}
+```
+
+Also, it generates versions of each color that contrast background color. In this way:
+
+```CSS
+:root {
+  --canvas-text-contrast-canvas-color: ...;
+  --primary-text-contrast-canvas-color: ...;
+  ...
+}
+```
+
+Most importantly, you can access a version of a color that contrast current background color through a CSS variable. You define current background color by adding a background class to your element, by extending that class using SASS, or it would be set by parent element.
+
+In the next example, `.my-class` would receive adapted text colors that contrast its parent background color.
+
+```CSS
+  .my-class {
+    color: var(--secondary-text-color)
+  }
+```
+
 ## Components
 
 `$component-selectors` is a SASS variable defined in configuration. It is a list of selectors of components that includes: `code`, `nav a`... There you can define style that components share.
@@ -45,11 +78,11 @@ Color variables in CSS:
 
 ### Links
 
-Below there is a typical example of styling links. Text color is set to `---primary-color` to make it match the rest of the website.
+Below there is a typical example of styling links. Text color is set to `--primary-text-color` to make it match the rest of the website.
 
 ```CSS
 .link, a {
-  color: var(--primary-color);
+  color: var(--primary-text-color);
   text-decoration: underline;
   font: inherit;
 }
