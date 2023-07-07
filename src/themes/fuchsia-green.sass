@@ -1,10 +1,16 @@
 // Configuration must be imported before theme.
-@import '../config'
+@use '../config'
 
 // Colors //
 $colors: ("canvas": #fff, "primary": #a6005a, "secondary": #007046 )
 
-//// $colors will generate:
+
+// Compontents //
+#{config.$component-selectors}
+  padding: 1em
+  border: solid 2px #aaa
+  border-radius: 1em
+
 @mixin last-declared
   :root
     --text-contrast-secondary-color: #f1ff2c
@@ -16,12 +22,6 @@ $colors: ("canvas": #fff, "primary": #a6005a, "secondary": #007046 )
   //   ...
   //   --primary-color: ...
   //   ...
-
-  // Compontents //
-  #{$component-selectors}
-    padding: 1em
-    border: solid 2px #aaa
-    border-radius: 1em
 
   // Typography //
   body 

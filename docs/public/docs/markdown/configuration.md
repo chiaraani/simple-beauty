@@ -1,6 +1,6 @@
 # Configuration
 
-`Config` file contains critical variables for layout development.
+`_config.sass` file contains critical variables for layout development.
 
 ## Breakpoints
 
@@ -19,4 +19,12 @@ However, you can customise breakpoints as SASS variables, in the next way:
 
 ```SASS
 $breakpoints: ('sm': ..., 'md': ..., 'xl': ..., 'xxl': ... )
+```
+
+## Component selectors
+
+It is a list of selectors of components that includes: `code`, `nav a`... So you can define style that components share. You can customise the list of components by changing this variable.
+
+```SASS
+$component-selectors: ..., ...
 ```

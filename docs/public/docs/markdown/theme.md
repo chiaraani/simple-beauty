@@ -65,10 +65,10 @@ In the next example, `.my-class` would receive adapted text colors that contrast
 
 ## Components
 
-`$component-selectors` is a SASS variable defined in configuration. It is a list of selectors of components that includes: `code`, `nav a`... There you can define style that components share.
+`config.$component-selectors` is a SASS variable defined in configuration. It is a list of selectors of components that includes: `code`, `nav a`... There you can define style that components share.
 
 ```SASS
-#{$component-selectors}
+#{config.$component-selectors}
   padding: ...
   border: ...
   border-radius: ...
