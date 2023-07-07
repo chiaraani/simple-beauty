@@ -6,3 +6,15 @@ You also can add `component` class to any div.
 ```HTML
 <div class="component">This is a component!</div>
 ```
+
+## Component color
+
+You can give a component any color you wish by simply adding that color's class.
+
+```HTML
+<style>div { display: inline-block; }</style>
+<div class="canvas component">Canvas component</div>
+<div class="primary component">Primary component</div>
+<div class="secondary component">Secondary component</div>
+<div class="info component">Secondary component</div>
+```

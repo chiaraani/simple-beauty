@@ -13,19 +13,24 @@
     @else
       @return lighten($text-base, 60%)
 
+@function border-color($color)
+  @if is-light($color)
+    @return darken($color, $border-contrast)
+  @else
+    @return lighten($color, $border-contrast)
+
 @mixin text-contrast-colors($color-name)
   color: var(--text-contrast-#{$color-name}-color)
   @each $color-name2, $color-code2 in $colors
     --#{$color-name2}-text-color: var(--#{$color-name2}-text-contrast-#{$color-name}-color)
 
 @each $color-name, $color-code in $colors
-  $contrast: if(is-light($color-code), dark, light)
-
   :root
     --#{$color-name}-color: #{$color-code}
     --text-contrast-#{$color-name}-color: #{if(is-light($color-code), black, white)}
     @each $color-name2, $color-code2 in $colors
       --#{$color-name2}-text-contrast-#{$color-name}-color: #{text-contrast-color($color-code, $color-code2)}
+    --#{$color-name}-border-color: #{border-color($color-code)}
 
   .#{$color-name}-bg
     background-color: var(--#{$color-name}-color)
@@ -33,3 +38,8 @@
 
   .#{$color-name}-text
     color: var(--#{$color-name}-text-color)
+
+  .#{$color-name} 
+    @extend .#{$color-name}-bg
+    border-color: var(--#{$color-name}-border-color)
+

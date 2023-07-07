@@ -3,12 +3,37 @@
 
 .brand
   color: var(--primary-text-color)
-  font-size: xxx-large
+  display: inline-block
+  font-size: x-large
+  @media only screen and (min-width: map.get(config.$breakpoints, 'sm'))
+    font-size: xx-large
+  @media only screen and (min-width: map.get(config.$breakpoints, 'md'))
+    font-size: xxx-large
 
 nav
-  display: flex
+  @extend .primary
+  padding: 0
   flex-direction: column
-    
-@media only screen and (min-width: map.get(config.$breakpoints, 'md'))
+  align-items: stretch
+  display: flex
+  .brand
+    margin: 0
+    font-size: x-large
+  a
+    color: var(--text-color)
+    border: none
+    border-bottom: inherit
+    border-radius: 0
+    text-decoration: none
+    &:last-child
+      border: none
+
+@media only screen and (min-width: map.get(config.$breakpoints, 'sm'))
   nav
     flex-direction: row
+    display: inline-flex
+    a, .brand
+      border-bottom: none
+      border-right: inherit
+      align-items: center
+      display: inline-flex

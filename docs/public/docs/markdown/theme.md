@@ -58,9 +58,27 @@ Most importantly, you can access a version of a color that contrast current back
 In the next example, `.my-class` would receive adapted text colors that contrast its parent background color.
 
 ```CSS
-  .my-class {
-    color: var(--secondary-text-color)
-  }
+.my-class {
+  color: var(--secondary-text-color)
+}
+```
+
+### Border colors
+
+Besides, `$colors` generates border colors for components. Border colors would contrast background colors as much as you set `$border-contrast`.
+
+```SASS
+$border-color: ...
+```
+
+You are able to customise them using CSS variables too.
+
+```CSS
+:root {
+  --canvas-border-color: ...;
+  --primary-border-color: ...;
+  ...
+}
 ```
 
 ## Components
