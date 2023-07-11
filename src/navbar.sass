@@ -25,11 +25,8 @@ nav
     border-bottom: inherit
     border-radius: 0
     text-decoration: none
-    &:last-child
-      border: none
 
-@media only screen and (min-width: map.get(config.$breakpoints, 'sm'))
-  nav
+  @media only screen and (min-width: map.get(config.$breakpoints, 'sm'))
     flex-direction: row
     display: inline-flex
     a, .brand
@@ -37,3 +34,26 @@ nav
       border-right: inherit
       align-items: center
       display: inline-flex
+
+
+// Placement
+nav
+  &.absolute, &.fixed, &.sticky
+    top: 0
+  &.absolute, &.fixed
+    left: 0
+    border-radius: 0
+    margin: 0
+    width: 100%
+    display: flex
+  &:not(.aboslute):not(.fixed) a:last-child
+    border: none
+  &.absolute
+    position: absolute
+  &.fixed
+    position: fixed
+  &.sticky
+    position: sticky
+
+body:has(nav.absolute), body:has(nav.fixed)
+  margin-top: var(--navbar-body-margin)

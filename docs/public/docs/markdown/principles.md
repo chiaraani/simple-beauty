@@ -34,7 +34,7 @@ For example, you want to make a component out of a 'div'.
 <div class="component">This is a div that is styled as a component.</div>
 ```
 
-#### To add a particular feature
+#### To set a particular feature
 
 For example, you want your text to have a particular color.
 

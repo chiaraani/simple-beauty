@@ -81,17 +81,6 @@ You are able to customise them using CSS variables too.
 }
 ```
 
-## Components
-
-`config.$component-selectors` is a SASS variable defined in configuration. It is a list of selectors of components that includes: `code`, `nav a`... There you can define style that components share.
-
-```SASS
-#{config.$component-selectors}
-  padding: ...
-  border: ...
-  border-radius: ...
-```
-
 ## Typography
 
 ### Links
@@ -103,5 +92,26 @@ Below there is a typical example of styling links. Text color is set to `--prima
   color: var(--primary-text-color);
   text-decoration: underline;
   font: inherit;
+}
+```
+
+## Components
+
+`config.$component-selectors` is a SASS variable defined in configuration. It is a list of selectors of components that includes: `code`, `nav a`... There you can define style that components share.
+
+```SASS
+#{config.$component-selectors}
+  padding: ...
+  border: ...
+  border-radius: ...
+```
+
+## Navbar
+
+There is a CSS variable defined at `:root`, that sets top margin of body if there is a `nav.absolute`, or `nav.fixed`.
+
+```CSS
+:root {
+  --navbar-body-margin: ...;
 }
 ```
