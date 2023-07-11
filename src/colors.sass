@@ -19,6 +19,22 @@
   @else
     @return lighten($color, $border-contrast)
 
+@mixin background-variables-for($color-name)
+  --light-gradient-color: var(--light-gradient-#{$color-name}-color)
+  --dark-gradient-color: var(--dark-gradient-#{$color-name}-color)
+  @include text-contrast-colors($color-name)
+
+@mixin gradient-colors($color-name, $color-code)
+  @if lightness($color-code) < $gradient-contrast
+    --light-gradient-#{$color-name}-color: #{lighten($color-code, $gradient-contrast)}
+  @else
+    --light-gradient-#{$color-name}-color: #{lighten($color-code, $gradient-contrast / 2)}
+  @if 100% - lightness($color-code) < $gradient-contrast
+    --dark-gradient-#{$color-name}-color: #{darken($color-code, $gradient-contrast)}
+  @else
+    --dark-gradient-#{$color-name}-color: #{darken($color-code, $gradient-contrast / 2)}
+
+
 @mixin text-contrast-colors($color-name)
   color: var(--text-contrast-#{$color-name}-color)
   @each $color-name2, $color-code2 in $colors
@@ -27,19 +43,24 @@
 @each $color-name, $color-code in $colors
   :root
     --#{$color-name}-color: #{$color-code}
+    // Gradients
+    @include gradient-colors($color-name, $color-code)
+    // Text
     --text-contrast-#{$color-name}-color: #{if(is-light($color-code), black, white)}
     @each $color-name2, $color-code2 in $colors
       --#{$color-name2}-text-contrast-#{$color-name}-color: #{text-contrast-color($color-code, $color-code2)}
+    // Border
     --#{$color-name}-border-color: #{border-color($color-code)}
 
   .#{$color-name}-bg
-    background-color: var(--#{$color-name}-color)
-    @include text-contrast-colors($color-name)
+    @include background-variables-for($color-name)
+    background: var(--background, var(--#{$color-name}-color))
 
   .#{$color-name}-text
     color: var(--#{$color-name}-text-color)
 
   .#{$color-name} 
-    @extend .#{$color-name}-bg
-    border-color: var(--#{$color-name}-border-color)
+    --component-color: #{var(--#{$color-name}-color)}
+    @include background-variables-for($color-name)
+    --border-color: var(--#{$color-name}-border-color)
 

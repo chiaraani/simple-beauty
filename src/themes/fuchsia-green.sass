@@ -5,20 +5,22 @@
 // Colors //
 $colors: ("canvas": #fff, "primary": #a6005a, "secondary": #007046, "info": #551a8b)
 $border-contrast: 10%
+$gradient-contrast: 10%
 
 // Compontents //
 #{config.$component-selectors}
-  padding: 0.5em
-  border: solid 2px var(--canvas-border-color)
   border-radius: 1em
-  margin: 0.1em 0
-  @media only screen and (min-width: map.get(config.$breakpoints, 'sm'))
-    padding: 1em
+  padding: 1em
+  margin: 1px
+  --background: linear-gradient(to bottom, var(--light-gradient-color), var(--component-color), var(--dark-gradient-color))
+
+// Buttons //
+#{config.$button-selectors}
+  font-size: 0.9em
 
 @mixin last-declared
   :root
     --text-contrast-secondary-color: #f1ff2c
-    --border-secondary-color: #f1ff2c
     --canvas-border-color: #aaa
   //// $colors will generate:
   //   --canvas-color: ...
@@ -49,15 +51,27 @@ $border-contrast: 10%
     border-style: dotted
     margin: 0.2em
 
+  // Components //
+  :root
+    --component-background: var(--canvas-color)
+    --component-border-color: var(--canvas-border-color)
+    --component-border-width: 2px 
+    --component-border-style: solid
+
   // Navbar //
   .brand
     text-decoration: none
-    margin: 0 0.5em
     font-family: serif
+    margin: 0 0.5em
   nav 
     .brand
       padding: 0.5em
     a
+      text-decoration: none
       margin: 0
+    .toggler
+      font-size: 15px
+      border-radius: 7px
+      padding: 7px
   :root
     --navbar-body-margin: 5em

@@ -83,6 +83,26 @@ You are able to customise them using CSS variables too.
 }
 ```
 
+### Gradients
+
+`$colors` even generates CSS variables for gradients, one for the light color of gradients, and another for the dark color, in the next way:
+
+```CSS
+:root {
+  --light-gradient-canvas-color: ...;
+  --dark-gradient-canvas-color: ...;
+}
+```
+
+The contrast is taken from `$gradient-contrast`.
+
+From these variables, you are able to create gradients for your components like this:
+
+```SASS
+#{config.$button-selectors}
+  --background: linear-gradient(to bottom, var(--light-gradient-color), var(--dark-gradient-color))
+```
+
 ## Typography
 
 ### Links
@@ -104,7 +124,8 @@ Below there is a typical example of styling links. Text color is set to `--prima
 ```SASS
 #{config.$component-selectors}
   padding: ...
-  border: ...
+  border-style: ...
+  border-width: ...
   border-radius: ...
 ```
 
