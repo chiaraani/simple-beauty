@@ -15,6 +15,8 @@ CSS is separated in mixin `last-declared`, because last declared CSS has priorit
 
 - **Secondary** is the second main color of the website.
 
+- **Info** is the color for links.
+
 Color variables in SASS:
 
 ```SASS
