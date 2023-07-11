@@ -5,7 +5,13 @@ What makes Simple beauty different to other web layout frameworks is its princip
 ## Style HTML tags
 
 If you want to style navbars, style is directly applied to `nav` tag, instead of creating `navbar` class, and a class to style links of the navbar.
-To style code, style is directly applied to `pre` and `code` tags, instead of creating classes for them.
+
+```HTML
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+</nav>
+```
 
 If an HTML tag is very specific, then apply style directly to it.
 This makes development very fast, because if you have a great deal of not styled HTML code, you might not even need to think about adding classes to it.
@@ -26,6 +32,14 @@ For example, you want to make a component out of a 'div'.
 
 ```HTML
 <div class="component">This is a div that is styled as a component.</div>
+```
+
+#### To add a particular feature
+
+For example, you want your text to have a particular color.
+
+```HTML
+<span class="secondary-text">Text with secondary color</span>
 ```
 
 ## Change look and feel in CSS or SASS
