@@ -21,10 +21,26 @@ However, you can customise breakpoints as SASS variables, in the next way:
 $breakpoints: ('sm': ..., 'md': ..., 'xl': ..., 'xxl': ... )
 ```
 
+### Collapse breakpoint
+
+`$collapse-breakpoint` when navbars should display horizontally, or collapsed vertically.
+
+```SASS
+$collapse-breakpoint: map.get($breakpoints, 'sm')
+```
+
 ## Component selectors
 
 It is a list of selectors of components that includes: `code`, `nav a`... So you can define style that components share. You can customise the list of components by changing this variable.
 
 ```SASS
 $component-selectors: ..., ...
+```
+
+## Button selectors
+
+`$button-selectors` defines all selectors for buttons, in turn, button selectors are component selectors as well.
+
+```SASS
+$button-selectors: ..., ...
 ```

@@ -5,5 +5,5 @@ import LayoutHeader from '@/components/layout/Header.vue'
 <template>
   <LayoutHeader />
 
-  <RouterView />
+  <main><RouterView /></main>
 </template>
