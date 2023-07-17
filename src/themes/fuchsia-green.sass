@@ -31,6 +31,9 @@ $gradient-contrast: 10%
   //   --primary-color: ...
   //   ...
 
+  *
+    transition: all 0.5s
+
   // Typography //
   body 
     line-height: 1.5
@@ -69,9 +72,15 @@ $gradient-contrast: 10%
     a
       text-decoration: none
       margin: 0
-    .toggler
+    .open-button
       font-size: 15px
       border-radius: 7px
       padding: 7px
+    .close-button
+      font-size: 20px
+      border-radius: 7px
+      padding: 0
+      width: 22px
+      height: 22px
   :root
     --navbar-body-margin: 5em

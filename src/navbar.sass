@@ -19,35 +19,85 @@ nav
   .brand
     margin: 0
     font-size: x-large
+    a
+      border: none
+      padding: 0
   a
+    background: transparent
     color: var(--text-color)
-    border: none
-    border-bottom: inherit
     border-radius: 0
-    text-decoration: none
-
-  @media only screen and (min-width: map.get(config.$breakpoints, 'sm'))
-    flex-direction: row
-    display: inline-flex
-    a, .brand
+    white-space: nowrap
+    border: none
+    border-bottom: var(--border)
+    &:last-child
       border-bottom: none
-      border-right: inherit
-      align-items: center
-      display: inline-flex
 
+
+// Horizontal navbar
+@mixin horizontal-navbar
+  flex-direction: row
+  overflow-x: auto
+  a, .brand
+    border-bottom: none
+    border-right: var(--border)
+    align-items: center
+
+nav
+  @media only screen and (min-width: config.$collapse-breakpoint)
+    @include horizontal-navbar
+  &.horizontal-sm
+    @include horizontal-navbar
+
+
+// Collapse
+nav
+  .open-button
+    border: var(--border)
+    &::before
+      content: '☰'
+    @media only screen and (min-width: config.$collapse-breakpoint)
+      display: none
+  &:has(.collapse) .brand
+    border-bottom: none
+
+  .collapse
+    background: var(--background)
+    display: flex
+    flex-direction: column
+    position: fixed
+    top: 0
+    left: 0
+    transform: translateX(-100%)
+    border-right:  var(--border)
+    @media only screen and (min-width: config.$collapse-breakpoint)
+      @include horizontal-navbar
+      position: static
+      transform: translateX(0)
+      border-right: none
+      :has(.close-button)
+        display: none
+
+    :has(.close-button)
+      border-bottom: var(--border)
+      text-align: right
+    .close-button::before
+      content: '×'
+
+  // Open
+  .collapse.open, &:has(.open-button:focus) .collapse:not(.close)
+    transform: translateX(0)
 
 // Placement
 nav
   &.absolute, &.fixed, &.sticky
     top: 0
+    z-index: 1000
   &.absolute, &.fixed
     left: 0
     border-radius: 0
     margin: 0
     width: 100%
     display: flex
-  &:not(.aboslute):not(.fixed) a:last-child
-    border: none
   &.absolute
     position: absolute
   &.fixed

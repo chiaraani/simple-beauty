@@ -1,2 +1,6 @@
+@use 'sass:map'
+
 $breakpoints: ('sm': 576px, 'md': 768px, 'xl': 1200px, 'xxl': 1400px )
-$component-selectors: '.component', pre, code, nav, nav a
+$button-selectors: '.button', button, 'input[type=submit]', 'input[type=button]', 'input[type=reset]'
+$component-selectors: join($button-selectors, ('.component', nav, nav a, pre, code))
+$collapse-breakpoint: map.get($breakpoints, 'sm')
