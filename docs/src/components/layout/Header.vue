@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <header>
-    <RouterLink :to="{ name: 'home' }" class="canvas-bg brand">
+    <RouterLink :to="{ name: 'home' }" class="brand">
       <span>Simple</span> <span class="secondary-text">beauty</span>
     </RouterLink>
   </header>

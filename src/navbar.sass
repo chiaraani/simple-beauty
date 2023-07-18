@@ -28,7 +28,7 @@ nav
     border-radius: 0
     white-space: nowrap
     border: none
-    border-bottom: var(--border)
+    border-bottom: var(--component-border)
     &:last-child
       border-bottom: none
 
@@ -39,7 +39,7 @@ nav
   overflow-x: auto
   a, .brand
     border-bottom: none
-    border-right: var(--border)
+    border-right: var(--component-border)
     align-items: center
 
 nav
@@ -52,7 +52,7 @@ nav
 // Collapse
 nav
   .open-button
-    border: var(--border)
+    border: var(--component-border)
     &::before
       content: '☰'
     @media only screen and (min-width: config.$collapse-breakpoint)
@@ -68,7 +68,7 @@ nav
     top: 0
     left: 0
     transform: translateX(-100%)
-    border-right:  var(--border)
+    border-right:  var(--component-border)
     max-height: 100%
     overflow: auto
     @media only screen and (min-width: config.$collapse-breakpoint)
@@ -80,7 +80,7 @@ nav
         display: none
 
     :has(.close-button)
-      border-bottom: var(--border)
+      border-bottom: var(--component-border)
       text-align: right
     .close-button::before
       content: '×'

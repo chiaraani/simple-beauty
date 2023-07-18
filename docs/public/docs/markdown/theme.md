@@ -96,11 +96,10 @@ You are able to customise them using CSS variables too.
 
 The contrast is taken from `$gradient-contrast`.
 
-From these variables, you are able to create gradients for your components like this:
+From these variables, you are able to create gradients for all backgrounds in the next way:
 
 ```SASS
-#{config.$button-selectors}
-  --background: linear-gradient(to bottom, var(--light-gradient-color), var(--dark-gradient-color))
+$gradient: linear-gradient(to bottom, var(--light-gradient-color), var(--dark-gradient-color))
 ```
 
 ## Typography

@@ -130,7 +130,7 @@ Just add `sticky` class.
 ```HTML
 <style type="text/css"> :root { height: 100px; }</style>
 
-<header><a href="#" class="brand">My website's name</a></header>
+<header><big>Header...</big></header>
 <nav class="sticky">
   <div class="brand"><button class="open-button"></button> <a href="#" >Brand</a></div>
   <div class="collapse">

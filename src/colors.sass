@@ -19,9 +19,13 @@
   @else
     @return lighten($color, $border-contrast)
 
-@mixin background-variables-for($color-name)
+@mixin background-for($color-name)
+  background: var(--background)
+  --background: var(--gradient) var(--background-color)
+  --background-color: var(--#{$color-name}-color)
   --light-gradient-color: var(--light-gradient-#{$color-name}-color)
   --dark-gradient-color: var(--dark-gradient-#{$color-name}-color)
+  --gradient: #{$gradient}
   @include text-contrast-colors($color-name)
 
 @mixin gradient-colors($color-name, $color-code)
@@ -53,14 +57,12 @@
     --#{$color-name}-border-color: #{border-color($color-code)}
 
   .#{$color-name}-bg
-    @include background-variables-for($color-name)
-    background: var(--background, var(--#{$color-name}-color))
+    @include background-for($color-name)
 
   .#{$color-name}-text
     color: var(--#{$color-name}-text-color)
 
   .#{$color-name} 
-    --component-color: #{var(--#{$color-name}-color)}
-    @include background-variables-for($color-name)
-    --border-color: var(--#{$color-name}-border-color)
+    @include background-for($color-name)
+    --component-border-color: var(--#{$color-name}-border-color)
 

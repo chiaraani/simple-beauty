@@ -6,13 +6,13 @@
 $colors: ("canvas": #fff, "primary": #a6005a, "secondary": #007046, "info": #551a8b)
 $border-contrast: 10%
 $gradient-contrast: 10%
+$gradient: linear-gradient(to bottom, var(--light-gradient-color), var(--dark-gradient-color))
 
 // Compontents //
 #{config.$component-selectors}
   border-radius: 1em
   padding: 1em
   margin: 1px
-  --background: linear-gradient(to bottom, var(--light-gradient-color), var(--component-color), var(--dark-gradient-color))
 
 // Buttons //
 #{config.$button-selectors}
@@ -56,8 +56,6 @@ $gradient-contrast: 10%
 
   // Components //
   :root
-    --component-background: var(--canvas-color)
-    --component-border-color: var(--canvas-border-color)
     --component-border-width: 2px 
     --component-border-style: solid
 
@@ -65,7 +63,7 @@ $gradient-contrast: 10%
   .brand
     text-decoration: none
     font-family: serif
-    margin: 0 0.5em
+    padding: 0 0.5em
   nav 
     .brand
       padding: 0.5em

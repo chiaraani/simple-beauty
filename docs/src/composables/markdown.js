@@ -55,7 +55,7 @@ function iframeResizing() {
     // Automatic resizing of iframes
     example.onload = () => {
       example.style.height =
-        example.contentWindow.document.documentElement.offsetHeight + 10 + 'px'
+        example.contentWindow.document.documentElement.offsetHeight + 5 + 'px'
     }
   }
 }
