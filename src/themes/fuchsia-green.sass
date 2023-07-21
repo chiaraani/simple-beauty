@@ -4,9 +4,21 @@
 
 // Colors //
 $colors: ("canvas": #fff, "primary": #a6005a, "secondary": #007046, "info": #551a8b)
+
 $border-contrast: 10%
+
 $gradient-contrast: 10%
-$gradient: linear-gradient(to bottom, var(--light-gradient-color), var(--dark-gradient-color))
+@mixin gradient
+  background-image: linear-gradient(to bottom, var(--hover-color), var(--light-gradient-color) 50%, var(--dark-gradient-color))
+  background-size: 100% 200%
+  background-position: 0 100%
+  &:focus
+    background-position: 0 0
+    background-image: linear-gradient(to top, var(--light-gradient-color), var(--dark-gradient-color))
+
+$hover-contrast: 5%
+@mixin hover
+  background-position: 0 0
 
 // Compontents //
 #{config.$component-selectors}

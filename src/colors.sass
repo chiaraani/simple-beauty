@@ -13,20 +13,23 @@
     @else
       @return lighten($text-base, 60%)
 
-@function border-color($color)
+@function contrast($color, $amount)
   @if is-light($color)
-    @return darken($color, $border-contrast)
+    @return darken($color, $amount)
   @else
-    @return lighten($color, $border-contrast)
+    @return lighten($color, $amount)
 
 @mixin background-for($color-name)
-  background: var(--background)
-  --background: var(--gradient) var(--background-color)
+  @include background
   --background-color: var(--#{$color-name}-color)
   --light-gradient-color: var(--light-gradient-#{$color-name}-color)
   --dark-gradient-color: var(--dark-gradient-#{$color-name}-color)
-  --gradient: #{$gradient}
   @include text-contrast-colors($color-name)
+  --hover-color: var(--#{$color-name}-hover-color)
+
+@mixin background
+  background-color: var(--background-color)
+  @include gradient
 
 @mixin gradient-colors($color-name, $color-code)
   @if lightness($color-code) < $gradient-contrast
@@ -54,7 +57,9 @@
     @each $color-name2, $color-code2 in $colors
       --#{$color-name2}-text-contrast-#{$color-name}-color: #{text-contrast-color($color-code, $color-code2)}
     // Border
-    --#{$color-name}-border-color: #{border-color($color-code)}
+    --#{$color-name}-border-color: #{contrast($color-code, $border-contrast)}
+    // Hover
+    --#{$color-name}-hover-color: #{contrast($color-code, $hover-contrast)}
 
   .#{$color-name}-bg
     @include background-for($color-name)

@@ -99,7 +99,16 @@ The contrast is taken from `$gradient-contrast`.
 From these variables, you are able to create gradients for all backgrounds in the next way:
 
 ```SASS
-$gradient: linear-gradient(to bottom, var(--light-gradient-color), var(--dark-gradient-color))
+@mixin gradient
+  background-image: linear-gradient(to bottom, var(--light-gradient-color), var(--dark-gradient-color))
+```
+
+### Hover
+
+You may want to change color of clickable elements when hovered. You can set the contrast when a clickable element is hover by setting `$hover-contrast`.
+
+```SASS
+$hover-contrast: ...
 ```
 
 ## Typography
@@ -126,6 +135,15 @@ Below there is a typical example of styling links. Text color is set to `--prima
   border-style: ...
   border-width: ...
   border-radius: ...
+```
+
+### Hover
+
+You can define `hover` mixin to set particular rules for hovered clickable elements.
+
+```SASS
+@mixin hover
+  ...
 ```
 
 ## Navbar

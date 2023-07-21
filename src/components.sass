@@ -3,3 +3,8 @@
 #{config.$component-selectors}
   --component-border: var(--component-border-width) var(--component-border-style) var(--component-border-color)
   border: var(--component-border)
+
+#{config.$clickable-selectors}
+  &:hover
+    background-color: var(--hover-color)
+    @include hover
