@@ -1,3 +1,5 @@
+@use 'sass:math'
+
 @function is-light($color-code)
   @return lightness($color-code) > 50%
 
@@ -35,11 +37,11 @@
   @if lightness($color-code) < $gradient-contrast
     --light-gradient-#{$color-name}-color: #{lighten($color-code, $gradient-contrast)}
   @else
-    --light-gradient-#{$color-name}-color: #{lighten($color-code, $gradient-contrast / 2)}
+    --light-gradient-#{$color-name}-color: #{lighten($color-code, math.div($gradient-contrast, 2))}
   @if 100% - lightness($color-code) < $gradient-contrast
     --dark-gradient-#{$color-name}-color: #{darken($color-code, $gradient-contrast)}
   @else
-    --dark-gradient-#{$color-name}-color: #{darken($color-code, $gradient-contrast / 2)}
+    --dark-gradient-#{$color-name}-color: #{darken($color-code, math.div($gradient-contrast, 2))}
 
 
 @mixin text-contrast-colors($color-name)
