@@ -24,25 +24,12 @@
 @mixin background-for($color-name)
   @include background
   --background-color: var(--#{$color-name}-color)
-  --light-gradient-color: var(--light-gradient-#{$color-name}-color)
-  --dark-gradient-color: var(--dark-gradient-#{$color-name}-color)
   @include text-contrast-colors($color-name)
   --hover-color: var(--#{$color-name}-hover-color)
 
 @mixin background
-  background-color: var(--background-color)
-  @include gradient
-
-@mixin gradient-colors($color-name, $color-code)
-  @if lightness($color-code) < $gradient-contrast
-    --light-gradient-#{$color-name}-color: #{lighten($color-code, $gradient-contrast)}
-  @else
-    --light-gradient-#{$color-name}-color: #{lighten($color-code, math.div($gradient-contrast, 2))}
-  @if 100% - lightness($color-code) < $gradient-contrast
-    --dark-gradient-#{$color-name}-color: #{darken($color-code, $gradient-contrast)}
-  @else
-    --dark-gradient-#{$color-name}-color: #{darken($color-code, math.div($gradient-contrast, 2))}
-
+  --background: var(--background-color) var(--background-image)
+  background: var(--background)
 
 @mixin text-contrast-colors($color-name)
   color: var(--text-contrast-#{$color-name}-color)
@@ -52,8 +39,6 @@
 @each $color-name, $color-code in $colors
   :root
     --#{$color-name}-color: #{$color-code}
-    // Gradients
-    @include gradient-colors($color-name, $color-code)
     // Text
     --text-contrast-#{$color-name}-color: #{if(is-light($color-code), black, white)}
     @each $color-name2, $color-code2 in $colors

@@ -128,7 +128,7 @@ Simply add `fixed` class.
 Just add `sticky` class.
 
 ```HTML
-<style type="text/css"> :root { height: 100px; }</style>
+<style type="text/css"> :root { height: 100px; background: white; } </style>
 
 <header><big>Header...</big></header>
 <nav class="sticky">

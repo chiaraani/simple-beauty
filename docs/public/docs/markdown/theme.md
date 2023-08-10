@@ -83,32 +83,22 @@ You are able to customise them using CSS variables too.
 }
 ```
 
-### Gradients
-
-`$colors` even generates CSS variables for gradients, one for the light color of gradients, and another for the dark color, in the next way:
-
-```CSS
-:root {
-  --light-gradient-canvas-color: ...;
-  --dark-gradient-canvas-color: ...;
-}
-```
-
-The contrast is taken from `$gradient-contrast`.
-
-From these variables, you are able to create gradients for all backgrounds in the next way:
-
-```SASS
-@mixin gradient
-  background-image: linear-gradient(to bottom, var(--light-gradient-color), var(--dark-gradient-color))
-```
-
 ### Hover
 
 You may want to change color of clickable elements when hovered. You can set the contrast when a clickable element is hover by setting `$hover-contrast`.
 
 ```SASS
 $hover-contrast: ...
+```
+
+### Gradients
+
+You can define a gradient for all backgrounds by declaring `--background-image`.
+
+```CSS
+:root {
+  --background-image: ...;
+}
 ```
 
 ## Typography
@@ -135,15 +125,6 @@ Below there is a typical example of styling links. Text color is set to `--prima
   border-style: ...
   border-width: ...
   border-radius: ...
-```
-
-### Hover
-
-You can define `hover` mixin to set particular rules for hovered clickable elements.
-
-```SASS
-@mixin hover
-  ...
 ```
 
 ## Navbar
