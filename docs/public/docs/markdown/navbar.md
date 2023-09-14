@@ -24,7 +24,8 @@ Make your navbar collapsable like this:
 
 ```HTML
 <nav>
-  <div class="brand"><button class="open-button"></button> <a href="#" >Brand</a></div>
+  <button class="open-button"></button>
+  <a href="#" class="brand">Brand</a>
   <div class="collapse">
     <div><button class="close-button"></button></div>
     <a href="#">Home</a>
@@ -41,7 +42,8 @@ To keep navbar open add `open` class to `.collapse`.
 
 ```HTML
 <nav>
-  <div class="brand"><button class="open-button"></button> <a href="#" >Brand</a></div>
+  <button class="open-button"></button>
+  <a href="#" class="brand">Brand</a>
   <div class="open collapse">
     <div><button class="close-button"></button></div>
     <a href="#">Home</a>
@@ -56,7 +58,8 @@ To keep navbar close add `close` class to `.collapse`.
 
 ```HTML
 <nav>
-  <div class="brand"><button class="open-button"></button> <a href="#" >Brand</a></div>
+  <button class="open-button"></button>
+  <a href="#" class="brand">Brand</a>
   <div class="close collapse">
     <div><button class="close-button"></button></div>
     <a href="#">Home</a>
@@ -85,7 +88,8 @@ Just add `absolute` class to it.
 
 ```HTML
 <nav class="absolute">
-  <div class="brand"><button class="open-button"></button> <a href="#" >Brand</a></div>
+  <button class="open-button"></button>
+  <a href="#" class="brand">Brand</a>
   <div class="collapse">
     <div><button class="close-button"></button></div>
     <a href="#">Home</a>
@@ -107,7 +111,8 @@ Simply add `fixed` class.
 <style type="text/css"> body { height: 100px; }</style>
 
 <nav class="fixed">
-  <div class="brand"><button class="open-button"></button> <a href="#" >Brand</a></div>
+  <button class="open-button"></button>
+  <a href="#" class="brand">Brand</a>
   <div class="collapse">
     <div><button class="close-button"></button></div>
     <a href="#">Home</a>
@@ -132,7 +137,8 @@ Just add `sticky` class.
 
 <header><big>Header...</big></header>
 <nav class="sticky">
-  <div class="brand"><button class="open-button"></button> <a href="#" >Brand</a></div>
+  <button class="open-button"></button>
+  <a href="#" class="brand">Brand</a>
   <div class="collapse">
     <div><button class="close-button"></button></div>
     <a href="#">Home</a>
