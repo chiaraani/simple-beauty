@@ -127,6 +127,19 @@ Below there is a typical example of styling links. Text color is set to `--prima
   border-radius: ...
 ```
 
+Also you can define styles for buttons, and clickable elements.
+
+```SASS
+#{config.$button-selectors}
+  ...
+
+#{config.$clickable-selectors}
+  ...
+  &:focus, &:focus:hover
+    background-color: ...
+
+```
+
 ## Navbar
 
 There is a CSS variable defined at `:root`, that sets top margin of body if there is a `nav.absolute`, or `nav.fixed`.
