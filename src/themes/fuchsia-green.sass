@@ -14,9 +14,8 @@ $hover-contrast: 7%
   padding: 1em
   margin: 1px
 #{config.$clickable-selectors}
-  &:focus, &:focus:hover
-    background-color: var(--background-color)
-    --background-image: linear-gradient(to top, #fff2, transparent, #0002)
+  &:focus, &.active
+    background-image: linear-gradient(to top, #fff2, transparent, #0002)
 
 // Buttons //
 #{config.$button-selectors}

@@ -153,3 +153,17 @@ Just add `sticky` class.
   <li>Stuff...</li>
 </ol>
 ```
+
+## Items
+
+### Active
+
+You can add `active` class to active link to style it.
+
+```HTML
+<nav>
+  <a href="#" class="brand">Brand</a>
+  <a href="#">Home</a>
+  <a href="#" class="active">About</a>
+</nav>
+```
