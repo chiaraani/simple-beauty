@@ -1,5 +1,5 @@
 <template>
-  <div v-html="pageContent || 'Loading...'"></div>
+  <div v-html="pageContent || 'Loading...'" class="heading-counters"></div>
 </template>
 
 <script setup>

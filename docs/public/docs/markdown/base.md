@@ -10,12 +10,6 @@ As easy as this:
 <a href="#">Link</a>
 ```
 
-If you would like to make something look like a link:
-
-```HTML
-<button class="link">Not a link, but it looks like a link.</button>
-```
-
 ### Pre, code
 
 `pre` and `code` are automatically formatted.
@@ -23,4 +17,18 @@ If you would like to make something look like a link:
 ```HTML
 <p>This is <code>code</code>!</p>
 <pre><code>alert(1)</code></pre>
+```
+
+### Heading counters
+
+Just add `heading-counters` class to container of all headings.
+
+```HTML
+<main class="heading-counters">
+<h1>Page</h1>
+  <h2>Chapter</h2>
+    <h2>Section</h2>
+      <h3>Part</h3>
+  <h2>Chapter</h2>
+</main>
 ```

@@ -18,6 +18,8 @@ $active-contrast: 10%
 // Buttons //
 #{config.$button-selectors}
   font-size: 0.9em
+  padding: 0.7em
+  border-radius: 10px
 
 @mixin last-declared
   :root
@@ -45,7 +47,7 @@ $active-contrast: 10%
     font-family: serif
     color: #444
 
-  .link, a
+  a
     color: var(--info-text-color)
     font: inherit
     text-decoration: underline

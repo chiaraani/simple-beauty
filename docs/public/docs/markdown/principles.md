@@ -23,7 +23,7 @@ This makes development very fast, because if you have a great deal of not styled
 When you want element to look as if was other kind of element.
 
 ```HTML
-<button class="link">Not a link, but it looks like a link.</button>
+<a class="button" href="#">Not a button, but it looks like a button</a>
 ```
 
 #### HTML tag is unspecific

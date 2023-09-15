@@ -6,14 +6,6 @@
   min-height: 100vh
   @extend .canvas
 
-// Links
-.link
-  display: inline
-  background: none
-  border: none
-  cursor: pointer
-  padding: 0
-
 // Pre code
 pre
   overflow: auto
@@ -26,3 +18,13 @@ pre
 :not(pre) > code
   display: inline-block
   
+// Heading counters //
+.heading-counters
+  $counter-content: ()
+  @for $i from 2 through 6
+    $counter-content: join($counter-content, (counter(h#{$i}counter) "."))
+    h#{$i - 1}
+      counter-reset: h#{$i}counter
+    h#{$i}::before 
+      counter-increment: h#{$i}counter
+      content: $counter-content " "
