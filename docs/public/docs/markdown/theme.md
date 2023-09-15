@@ -91,6 +91,14 @@ You may want to change color of clickable elements when hovered. You can set the
 $hover-contrast: ...
 ```
 
+### Active
+
+You may want to change color of clickable elements when active, focus or with `active` class. You can set their contrast with `$active-contrast`.
+
+```SASS
+$active-contrast: ...
+```
+
 ### Gradients
 
 You can define a gradient for all backgrounds by declaring `--background-image`.
