@@ -5,5 +5,7 @@
   border: var(--component-border)
 
 #{config.$clickable-selectors}
-  &:hover:not(:focus):not(.active)
+  &:hover
     background-color: var(--hover-color)
+  &:focus, &:active, &.active
+    background-color: var(--active-color)

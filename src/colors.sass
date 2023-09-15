@@ -26,6 +26,7 @@
   --background-color: var(--#{$color-name}-color)
   @include text-contrast-colors($color-name)
   --hover-color: var(--#{$color-name}-hover-color)
+  --active-color: var(--#{$color-name}-active-color)
 
 @mixin background
   --background: var(--background-color) var(--background-image)
@@ -47,6 +48,8 @@
     --#{$color-name}-border-color: #{contrast($color-code, $border-contrast)}
     // Hover
     --#{$color-name}-hover-color: #{contrast($color-code, $hover-contrast)}
+    // Active
+    --#{$color-name}-active-color: #{contrast($color-code, $active-contrast)}
 
   .#{$color-name}-bg
     @include background-for($color-name)
@@ -57,4 +60,3 @@
   .#{$color-name} 
     @include background-for($color-name)
     --component-border-color: var(--#{$color-name}-border-color)
-

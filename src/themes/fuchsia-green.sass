@@ -7,15 +7,13 @@ $colors: ("canvas": #fff, "primary": #a6005a, "secondary": #007046, "info": #551
 
 $border-contrast: 10%
 $hover-contrast: 7%
+$active-contrast: 10%
 
 // Compontents //
 #{config.$component-selectors}
   border-radius: 1em
   padding: 1em
   margin: 1px
-#{config.$clickable-selectors}
-  &:focus, &.active
-    background-image: linear-gradient(to top, #fff2, transparent, #0002)
 
 // Buttons //
 #{config.$button-selectors}
