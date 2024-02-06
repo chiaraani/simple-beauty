@@ -1,15 +1,15 @@
 <template>
-  <div v-html="processed || 'Loading...'" class="heading-counters"></div>
+  <MarkdownProcessing :raw="raw" v-if="raw" />
+  <p v-else>Loading...</p>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 
-import { useMarkdown } from '@/composables/markdown'
+import MarkdownProcessing from './Processing.vue'
 const props = defineProps(['path'])
 
 const raw = ref()
-const processed = useMarkdown(raw)
 
 fetch(`./markdown/${props.path}.md`)
   .then((response) => response.text())
