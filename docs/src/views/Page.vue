@@ -1,14 +1,9 @@
 <template>
-  <div v-html="pageContent || 'Loading...'" class="heading-counters"></div>
+  <MarkdownFile :path="$route.params.path" />
 </template>
 
 <script setup>
-import { useRoute } from 'vue-router'
-const route = useRoute()
-
-import { useMarkdownFile } from '@/composables/markdown'
-const pageContent = useMarkdownFile(`./markdown/${route.params.path}`)
-
+import MarkdownFile from '@/components/markdown/File.vue'
 import { useMetaTags } from '@/composables/metaTags'
 useMetaTags()
 </script>

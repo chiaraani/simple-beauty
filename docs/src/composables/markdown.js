@@ -2,18 +2,7 @@ import { ref, watch } from 'vue'
 import { marked } from '@/config/marked'
 import hljs from '@/config/hljs'
 
-export function useMarkdownFile(path) {
-  const raw = ref()
-  const processed = useMarkdown(raw)
-
-  fetch(`${path}.md`)
-    .then((response) => response.text())
-    .then((text) => (raw.value = text))
-
-  return processed
-}
-
-function useMarkdown(raw) {
+export function useMarkdown(raw) {
   const processed = ref()
   watch(raw, () => {
     new Promise((resolve) => {
