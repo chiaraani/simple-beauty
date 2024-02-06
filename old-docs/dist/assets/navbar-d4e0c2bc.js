@@ -1,0 +1,2 @@
+import{o as t,c as a,a as e}from"./index-bf43b99e.js";const o={class:"markdown-body"},n=e("h1",null,"Navbar",-1),r=e("h1",null,"Brand",-1),c=e("p",null,"This is where you display your website’s name.",-1),_=e("pre",null,[e("code",{class:"language-HTML"},`<a href="#" class="brand">My website's name</a>
+`)],-1),l=[n,r,c,_],p={__name:"navbar",setup(d,{expose:s}){return s({frontmatter:{}}),(h,u)=>(t(),a("div",o,l))}};export{p as default};
