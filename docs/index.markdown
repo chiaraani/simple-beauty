@@ -4,3 +4,6 @@
 
 layout: home
 ---
+# Framework for super fast, easy and beautiful web layout development.
+## Responsive. Build and customize with Sass and components.
+[comment]: <todo: utilize prebuilt grid system>
