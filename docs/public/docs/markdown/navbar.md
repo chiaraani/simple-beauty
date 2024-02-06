@@ -108,7 +108,7 @@ Just add `absolute` class to it.
 Simply add `fixed` class.
 
 ```HTML
-<style type="text/css"> body { height: 100px; }</style>
+<style type="text/css"> :root { height: 100px; background: white; } </style>
 
 <nav class="fixed">
   <button class="open-button"></button>
