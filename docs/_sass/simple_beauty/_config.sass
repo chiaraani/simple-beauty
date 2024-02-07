@@ -1,9 +1,0 @@
-@use 'sass:map'
-
-
-$button-selectors: '.button', button, 'input[type=submit]', 'input[type=button]', 'input[type=reset]'
-$component-selectors: join($button-selectors, ('.component', nav, nav a))
-$clickable-selectors: join($button-selectors, 'nav a')
-
-$breakpoints: ('sm': 576px, 'md': 768px, 'xl': 1200px, 'xxl': 1400px )
-$collapse-breakpoint: map.get($breakpoints, 'sm')

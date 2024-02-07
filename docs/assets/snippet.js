@@ -25,7 +25,7 @@ function addSnippets() {
 }
 
 function iframeResizing() {
-  for (let example of document.getElementsByClassName('example')) {
+  for (let example of document.querySelectorAll('.example iframe')) {
     // Automatic resizing of iframes
     example.onload = () => {
       example.style.height =

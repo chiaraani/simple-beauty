@@ -1,0 +1,16 @@
+.container
+  width: 800px
+  margin: auto
+  max-width: 100%
+
+// Grid
+
+$width-divisors: (1, 2, 3, 4, 6, 12)
+
+@media only screen and (min-width: $small-device + 1)
+  @each $width-divisor in $width-divisors 
+    .width-divided-in-#{$width-divisor}
+      display: inline-block
+      width: calc(100%/#{$width-divisor})
+
+  

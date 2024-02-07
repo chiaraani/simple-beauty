@@ -1,1 +1,0 @@
-import{o as s,c,F as l,a as n}from"./index-bf43b99e.js";const _=(e,t)=>{const o=e.__vccOpts||e;for(const[a,r]of t)o[a]=r;return o},u={},f=n("h1",null,"Home",-1),m=n("p",null,"Framework for super fast, easy and beautiful web layout development.",-1);function d(e,t){return s(),c(l,null,[f,m],64)}const i=_(u,[["render",d]]);export{i as default};
