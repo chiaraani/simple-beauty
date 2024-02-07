@@ -10,14 +10,6 @@ As easy as this:
 ```html
 <a href="#">Link</a>
 ```
-
-### Pre, code
-
-`pre` and `code` are automatically formatted.
-
-```html
-<p>This is <code>code</code>!</p>
-<pre><code>alert(1)</code></pre>
 ```
 
 ### Heading counters

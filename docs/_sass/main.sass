@@ -1,0 +1,37 @@
+@import 'simple_beauty/themes/fuchsia-green.sass'
+@import 'simple_beauty/index.sass'
+
+.example
+  @extend .component
+  padding: 0
+  border-top-left-radius: 0
+  border-top-right-radius: 0
+  overflow: auto
+  margin-top: -1em
+  resize: both
+  width: calc(100% - 2px)
+  background: none
+  position: relative
+
+
+.language-html pre
+  border-bottom-left-radius: 0
+  border-bottom-right-radius: 0
+
+.language-html pre::before
+    content: 'HTML'
+.language-css pre::before
+  content: 'CSS'
+.language-sass pre::before
+  content: 'SASS'
+
+pre 
+  position: relative
+  code
+    margin-right: 4em
+
+pre::before
+  position: absolute
+  right: 1em
+  font-weight: bold
+  padding: 0.2em
