@@ -7,7 +7,7 @@ title: Base
 
 As easy as this:
 
-```HTML
+```html
 <a href="#">Link</a>
 ```
 
@@ -15,7 +15,7 @@ As easy as this:
 
 `pre` and `code` are automatically formatted.
 
-```HTML
+```html
 <p>This is <code>code</code>!</p>
 <pre><code>alert(1)</code></pre>
 ```
@@ -24,7 +24,7 @@ As easy as this:
 
 Just add `heading-counters` class to container of all headings.
 
-```HTML
+```html
 <main class="heading-counters">
 <h1>Page</h1>
   <h2>Chapter</h2>

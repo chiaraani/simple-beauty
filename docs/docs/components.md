@@ -5,7 +5,7 @@ title: Components
 `config.$component-selectors` include elements that are considered components like: `nav a`, `code`... Components share style.
 You also can add `component` class to any div.
 
-```HTML
+```html
 <div class="component">This is a component!</div>
 ```
 
@@ -13,7 +13,7 @@ You also can add `component` class to any div.
 
 You can give a component any color you wish by simply adding that color's class.
 
-```HTML
+```html
 <style>div { display: inline-block; }</style>
 <div class="canvas component">Canvas component</div>
 <div class="primary component">Primary component</div>

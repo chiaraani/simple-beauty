@@ -6,7 +6,7 @@ title: Forms
 
 Any kind of button matches the website automatically!
 
-```HTML
+```html
 <button>Button</button>
 <input type="submit" value="Input type submit" />
 <input type="button" value="Input type button" />
@@ -15,7 +15,7 @@ Any kind of button matches the website automatically!
 
 ### Colors
 
-```HTML
+```html
 <button class="canvas">Canvas</button>
 <button class="primary">Primary</button>
 <button class="secondary">Secondary</button>
@@ -24,6 +24,6 @@ Any kind of button matches the website automatically!
 
 ### Button-like
 
-```HTML
+```html
 <a href="#" class="button">A link that looks like a button</a>
 ```

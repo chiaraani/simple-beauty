@@ -2,12 +2,12 @@
 title: Theme
 ---
 
-If you use SASS, you can change SASS variables how you fancy to get a new theme.
-It is worth to note that many variables are only in CSS, and they work differently to SASS variables.
+If you use sass, you can change sass variables how you fancy to get a new theme.
+It is worth to note that many variables are only in CSS, and they work differently to sass variables.
 Some parts of the theme are hard coded, for there is not a useful reason to encapsulate them in variables.
 
 You must import _config.sass_ to your theme first to be able work well.
-CSS is separated in mixin `last-declared`, because last declared CSS has priority over first declared, and the CSS of the theme must have priority over other CSS. Therefore, whatever you write in this mixin would be declared last in the resulting CSS transpiled from SASS.
+CSS is separated in mixin `last-declared`, because last declared CSS has priority over first declared, and the CSS of the theme must have priority over other CSS. Therefore, whatever you write in this mixin would be declared last in the resulting CSS transpiled from sass.
 
 ## Colors
 
@@ -19,15 +19,15 @@ CSS is separated in mixin `last-declared`, because last declared CSS has priorit
 
 - **Info** is the color for links.
 
-Color variables in SASS:
+Color variables in sass:
 
-```SASS
+```sass
 $colors: ( "canvas": ..., "primary": ..., "secondary": ...)
 ```
 
 Color variables in CSS:
 
-```CSS
+```css
 :root {
   --canvas-color: ...;
   --primary-color: ...;
@@ -39,7 +39,7 @@ Color variables in CSS:
 
 `$colors` would also generate CSS variables to let text color contrast background color. You can change these as you fancy to create cool results!
 
-```CSS
+```css
 :root {
   --text-contrast-canvas-color: ...;
   --text-contrast-primary-color: ...;
@@ -49,7 +49,7 @@ Color variables in CSS:
 
 Also, it generates versions of each color that contrast background color. In this way:
 
-```CSS
+```css
 :root {
   --canvas-text-contrast-canvas-color: ...;
   --primary-text-contrast-canvas-color: ...;
@@ -57,11 +57,11 @@ Also, it generates versions of each color that contrast background color. In thi
 }
 ```
 
-Most importantly, you can access a version of a color that contrast current background color through a CSS variable. You define current background color by adding a background class to your element, by extending that class using SASS, or it would be set by parent element.
+Most importantly, you can access a version of a color that contrast current background color through a CSS variable. You define current background color by adding a background class to your element, by extending that class using sass, or it would be set by parent element.
 
 In the next example, `.my-class` would receive adapted text colors that contrast its parent background color.
 
-```CSS
+```css
 .my-class {
   color: var(--secondary-text-color)
 }
@@ -71,13 +71,13 @@ In the next example, `.my-class` would receive adapted text colors that contrast
 
 Besides, `$colors` generates border colors for components. Border colors would contrast background colors as much as you set `$border-contrast`.
 
-```SASS
+```sass
 $border-color: ...
 ```
 
 You are able to customise them using CSS variables too.
 
-```CSS
+```css
 :root {
   --canvas-border-color: ...;
   --primary-border-color: ...;
@@ -89,7 +89,7 @@ You are able to customise them using CSS variables too.
 
 You may want to change color of clickable elements when hovered. You can set the contrast when a clickable element is hover by setting `$hover-contrast`.
 
-```SASS
+```sass
 $hover-contrast: ...
 ```
 
@@ -97,7 +97,7 @@ $hover-contrast: ...
 
 You may want to change color of clickable elements when active, focus or with `active` class. You can set their contrast with `$active-contrast`.
 
-```SASS
+```sass
 $active-contrast: ...
 ```
 
@@ -105,7 +105,7 @@ $active-contrast: ...
 
 You can define a gradient for all backgrounds by declaring `--background-image`.
 
-```CSS
+```css
 :root {
   --background-image: ...;
 }
@@ -117,7 +117,7 @@ You can define a gradient for all backgrounds by declaring `--background-image`.
 
 Below there is a typical example of styling links. Text color is set to `--primary-text-color` to make it match the rest of the website.
 
-```CSS
+```css
 .link, a {
   color: var(--primary-text-color);
   text-decoration: underline;
@@ -127,9 +127,9 @@ Below there is a typical example of styling links. Text color is set to `--prima
 
 ## Components
 
-`config.$component-selectors` is a SASS variable defined in configuration. It is a list of selectors of components that includes: `code`, `nav a`... There you can define style that components share.
+`config.$component-selectors` is a sass variable defined in configuration. It is a list of selectors of components that includes: `code`, `nav a`... There you can define style that components share.
 
-```SASS
+```sass
 #{config.$component-selectors}
   padding: ...
   border-style: ...
@@ -139,7 +139,7 @@ Below there is a typical example of styling links. Text color is set to `--prima
 
 Also you can define styles for buttons, and clickable elements.
 
-```SASS
+```sass
 #{config.$button-selectors}
   ...
 
@@ -154,7 +154,7 @@ Also you can define styles for buttons, and clickable elements.
 
 There is a CSS variable defined at `:root`, that sets top margin of body if there is a `nav.absolute`, or `nav.fixed`.
 
-```CSS
+```css
 :root {
   --navbar-body-margin: ...;
 }

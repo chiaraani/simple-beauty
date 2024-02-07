@@ -6,7 +6,7 @@ title: Colors
 
 You can set the background color of anything by adding classes. And text would get the right contrast.
 
-```HTML
+```html
 <style type="text/css">div { padding: 1em; display: inline-block; }</style>
 <div class="canvas-bg">Canvas</div>
 <div class="primary-bg">Primary</div>
@@ -18,7 +18,7 @@ You can set the background color of anything by adding classes. And text would g
 
 When you set a color to a text, the color would contrast its background.
 
-```HTML
+```html
 <span class="canvas-text">Canvas</span>
 <span class="primary-text">Primary</span>
 <span class="secondary-text">Secondary</span>

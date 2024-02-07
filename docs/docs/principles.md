@@ -4,11 +4,11 @@ title: Principles of Simple beauty
 
 What makes Simple beauty different to other web layout frameworks is its principles.
 
-## Style HTML tags
+## Style html tags
 
 If you want to style navbars, style is directly applied to `nav` tag, instead of creating `navbar` class, and a class to style links of the navbar.
 
-```HTML
+```html
 <nav>
   <a href="#">Home</a>
   <a href="#">About</a>
@@ -16,23 +16,23 @@ If you want to style navbars, style is directly applied to `nav` tag, instead of
 ```
 
 If an HTML tag is very specific, then apply style directly to it.
-This makes development very fast, because if you have a great deal of not styled HTML code, you might not even need to think about adding classes to it.
+This makes development very fast, because if you have a great deal of not styled html code, you might not even need to think about adding classes to it.
 
 ### Exceptions
 
-#### You want a different look to actual HTML tag
+#### You want a different look to actual html tag
 
 When you want element to look as if was other kind of element.
 
-```HTML
+```html
 <a class="button" href="#">Not a button, but it looks like a button</a>
 ```
 
-#### HTML tag is unspecific
+#### html tag is unspecific
 
 For example, you want to make a component out of a 'div'.
 
-```HTML
+```html
 <div class="component">This is a div that is styled as a component.</div>
 ```
 
@@ -40,13 +40,13 @@ For example, you want to make a component out of a 'div'.
 
 For example, you want your text to have a particular color.
 
-```HTML
+```html
 <span class="secondary-text">Text with secondary color</span>
 ```
 
 ## Change look and feel in CSS or SASS
 
-If you wish to change look, create a new theme with SASS variables, CSS variables, or CSS in general. Adding loads of classes that abbreviate CSS declarations is very tedious, and ends up in a very unclean messy long HTML.
+If you wish to change look, create a new theme with SASS variables, CSS variables, or CSS in general. Adding loads of classes that abbreviate CSS declarations is very tedious, and ends up in a very unclean messy long html.
 
 ## How was this framework originated?
 

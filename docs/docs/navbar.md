@@ -4,7 +4,7 @@ title: Navbar
 
 As easy as this:
 
-```HTML
+```html
 <nav>
   <a href="#" class="brand">Brand</a>
   <a href="#">Home</a>
@@ -16,7 +16,7 @@ As easy as this:
 
 This is where you display your website's name.
 
-```HTML
+```html
 <a href="#" class="brand">My website's name</a>
 ```
 
@@ -24,7 +24,7 @@ This is where you display your website's name.
 
 Make your navbar collapsable like this:
 
-```HTML
+```html
 <nav>
   <button class="open-button"></button>
   <a href="#" class="brand">Brand</a>
@@ -42,7 +42,7 @@ _The navbar is only collapsed in small devices._
 
 To keep navbar open add `open` class to `.collapse`.
 
-```HTML
+```html
 <nav>
   <button class="open-button"></button>
   <a href="#" class="brand">Brand</a>
@@ -58,7 +58,7 @@ To keep navbar open add `open` class to `.collapse`.
 
 To keep navbar close add `close` class to `.collapse`.
 
-```HTML
+```html
 <nav>
   <button class="open-button"></button>
   <a href="#" class="brand">Brand</a>
@@ -74,7 +74,7 @@ To keep navbar close add `close` class to `.collapse`.
 
 If you add `horizonal-sm` class, it would always arrange elements horizontally, even in small devices.
 
-```HTML
+```html
 <nav class="horizontal-sm">
   <a href="#" class="brand">Brand</a>
   <a href="#">Home</a>
@@ -88,7 +88,7 @@ If you add `horizonal-sm` class, it would always arrange elements horizontally, 
 
 Just add `absolute` class to it.
 
-```HTML
+```html
 <nav class="absolute">
   <button class="open-button"></button>
   <a href="#" class="brand">Brand</a>
@@ -109,7 +109,7 @@ Just add `absolute` class to it.
 
 Simply add `fixed` class.
 
-```HTML
+```html
 <style type="text/css"> :root { height: 100px; background: white; } </style>
 
 <nav class="fixed">
@@ -134,7 +134,7 @@ Simply add `fixed` class.
 
 Just add `sticky` class.
 
-```HTML
+```html
 <style type="text/css"> :root { height: 100px; background: white; } </style>
 
 <header><big>Header...</big></header>
@@ -162,7 +162,7 @@ Just add `sticky` class.
 
 You can add `active` class to active link to style it.
 
-```HTML
+```html
 <nav>
   <a href="#" class="brand">Brand</a>
   <a href="#">Home</a>

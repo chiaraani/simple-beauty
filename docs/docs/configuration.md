@@ -17,9 +17,9 @@ By default, breakpoints are:
 | Extra large       | xl          | ≥1200px    |
 | Extra extra large | xxl         | ≥1400px    |
 
-However, you can customise breakpoints as SASS variables, in the next way:
+However, you can customise breakpoints as sass variables, in the next way:
 
-```SASS
+```sass
 $breakpoints: ('sm': ..., 'md': ..., 'xl': ..., 'xxl': ... )
 ```
 
@@ -27,7 +27,7 @@ $breakpoints: ('sm': ..., 'md': ..., 'xl': ..., 'xxl': ... )
 
 `$collapse-breakpoint` when navbars should display horizontally, or collapsed vertically.
 
-```SASS
+```sass
 $collapse-breakpoint: map.get($breakpoints, 'sm')
 ```
 
@@ -35,7 +35,7 @@ $collapse-breakpoint: map.get($breakpoints, 'sm')
 
 It is a list of selectors of components that includes: `code`, `nav a`... So you can define style that components share. You can customise the list of components by changing this variable.
 
-```SASS
+```sass
 $component-selectors: ..., ...
 ```
 
@@ -43,6 +43,6 @@ $component-selectors: ..., ...
 
 `$button-selectors` defines all selectors for buttons, in turn, button selectors are component selectors as well.
 
-```SASS
+```sass
 $button-selectors: ..., ...
 ```
