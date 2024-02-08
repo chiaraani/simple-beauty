@@ -1,0 +1,39 @@
+.card {
+  @include color-component('canvas');
+  padding: var(--card-padding);
+  border-radius: var(--card-border-radius);
+  border-width: var(--card-border-width);
+  border-style: var(--card-border-style);
+}
+
+.button, button, input[type=submit], input[type=button], input[type=reset] {
+  @include color-component('primary');
+  @include color-clickable('primary');
+  text-decoration: none;
+  padding: var(--button-padding);
+  border-radius: var(--button-border-radius);
+  border-width: var(--button-border-width);
+  border-style: var(--button-border-style);
+  cursor: pointer;
+  font: var(--button-font);
+}
+
+.group {
+  padding: 0;
+  & > * {
+    @include color-component('canvas');
+    display: block;
+    padding: var(--group-padding);
+    border-width: var(--card-border-width);
+    border-style: var(--card-border-style);
+    &:last-child {
+      border-radius: 0 0 var(--group-border-radius) var(--group-border-radius);
+    }
+    &:first-child {
+      border-radius: var(--group-border-radius) var(--group-border-radius) 0 0;
+    }
+    &:not(:first-child) {
+      border-top: none;
+    }
+  }
+}

@@ -4,4 +4,11 @@
 
 @import "minima";
 
-@import 'main.sass';
+.example {
+  iframe {
+    display: block;
+    resize: both;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+}

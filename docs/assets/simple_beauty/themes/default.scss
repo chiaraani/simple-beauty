@@ -1,0 +1,46 @@
+---
+---
+
+@use '../generate-color-variables';
+
+:root {
+  // Colors
+  @include generate-color-variables.globals(
+    $colors: (
+      "canvas": white,
+      "primary": #002b6f,
+      "secondary": #005b52,
+      "tertiary": #29005b,
+      "success": #005b15,
+      "danger": #970000,
+      "warning": #e78f00,
+      "info": #00b8cf,
+    ),
+    $text-contrast: 95%,
+    $border-contrast: 20%,
+    $hover-contrast: 10%,
+  );
+
+  // Components
+  --component-padding: 1em;
+  --component-border-radius: 1em;
+  --component-border-width: 1px;
+  --component-border-style: solid;
+
+  // Card 
+  --card-padding: var(--component-padding);
+  --card-border-radius: var(--component-border-radius);
+  --card-border-width: var(--component-border-width);
+  --card-border-style: var(--component-border-style);
+  // Button
+  --button-padding: 0.5em;
+  --button-border-radius: 0.5em;
+  --button-border-width: var(--component-border-width);
+  --button-border-style: var(--component-border-style);
+  --button-font: inherit;
+  // Groups
+  --group-padding: var(--component-padding);
+  --group-border-radius: var(--component-border-radius);
+  --group-border-width: var(--component-border-width);
+  --group-border-style: var(--component-border-style);
+}

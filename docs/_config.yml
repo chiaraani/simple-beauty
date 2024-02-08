@@ -26,18 +26,18 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
 github_username:  chiaraani
 
+livereload: true
+
 defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
   - scope:
       path: ""
     values:
       layout: default
-
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
 # Build settings
 theme: minima
 # plugins:

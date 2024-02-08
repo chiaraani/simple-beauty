@@ -1,6 +1,12 @@
 list_title: Documentation
 list:
-  - title: 'Layout: Grid system, container...'
+  - title: 'Layout: Container...'
     path: layout
+  - title: 'Colours'
+    path: colors
+  - title: 'Components'
+    path: components
+  - title: 'Theme: make your own theme!'
+    path: theme
   - title: 'Principles of Simple beauty'
-    path: 'principles'
+    path: principles

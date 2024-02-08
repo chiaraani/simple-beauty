@@ -1,0 +1,50 @@
+@use 'sass:color';
+
+@mixin globals($colors, $text-contrast, $border-contrast, $hover-contrast) {
+  @each $color-name, $color-code in $colors {
+    --#{$color-name}-color: #{$color-code};
+    // Text
+    --text-contrast-#{$color-name}-color: #{text-contrast-color($color-code, $contrast: $text-contrast)};
+    @each $color-name2, $color-code2 in $colors {
+      --#{$color-name2}-text-contrast-#{$color-name}-color: #{text-contrast-color($color-code, $text-base: $color-code2)}
+    }
+    // Border
+    --#{$color-name}-border-color: #{contrast($color-code, $border-contrast)};
+    // Hover
+    --#{$color-name}-hover-color: #{contrast($color-code, $hover-contrast)};
+  }
+}
+
+@function is-light($color-code) {
+  @return lightness($color-code) > 50%;
+}
+
+@function contrast($color, $amount) {
+  @if is-light($color) {
+    @return darken($color, $amount);
+  }
+  @else {
+    @return lighten($color, $amount);
+  }
+}
+
+@function text-contrast-color($background, $text-base: false, $contrast: 60%) {
+  @if $text-base {
+    @if is-light($background) {
+      @if lightness($background) - lightness($text-base) >= $contrast {
+        @return  $text-base
+      } @else {
+        @return color.change($text-base, $lightness: 100% - $contrast)
+      }
+    } @else {
+      @if lightness($text-base) - lightness($background) >=  $contrast {
+        @return $text-base;
+      }
+      @else {
+        @return color.change($text-base, $lightness: $contrast)
+      }
+    }
+    } @else {
+      @return text-contrast-color($background, $background, $contrast);
+    }
+}
