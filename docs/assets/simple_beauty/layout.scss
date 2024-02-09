@@ -1,3 +1,7 @@
+body {
+  @extend .canvas-bg
+}
+
 .responsive {
   display: inline-block;
 }

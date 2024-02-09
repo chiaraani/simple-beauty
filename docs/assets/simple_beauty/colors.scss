@@ -37,37 +37,21 @@ $colors: (
     
     --hover-color: var(--#{$color}-hover-color);
   }
-}
 
-body {
-  @extend .canvas-bg
-}
+  %color-component-default-#{$color} {
+    background-color: var(--background-color, var(--#{$color}-color));
+    border-color: var(--border-color, var(--#{$color}-border-color));
 
-@mixin color-component($default) {
-  background-color: var(--background-color, var(--default-background-color));
-  border-color: var(--border-color, var(--default-border-color));
-
-  // Text contrasts background colors
-  color: var(--text-contrast-color, var(--default-text-contrast-color));
-  @each $color in $colors {
-    --#{$color}-text-color: var(--#{$color}-text-contrast-color, var(--#{$color}-text-contrast-default-color));
+    // Text contrasts background colors
+    color: var(--text-contrast-color, var(--text-contrast-#{$color}-color));
+    @each $color2 in $colors {
+      --#{$color2}-text-color: var(--#{$color2}-text-contrast-color, var(--#{$color2}-text-contrast-#{$color}-color) );
+    }
   }
 
-  // Default
-  --default-background-color: var(--#{$default}-color);
-  --default-border-color:  var(--#{$default}-border-color);
-  // Text contrasts default background color
-  --default-text-contrast-color: var(--text-contrast-#{$default}-color);
-  @each $color in $colors {
-    --#{$color}-text-contrast-default-color: var(--#{$color}-text-contrast-#{$default}-color);
+  %color-clickable-default-#{$color} {
+    &:hover {
+      background-color: var(--hover-color, var(--#{$color}-hover-color));
+    }
   }
-  
-
-}
-
-@mixin color-clickable($default) {
-  &:hover {
-    background-color: var(--hover-color, var(--default-hover-color));
-  }
-  --default-hover-color: var(--#{$default}-hover-color);
 }
