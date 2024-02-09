@@ -71,3 +71,16 @@ nav {
     }
   }
 }
+
+// Fixed
+
+body:has(nav.fixed) {
+  padding-top: calc(var(--navbar-padding) + calc( var(--site-name-size) ) );
+}
+
+nav.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+}
