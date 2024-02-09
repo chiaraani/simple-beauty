@@ -17,3 +17,36 @@ body {
   margin: auto;
   max-width: 100%;
 }
+
+
+@for $i from 2 through 12 {
+  $size: calc(1400px / $i);
+  .part-#{$i} {
+    display: inline-block;
+    width: 100%;
+  }
+  @for $x from 2 through $i {
+    @media only screen and (min-width: calc( $size * $x ) ) {
+      .part-#{$i} {
+        width: calc(100% / $x);
+      }
+    }
+  }
+}
+
+
+@for $i from 2 through 12 {
+  $size: calc(1400px / $i);
+  .sliced-in-#{$i} {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @for $x from 2 through $i {
+    @media only screen and (min-width: calc( $size * $x ) ) {
+      .sliced-in-#{$i} {
+        grid-template-columns: repeat($x, 1fr);
+      }
+    }
+  }
+}
+
