@@ -1,12 +1,5 @@
-$colors: (
-  "canvas",
-  "primary",
-  "secondary", 
-  "tertiary", 
-  "success", 
-  "danger", 
-  "warning", 
-  "info",
+$colors: ( "canvas", "primary", "secondary", "tertiary", 
+  "success", "danger", "warning", "info",
 );
 
 @each $color in $colors {

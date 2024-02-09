@@ -23,23 +23,27 @@
 
   // Components
   --component-padding: 1em;
+  --component-margin: 0.2em;
   --component-border-radius: 1em;
   --component-border-width: 1px;
   --component-border-style: solid;
 
   // Card 
   --card-padding: var(--component-padding);
+  --card-margin: var(--component-margin);
   --card-border-radius: var(--component-border-radius);
   --card-border-width: var(--component-border-width);
   --card-border-style: var(--component-border-style);
   // Button
   --button-padding: 0.5em;
+  --button-margin: 0.05em;
   --button-border-radius: 0.5em;
   --button-border-width: var(--component-border-width);
   --button-border-style: var(--component-border-style);
   --button-font: inherit;
   // Groups
   --group-padding: var(--component-padding);
+  --group-margin: var(--component-margin);
   --group-border-radius: var(--component-border-radius);
   --group-border-width: var(--component-border-width);
   --group-border-style: var(--component-border-style);

@@ -6,6 +6,8 @@ list:
     path: colors
   - title: 'Components'
     path: components
+  - title: 'Navbar'
+    path: navbar
   - title: 'Theme: make your own theme!'
     path: theme
   - title: 'Principles of Simple beauty'
