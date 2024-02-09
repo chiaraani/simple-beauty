@@ -17,16 +17,7 @@
         </label>
 
         <div class="trigger">
-          <ul>
-            <li>
-              <h2>{{ site.data.docs.list_title }}</h2>
-                <ul>
-                   {% for item in site.data.docs.list %}
-                      <li><a href="/docs/{{ item.path }}.html">{{ item.title }}</a></li>
-                   {% endfor %}
-                </ul>
-            </li>
-          </ul>
+          <a class="page-link" href="/docs.html">Documentation</a>
         </div>
       </nav>
     {%- endif -%}
