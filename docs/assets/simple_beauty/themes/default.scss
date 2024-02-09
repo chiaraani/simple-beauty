@@ -3,6 +3,10 @@
 
 @use '../generate-color-variables';
 
+* {
+  transition: 0.5s all;
+}
+
 :root {
   // Colors
   @include generate-color-variables.globals(
@@ -47,4 +51,13 @@
   --group-border-radius: var(--component-border-radius);
   --group-border-width: var(--component-border-width);
   --group-border-style: var(--component-border-style);
+
+  // Navbar
+  --site-name-size: 1.5em;
+  --navbar-padding: var(--component-padding);
+  --navbar-margin: var(--component-margin);
+  --navbar-border-width: var(--component-border-width);
+  --navbar-border-style: var(--component-border-style);
+  --navbar-link-text-decoration: none;
 }
+

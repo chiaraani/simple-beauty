@@ -1,5 +1,11 @@
+$large-device: 1000px;
+
 body {
   @extend .canvas-bg
+}
+
+.site-name {
+  font-size: var(--site-name-size);
 }
 
 .responsive {

@@ -34,9 +34,9 @@
     }
     &:first-child {
       border-radius: var(--group-border-radius) var(--group-border-radius) 0 0;
-    }
-    &:not(:first-child) {
-      border-top: none;
+    } 
+    &:not(:last-child) {
+      border-bottom: none;
     }
   }
 }
