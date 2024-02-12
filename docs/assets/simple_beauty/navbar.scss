@@ -1,4 +1,10 @@
+:root {
+  --navbar-height: calc( var(--navbar-padding) + var(--site-name-size) );
+}
+
 nav {
+  display: flex;
+  flex-direction: column;
   @extend %color-component-default-primary;
   border-width: var(--navbar-border-width);
   border-style: var(--navbar-border-style);
@@ -6,74 +12,74 @@ nav {
     @extend %color-component-default-primary;
     @extend %color-clickable-default-primary;
     border-width: var(--navbar-border-width);
-    border-top-style: var(--navbar-border-style);
+    border-bottom-style: var(--navbar-border-style);
     display: block;
     color: inherit;
     text-decoration: var(--navbar-link-text-decoration);
     padding: var(--navbar-padding);
   }
 
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: inherit;
+    border-width: 0;
+  }
+
   .site-name {
+    border-bottom-style: none;
     padding: calc(var(--navbar-padding) - calc( var(--site-name-size) - 1em ) ); 
   }
 
-  
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   .open-button::before {
     content: '☰';
   }
 
-  .collapse {
-    border-right: inherit;
-    background: inherit;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: translateX(-100%);
-    height: 100%;
+  .collapse {;
+    max-height: 0;
     overflow: auto;
+    flex-direction: inherit;
     div {
-      display: flex;
       flex-direction: inherit;
-    }
-    .close-button {
-      align-self: flex-end;
-      padding: calc(var(--navbar-padding) / 4);
-      &::before {
-        content: '×';
-      }
     }
   }
 
-  .open-button:focus + .collapse {
-    transform: translateX(0);
-  }
+  &.open {
+    .header {
+      border-bottom-width: inherit;
+    }
+    .collapse {
+      max-height: calc( 90vh - var(--navbar-height) * 2 );
+    }
+  } 
 }
 
 @media only screen and (min-width: $large-device)  {
   nav {
-    a {
-      display: inline-block;
-      border-top-style: none;
+    flex-direction: row;
+    a, .site-name {
+      border-bottom-style: none;
       border-right-style: var(--navbar-border-style);
     }
     .header  { 
       display: inline-block;
+      border: none;
     }
-    .open-button, .close-button {
+    .open-button {
       display: none;
     }
     .collapse {
-      flex-direction: row;
+      display: flex;
+      height: auto;
       justify-content: space-between;
-      position: static;
-      transform: translateX(0);
-      border-right: none;
       flex-grow: 1;
+      div {
+        display: flex;
+      }
+      &.open {
+        max-height: auto;
+      }
     }
   }
 }
@@ -81,7 +87,7 @@ nav {
 // Fixed
 
 .navbar-push {
- padding-top: calc( var(--navbar-padding) + var(--site-name-size) + 1em );
+ padding-top: var(--navbar-height);
 }
 
 nav.fixed {

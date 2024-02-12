@@ -4,18 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>All in Simple Beauty</title>
+    <script src="/assets/simple_beauty/index.js"></script>
     <link rel="stylesheet" type="text/css" href="/assets/simple_beauty.css" />
     <link rel="stylesheet" type="text/css" href="/assets/simple_beauty/themes/default.css" />
   </head>
   <body class="navbar-push">
     <header>
       <nav class="fixed">
-        <a href="#" class="site-name">Site name</a>
-        <button class="open-button"></button>
+        <div class="header">
+          <a href="#" class="site-name">Site name</a>
+          <button class="open-button" onclick="toggleNavbar()"></button>
+        </div>
         <div class="collapse">
-          <button class="close-button"></button>
           <div>
-            <a href="/">Home</a></li>
+            <a href="#">Home</a></li>
             <a href="#">About</a></li>
           </div>
           <div>
