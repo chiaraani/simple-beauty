@@ -14,10 +14,11 @@ This a navbar:
   </div>
   <div class="collapse">
     <div>
-      <a href="#">Home</a></li>
-      <a href="#">About</a></li>
+      <a href="#">Home</a>
+      <a href="#">About</a>
     </div>
     <div>
+      <p><em>Slogan...</em></p>
       <a href="#" class="success">Sign up</a>
       <a href="#">Sign in</a>
     </div>
@@ -39,10 +40,11 @@ Add `open` class to open `.collapse`.
   </div>
   <div class="collapse">
     <div>
-      <a href="#">Home</a></li>
-      <a href="#">About</a></li>
+      <a href="#">Home</a>
+      <a href="#">About</a>
     </div>
     <div>
+      <p><em>Slogan...</em></p>
       <a href="#" class="success">Sign up</a>
       <a href="#">Sign in</a>
     </div>
@@ -64,10 +66,11 @@ Add `fixed` class to navbar, and `navbar-push` class to body or website content.
   </div>
   <div class="collapse">
     <div>
-      <a href="#">Home</a></li>
-      <a href="#">About</a></li>
+      <a href="#">Home</a>
+      <a href="#">About</a>
     </div>
     <div>
+      <p><em>Slogan...</em></p>
       <a href="#" class="success">Sign up</a>
       <a href="#">Sign in</a>
     </div>

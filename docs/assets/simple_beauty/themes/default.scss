@@ -39,9 +39,9 @@
   --card-border-width: var(--component-border-width);
   --card-border-style: var(--component-border-style);
   // Button
-  --button-padding: 0.5em;
+  --button-padding: 0.5em 1em;
   --button-margin: 0.05em;
-  --button-border-radius: 0.5em;
+  --button-border-radius: var(--component-border-radius);
   --button-border-width: var(--component-border-width);
   --button-border-style: var(--component-border-style);
   --button-font: inherit;
@@ -61,3 +61,6 @@
   --navbar-link-text-decoration: none;
 }
 
+nav p {
+  opacity: 0.95;
+}

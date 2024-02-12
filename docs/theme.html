@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All in Simple Beauty</title>
+    <title>Theme - Simple Beauty</title>
     <script src="/assets/simple_beauty/index.js"></script>
     <link rel="stylesheet" type="text/css" href="/assets/simple_beauty.css" />
     <link rel="stylesheet" type="text/css" href="/assets/simple_beauty/themes/default.css" />
@@ -17,12 +17,11 @@
         </div>
         <div class="collapse">
           <div>
-            <a href="#">Home</a></li>
-            <a href="#">About</a></li>
+            <a href="/">Home</a>
+            <a href="/docs">Documentation</a>
           </div>
           <div>
-            <a href="#" class="success">Sign up</a>
-            <a href="#">Sign in</a>
+            <p><i>Default Theme</i></p>
           </div>
         </div>
       </nav>
@@ -30,6 +29,51 @@
     <main class="container">
       <h1>All in Simple beauty</h1>
       <h2>Framework for super fast, easy and beautiful web layout development.</h2>
+      <h2>Components</h2>
+      <h3>Cards</h3>
+      <div class="sliced-in-8">
+        <div class="card">Card</div>
+        <div class="primary card">Primary Card</div>
+        <div class="secondary card">Secondary Card</div>
+        <div class="tertiary card">Tertiary Card</div>
+        <div class="success card">Success Card</div>
+        <div class="danger card">Danger Card</div>
+        <div class="warning card" >Warning Card</div>
+        <div class="info card">Info Card</div>
+      </div>
+      <h3>Buttons</h3>
+      <button class="canvas">Canvas</button>
+      <button class="primary">Primary</button>
+      <button class="secondary">Secondary</button>
+      <button class="tertiary">Tertiary</button>
+      <button class="success">Success</button>
+      <button class="danger">Danger</button>
+      <button class="warning">Warning</button>
+      <button class="info">Info</button>
+      <h3>Group</h3>
+      <div class="group">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>      
+      </div>
+      <h2>Navbar</h2>
+      <nav>
+        <div class="header">
+          <a href="#" class="site-name">Site name</a>
+          <button class="open-button" onclick="toggleNavbar()"></button>
+        </div>
+        <div class="collapse">
+          <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+          </div>
+          <div>
+            <p><em>Slogan...</em></p>
+            <a href="#" class="success">Sign up</a>
+            <a href="#">Sign in</a>
+          </div>
+        </div>
+      </nav>
     </main>
   </body>
 </html>
