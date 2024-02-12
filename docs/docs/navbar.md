@@ -6,10 +6,8 @@ This a navbar:
 
 ```html
 <nav>
-  <div class="header">
-    <a href="#" class="site-name">Site name</a>
-    <button class="open-button"></button>
-  </div>
+  <a href="#" class="site-name">Site name</a>
+  <button class="open-button"></button>
   <div class="collapse">
     <button class="close-button"></button>
     <div>
@@ -26,14 +24,14 @@ This a navbar:
 
 ## Fixed
 
+Add `fixed` class to navbar, and `navbar-push` class to body or website content.
+
 ```html
-<style>body { height: 3em; }</style>
+<style>body { height: 5em; }</style>
 
 <nav class="fixed">
-  <div class="header">
-    <a href="#" class="site-name">Site name</a>
-    <button class="open-button"></button>
-  </div>
+  <a href="#" class="site-name">Site name</a>
+  <button class="open-button"></button>
   <div class="collapse">
     <button class="close-button"></button>
     <div>
@@ -47,7 +45,7 @@ This a navbar:
   </div>
 </nav>
 
-<ol>
+<ol class="navbar-push">
   <li>Item</li>
   <li>Item</li>
   <li>Item</li>

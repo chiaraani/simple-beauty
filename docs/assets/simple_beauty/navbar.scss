@@ -1,5 +1,7 @@
 nav {
   @extend %color-component-default-primary;
+  border-width: var(--navbar-border-width);
+  border-style: var(--navbar-border-style);
   a {
     @extend %color-component-default-primary;
     @extend %color-clickable-default-primary;
@@ -15,16 +17,16 @@ nav {
     padding: calc(var(--navbar-padding) - calc( var(--site-name-size) - 1em ) ); 
   }
 
-  .header  {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    .open-button::before {
-      content: '☰';
-    }
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .open-button::before {
+    content: '☰';
   }
 
   .collapse {
+    border-right: inherit;
     background: inherit;
     display: flex;
     flex-direction: column;
@@ -34,6 +36,10 @@ nav {
     transform: translateX(-100%);
     height: 100%;
     overflow: auto;
+    div {
+      display: flex;
+      flex-direction: inherit;
+    }
     .close-button {
       align-self: flex-end;
       padding: calc(var(--navbar-padding) / 4);
@@ -42,14 +48,14 @@ nav {
       }
     }
   }
-  &:has(.open-button:focus) .collapse {
+
+  .open-button:focus + .collapse {
     transform: translateX(0);
   }
 }
 
 @media only screen and (min-width: $large-device)  {
   nav {
-    display: flex;
     a {
       display: inline-block;
       border-top-style: none;
@@ -74,8 +80,8 @@ nav {
 
 // Fixed
 
-body:has(nav.fixed) {
-  padding-top: calc(var(--navbar-padding) + calc( var(--site-name-size) ) );
+.navbar-push {
+ padding-top: calc( var(--navbar-padding) + var(--site-name-size) + 1em );
 }
 
 nav.fixed {
@@ -83,4 +89,5 @@ nav.fixed {
   width: 100%;
   top: 0;
   right: 0;
+  border-style: none none var(--navbar-border-style) none;
 }
