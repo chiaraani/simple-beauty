@@ -33,7 +33,7 @@
 :root {
   --component-padding: 1em;
   --component-margin: 0.2em;
-  --component-border-radius: 1em;
+  --component-border-radius: 12px;
   --component-border-width: 2px;
   --component-border-style: solid;
 }
@@ -47,9 +47,9 @@
 }
 
 #{selectors.$button} {
-  padding: 0.5em 1em;
+  padding: 0.5em 0.7em;
   margin: 0.05em;
-  border-radius: var(--component-border-radius);
+  border-radius: 1em;
   border-width: var(--component-border-width);
   border-style: var(--component-border-style);
   font: inherit;
@@ -70,12 +70,14 @@
   --site-name-size: 1.5em;
   --navbar-padding: var(--component-padding);
   --navbar-margin: var(--component-margin);
+  --navbar-border-radius: var(--component-border-radius);
   --navbar-border-width: var(--component-border-width);
   --navbar-border-style: var(--component-border-style);
   --navbar-link-text-decoration: none;
 }
 
 nav {
+    border-radius: var(--navbar-border-radius);
   a {
     text-decoration: none;
   }
