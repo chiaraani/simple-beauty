@@ -1,34 +1,22 @@
+@use 'selectors';
+
 .card {
   @extend %color-component-default-canvas;
-  padding: var(--card-padding);
-  margin: var(--card-margin);
-  border-radius: var(--card-border-radius);
-  border-width: var(--card-border-width);
-  border-style: var(--card-border-style);
 }
 
-.button, button, input[type=submit], input[type=button], input[type=reset] {
+#{selectors.$button} {
   @extend %color-component-default-primary;
   @extend %color-clickable-default-primary;
+  display: inline-block;
   text-decoration: none;
-  padding: var(--button-padding);
-  margin: var(--button-margin);
-  border-radius: var(--button-border-radius);
-  border-width: var(--button-border-width);
-  border-style: var(--button-border-style);
   cursor: pointer;
-  font: var(--button-font);
 }
 
 .group {
   padding: 0;
-  margin: var(--group-margin);
   & > * {
     @extend %color-component-default-canvas;
     display: block;
-    padding: var(--group-padding);
-    border-width: var(--card-border-width);
-    border-style: var(--card-border-style);
     &:last-child {
       border-radius: 0 0 var(--group-border-radius) var(--group-border-radius);
     }

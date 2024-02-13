@@ -1,5 +1,5 @@
 :root {
-  --navbar-height: calc( var(--navbar-padding) + var(--site-name-size) );
+  --navbar-height: calc( var(--navbar-padding) + var(--site-name-size) + var(--navbar-margin) );
 }
 
 nav {
@@ -15,7 +15,6 @@ nav {
     border-bottom-style: var(--navbar-border-style);
     display: block;
     color: inherit;
-    text-decoration: var(--navbar-link-text-decoration);
   }
 
   p, a {
@@ -28,7 +27,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     border-bottom: inherit;
-    border-width: 0;
+    border-color: transparent;
   }
 
   .site-name {
@@ -51,7 +50,7 @@ nav {
 
   &.open {
     .header {
-      border-bottom-width: inherit;
+      border-color: inherit;
     }
     .collapse {
       max-height: calc( 90vh - var(--navbar-height) * 1.5 );
@@ -62,7 +61,7 @@ nav {
 @media only screen and (min-width: $large-device)  {
   nav {
     flex-direction: row;
-    a, .site-name {
+    a {
       border-bottom-style: none;
       border-right-style: var(--navbar-border-style);
     }

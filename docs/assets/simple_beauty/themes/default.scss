@@ -2,13 +2,10 @@
 ---
 
 @use '../generate-color-variables';
+@use '../selectors';
 
-* {
-  transition: 0.5s all;
-}
-
+// Colors
 :root {
-  // Colors
   @include generate-color-variables.globals(
     $colors: (
       "canvas": white,
@@ -21,38 +18,55 @@
       "info": #00b8cf,
     ),
     $text-contrast: 95%,
-    $border-contrast: 20%,
+    $border-contrast: 10%,
     $hover-contrast: 10%,
+    $input-alpha: 0.05,
   );
+}
 
-  // Components
+// Transition
+* {
+  transition: 0.5s all;
+}
+
+// Components
+:root {
   --component-padding: 1em;
   --component-margin: 0.2em;
   --component-border-radius: 1em;
-  --component-border-width: 1px;
+  --component-border-width: 2px;
   --component-border-style: solid;
+}
 
-  // Card 
-  --card-padding: var(--component-padding);
-  --card-margin: var(--component-margin);
-  --card-border-radius: var(--component-border-radius);
-  --card-border-width: var(--component-border-width);
-  --card-border-style: var(--component-border-style);
-  // Button
-  --button-padding: 0.5em 1em;
-  --button-margin: 0.05em;
-  --button-border-radius: var(--component-border-radius);
-  --button-border-width: var(--component-border-width);
-  --button-border-style: var(--component-border-style);
-  --button-font: inherit;
-  // Groups
-  --group-padding: var(--component-padding);
-  --group-margin: var(--component-margin);
+.card { 
+  padding: var(--component-padding);
+  margin: var(--component-margin);
+  border-radius: var(--component-border-radius);
+  border-width: var(--component-border-width);
+  border-style: var(--component-border-style);
+}
+
+#{selectors.$button} {
+  padding: 0.5em 1em;
+  margin: 0.05em;
+  border-radius: var(--component-border-radius);
+  border-width: var(--component-border-width);
+  border-style: var(--component-border-style);
+  font: inherit;
+}
+
+.group {
+  margin: var(--component-margin);
   --group-border-radius: var(--component-border-radius);
-  --group-border-width: var(--component-border-width);
-  --group-border-style: var(--component-border-style);
+  & > * {
+    padding: var(--component-padding);
+    border-width: var(--component-border-width);
+    border-style: var(--component-border-style);
+  }
+}
 
-  // Navbar
+// Navbar
+:root {
   --site-name-size: 1.5em;
   --navbar-padding: var(--component-padding);
   --navbar-margin: var(--component-margin);
@@ -61,6 +75,22 @@
   --navbar-link-text-decoration: none;
 }
 
-nav p {
-  opacity: 0.95;
+nav {
+  a {
+    text-decoration: none;
+  }
+
+  p {
+    opacity: 0.95;
+  }
 }
+
+// // Forms //
+// // Inputs
+// --input-padding: 0.7em 1em;
+// --input-margin: var(--component-margin);
+// --input-border-radius: 2em;
+// --input-border-width: 0.2em;
+// --input-border-style: var(--component-border-style);
+// --input-box-shadow: inset 0 0 0.7em #0003;
+// --focus-input-color: var(--info-input-color);

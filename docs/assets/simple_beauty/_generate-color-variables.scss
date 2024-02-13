@@ -1,6 +1,10 @@
 @use 'sass:color';
 
-@mixin globals($colors, $text-contrast, $border-contrast, $hover-contrast) {
+$color-names: ( "canvas", "primary", "secondary", "tertiary", 
+  "success", "danger", "warning", "info",
+);
+
+@mixin globals($colors, $text-contrast, $border-contrast, $hover-contrast, $input-alpha) {
   @each $color-name, $color-code in $colors {
     --#{$color-name}-color: #{$color-code};
     // Text
@@ -12,6 +16,9 @@
     --#{$color-name}-border-color: #{contrast($color-code, $border-contrast)};
     // Hover
     --#{$color-name}-hover-color: #{contrast($color-code, $hover-contrast)};
+
+    // Inputs
+    --#{$color-name}-input-color: #{color.change($color-code, $alpha: $input-alpha)};
   }
 }
 

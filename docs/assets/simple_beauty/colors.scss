@@ -47,4 +47,9 @@ $colors: ( "canvas", "primary", "secondary", "tertiary",
       background-color: var(--hover-color, var(--#{$color}-hover-color));
     }
   }
+
+  // Forms
+  .#{$color} {
+    --input-color: var(--#{$color}-input-color);
+  }
 }
