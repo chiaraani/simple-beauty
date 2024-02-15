@@ -3,18 +3,25 @@ $colors: ( "canvas", "primary", "secondary", "tertiary",
 );
 
 @each $color in $colors {
-  .#{$color}-bg { 
-    background-color: var(--#{$color}-color);
-
-    // Text contrasts background colors
+  %text-contrasts-#{$color}-background {
     color: var(--text-contrast-#{$color}-color);
     @each $color2 in $colors {
       --#{$color2}-text-color: var(--#{$color2}-text-contrast-#{$color}-color);
     }
   }
 
+  .#{$color}-bg { 
+    background-color: var(--#{$color}-color);
+    @extend %text-contrasts-#{$color}-background;
+
+    // Input border
+    @each $color2 in $colors {
+      --#{$color2}-input-border-color: var(--#{$color2}-input-border-contrast-#{$color}-color);
+    }
+  }
+
   .#{$color}-text {
-    color: var(--#{$color}-text-color)
+    color: var(--#{$color}-text-color);
   }
 
   // Components
@@ -26,9 +33,11 @@ $colors: ( "canvas", "primary", "secondary", "tertiary",
     --text-contrast-color: var(--text-contrast-#{$color}-color);
     @each $color2 in $colors {
       --#{$color2}-text-contrast-color: var(--#{$color2}-text-contrast-#{$color}-color);
+      --#{$color2}-input-border-contrast-color: var(--#{$color2}-input-border-contrast-#{$color}-color);
     }
     
     --hover-color: var(--#{$color}-hover-color);
+    --input-border-color: var(--#{$color}-input-border-color);
   }
 
   %color-component-default-#{$color} {
@@ -39,6 +48,8 @@ $colors: ( "canvas", "primary", "secondary", "tertiary",
     color: var(--text-contrast-color, var(--text-contrast-#{$color}-color));
     @each $color2 in $colors {
       --#{$color2}-text-color: var(--#{$color2}-text-contrast-color, var(--#{$color2}-text-contrast-#{$color}-color) );
+      // Input border
+      --#{$color2}-input-border-color: var(--#{$color2}-input-border-contrast-color, var(--#{$color2}-input-border-contrast-#{$color}-color));
     }
   }
 
@@ -46,10 +57,5 @@ $colors: ( "canvas", "primary", "secondary", "tertiary",
     &:hover {
       background-color: var(--hover-color, var(--#{$color}-hover-color));
     }
-  }
-
-  // Forms
-  .#{$color} {
-    --input-color: var(--#{$color}-input-color);
   }
 }

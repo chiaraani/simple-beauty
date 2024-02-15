@@ -1,12 +1,16 @@
 list:
-  - title: 'Layout: Container...'
+  - title: 'Layout: Container, grid system...'
     path: layout
   - title: 'Colours'
     path: colors
+  - title: 'Content: Typography'
+    path: 'content'
   - title: 'Components'
     path: components
   - title: 'Navbar'
     path: navbar
+  - title: 'Forms'
+    path: forms
   - title: 'Theme: make your own theme!'
     path: theme
   - title: 'Principles of Simple beauty'

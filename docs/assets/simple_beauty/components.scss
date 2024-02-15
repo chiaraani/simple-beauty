@@ -1,5 +1,9 @@
 @use 'selectors';
 
+#{selectors.$clickable-components} {
+  cursor: pointer;
+}
+
 .card {
   @extend %color-component-default-canvas;
 }

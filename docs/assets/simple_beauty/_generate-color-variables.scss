@@ -4,21 +4,20 @@ $color-names: ( "canvas", "primary", "secondary", "tertiary",
   "success", "danger", "warning", "info",
 );
 
-@mixin globals($colors, $text-contrast, $border-contrast, $hover-contrast, $input-alpha) {
+@mixin globals($colors, $default-text-contrast, $minimum-text-contrast, $border-contrast, $hover-contrast, $input-border-contrast) {
   @each $color-name, $color-code in $colors {
     --#{$color-name}-color: #{$color-code};
     // Text
-    --text-contrast-#{$color-name}-color: #{text-contrast-color($color-code, $contrast: $text-contrast)};
+    --text-contrast-#{$color-name}-color: #{contrast-background($color-code, $default-text-contrast)};
     @each $color-name2, $color-code2 in $colors {
-      --#{$color-name2}-text-contrast-#{$color-name}-color: #{text-contrast-color($color-code, $text-base: $color-code2)}
+      --#{$color-name2}-text-contrast-#{$color-name}-color: #{contrast-background($color-code, $minimum-text-contrast, $base: $color-code2)};
+      // Input border
+      --#{$color-name2}-input-border-contrast-#{$color-name}-color: #{contrast-background($color-code, $input-border-contrast, $base: $color-code2)};
     }
     // Border
     --#{$color-name}-border-color: #{contrast($color-code, $border-contrast)};
     // Hover
     --#{$color-name}-hover-color: #{contrast($color-code, $hover-contrast)};
-
-    // Inputs
-    --#{$color-name}-input-color: #{color.change($color-code, $alpha: $input-alpha)};
   }
 }
 
@@ -35,23 +34,23 @@ $color-names: ( "canvas", "primary", "secondary", "tertiary",
   }
 }
 
-@function text-contrast-color($background, $text-base: false, $contrast: 60%) {
-  @if $text-base {
+@function contrast-background($background, $contrast, $base: false) {
+  @if $base {
     @if is-light($background) {
-      @if lightness($background) - lightness($text-base) >= $contrast {
-        @return  $text-base
+      @if lightness($background) - lightness($base) >= $contrast {
+        @return  $base
       } @else {
-        @return color.change($text-base, $lightness: 100% - $contrast)
+        @return color.change($base, $lightness: clamp(0%, color.lightness($background) - $contrast, 100%))
       }
     } @else {
-      @if lightness($text-base) - lightness($background) >=  $contrast {
-        @return $text-base;
+      @if lightness($base) - lightness($background) >=  $contrast {
+        @return $base;
       }
       @else {
-        @return color.change($text-base, $lightness: $contrast)
+        @return color.change($base, $lightness: clamp(0%, color.lightness($background) + $contrast, 100%))
       }
     }
     } @else {
-      @return text-contrast-color($background, $background, $contrast);
+      @return contrast-background($background, $contrast, $base: $background);
     }
 }

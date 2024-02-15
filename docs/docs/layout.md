@@ -23,7 +23,7 @@ It's responsive. Its width is 800px or less to fit the device.
 
 ## Part
 
-`part-NUMBER` class is going to be 1400px divided in that number. Then it is automatically going to adapt to smaller devices.
+`.part-NUMBER` width is going to be 1400px ÷ NUMBER or, if it is in a `.container`, 800px ÷ NUMBER. Then it is automatically going to adapt to smaller devices.
 
 ```html
 <div class="part-1">
@@ -48,7 +48,7 @@ It's responsive. Its width is 800px or less to fit the device.
 
 ## Sliced
 
-`.sliced-in-NUMBER` children are going to be 1400px divided in that number. Then they are automatically going to adapt to smaller devices.
+`.sliced-in-NUMBER` child width is going to be 1400px ÷ NUMBER or, if it is in a `.container`, 800px ÷ NUMBER. Then they are automatically going to adapt to smaller devices.
 
 ```html
 <div class="sliced-in-1">

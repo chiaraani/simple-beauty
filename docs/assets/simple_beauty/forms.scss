@@ -1,0 +1,16 @@
+@use 'selectors';
+
+#{selectors.$input} {
+  background-color: var(--canvas-color);
+  @extend %text-contrasts-canvas-background;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+}
+
+.field.danger {
+  @extend .danger-text;
+  --input-border-color: var(--danger-input-border-color);
+}

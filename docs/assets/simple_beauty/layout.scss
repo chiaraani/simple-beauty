@@ -2,12 +2,8 @@ $medium-device: 800px;
 $large-device: 1000px;
 $extra-extra-large-device: 1400px;
 
-body {
-  @extend .canvas-bg
-}
-
-.site-name {
-  font-size: var(--site-name-size);
+* {
+  box-sizing: border-box;
 }
 
 .responsive {
@@ -15,15 +11,13 @@ body {
 }
 
 .container {
-  width: 800px;
+  width: $medium-device;
   margin: auto;
   max-width: 100%;
 }
 
 // Part and sliced
-
-@for $i from 2 through 12 {
-  $size: calc($extra-extra-large-device / $i);
+@for $i from 1 through 12 {
   .part-#{$i} {
     display: inline-block;
     width: 100%;
@@ -33,10 +27,18 @@ body {
     grid-template-columns: 1fr;
   }
   @for $x from 2 through $i {
-    $device: calc( $size * $x );
-    $container: if($device < $medium-device, "*", ":not(.container)");
-    @media only screen and (min-width: $device) {
-      body #{$container} {
+    @media only screen and (min-width: calc( $extra-extra-large-device / $i * $x )) {
+      :not(.container) {
+        .part-#{$i} {
+          width: calc(100% / $x);
+        }
+        .sliced-in-#{$i} {
+          grid-template-columns: repeat($x, 1fr);
+        }
+      }
+    }
+    @media only screen and (min-width: calc( $medium-device / $i * $x )) {
+      .container {
         .part-#{$i} {
           width: calc(100% / $x);
         }

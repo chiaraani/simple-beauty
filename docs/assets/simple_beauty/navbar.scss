@@ -1,7 +1,3 @@
-:root {
-  --navbar-height: calc( var(--navbar-padding) + var(--site-name-size) + var(--navbar-margin) );
-}
-
 nav {
   display: flex;
   flex-direction: column;
@@ -12,12 +8,14 @@ nav {
     @extend %color-component-default-primary;
     @extend %color-clickable-default-primary;
     border-width: var(--navbar-border-width);
-    border-bottom-style: var(--navbar-border-style);
+    border-top-style: var(--navbar-border-style);
     display: block;
     color: inherit;
   }
 
   p, a {
+    display: flex;
+    align-items: center;
     padding: var(--navbar-padding);
     margin: 0;
   }
@@ -26,16 +24,10 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: inherit;
-    border-color: transparent;
     :first-child {
       border-radius: var(--navbar-border-radius) 0 0 var(--navbar-border-radius);
+      border: none;
     }
-  }
-
-  .site-name {
-    border-bottom-style: none;
-    padding: calc(var(--navbar-padding) - calc( var(--site-name-size) - 1em ) ); 
   }
 
   .open-button::before {
@@ -51,8 +43,7 @@ nav {
 
     }
     :last-child :last-child {
-      border-radius: 0 var(--navbar-border-radius) var(--navbar-border-radius) 0;
-      border: none;
+      border-radius: 0 0 var(--navbar-border-radius) var(--navbar-border-radius);
     }
   }
 
@@ -70,12 +61,8 @@ nav {
   nav {
     flex-direction: row;
     a {
-      border-bottom-style: none;
-      border-right-style: var(--navbar-border-style);
-    }
-    .header  { 
-      display: inline-block;
-      border: none;
+      border-top-style: none;
+      border-left-style: var(--navbar-border-style);
     }
     .open-button {
       display: none;
@@ -88,6 +75,9 @@ nav {
       flex-grow: 1;
       div {
         display: flex;
+      }
+      :last-child :last-child {
+        border-radius: 0 var(--navbar-border-radius) var(--navbar-border-radius) 0;
       }
     }
   }
