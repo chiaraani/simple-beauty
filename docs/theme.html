@@ -32,7 +32,7 @@
 
       <h2>Components</h2>
       <h3>Cards</h3>
-      <div class="sliced-in-8">
+      <div class="sliced-in-4">
         <div class="card">Card</div>
         <div class="primary card">Primary Card</div>
         <div class="secondary card">Secondary Card</div>
@@ -51,15 +51,39 @@
       <button class="danger">Danger</button>
       <button class="warning">Warning</button>
       <button class="info">Info</button>
-      <h3>Group</h3>
+      <h3>Groups</h3>
       <div class="group">
         <div>Item 1</div>
         <div>Item 2</div>
         <div>Item 3</div>      
       </div>
+      <h4>Group of links</h4>
+      <div class="group">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
 
       <h2>Navbar</h2>
       <nav>
+        <div class="header">
+          <a href="#" class="site-name">Site name</a>
+          <button class="open-button" onclick="toggleNavbar()"></button>
+        </div>
+        <div class="collapse">
+          <div>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+          </div>
+          <div>
+            <p><em>Slogan...</em></p>
+            <a href="#" class="success">Sign up</a>
+            <a href="#">Sign in</a>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="tertiary">
         <div class="header">
           <a href="#" class="site-name">Site name</a>
           <button class="open-button" onclick="toggleNavbar()"></button>
@@ -102,6 +126,7 @@
       <textarea placeholder="textarea"></textarea>
 
       <div class="primary card">
+        <h2>Log in</h2>
         <div class="field">
           <p><label for="exampleInputEmail1">Email address</label></p>
           <p><input type="email" id="exampleInputEmail1"></p>
@@ -113,7 +138,7 @@
         </div>
       </div>
 
-      <h3>Colors</h3>
+      <h3>Input colors</h3>
       <input type="text" class="canvas" placeholder="canvas">
       <input type="text" class="primary" placeholder="primary">
       <input type="text" class="secondary" placeholder="secondary">
@@ -123,7 +148,7 @@
       <input type="text" class="warning" placeholder="warning">
       <input type="text" class="info" placeholder="info">
 
-      <h3>Typography</h3>
+      <h2>Typography</h2>
       <a href="#">Link</a>
       <p>
         <span class="canvas-text">Canvas</span>

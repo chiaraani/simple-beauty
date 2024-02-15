@@ -51,7 +51,7 @@ This a group component:
 
 ```html
 <div class="group">
-  <div class="">Item</div>
+  <div>Item</div>
   <div class="primary">Item</div>
   <div class="secondary">Item</div>
   <div class="tertiary">Item</div>
@@ -59,6 +59,30 @@ This a group component:
   <div class="danger">Item</div>
   <div class="warning" >Item</div>
   <div class="info">Item</div>
+</div>
+```
+
+Primary group:
+
+```html
+<div class="primary group">
+  <div>Item</div>
+  <div>Item</div>
+</div>
+```
+
+`link` group
+
+```html
+<div class="group">
+  <a href="#">Item</a>
+  <a href="#" class="primary">Item</a>
+  <a href="#" class="secondary">Item</a>
+  <a href="#" class="tertiary">Item</a>
+  <a href="#" class="success">Item</a>
+  <a href="#" class="danger">Item</a>
+  <a href="#" class="warning" >Item</a>
+  <a href="#" class="info">Item</a>
 </div>
 ```
 
