@@ -30,6 +30,11 @@
   transition: 0.5s all;
 }
 
+// Links
+a {
+  color: var(--primary-text-color);
+}
+
 // Components
 :root {
   --component-padding: 1em;
