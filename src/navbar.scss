@@ -92,6 +92,8 @@ nav {
 }
 
 nav.fixed {
+  margin: 0;
+  z-index: 2000;
   --navbar-border-radius: 0;
   position: fixed;
   width: 100%;

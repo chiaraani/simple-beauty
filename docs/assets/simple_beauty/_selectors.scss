@@ -4,6 +4,8 @@ $button: (".button", "button", "input[type=submit]",
 
 $clickable-components: join($button, (".group > a", "nav a"));
 
+$background-components: ('.card', 'nav', '.group', '.group > *');
+
 $input: ("input[type=text]", "input[type=date]", "input[type=datetime-local]", "input[type=email]",
   "input[type=month]", "input[type=number]", "input[type=password]", "input[type=search]",
   "input[type=tel]", "input[type=time]", "input[type=url]", "textarea", "input[type=week]",

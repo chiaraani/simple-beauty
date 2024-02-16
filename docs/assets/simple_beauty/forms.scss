@@ -2,7 +2,7 @@
 
 #{selectors.$input} {
   background-color: var(--canvas-color);
-  @extend %text-contrasts-canvas-background;
+  color: var(--text-contrast-canvas-color);
 }
 
 textarea {
@@ -12,5 +12,5 @@ textarea {
 
 .field.danger {
   @extend .danger-text;
-  --input-border-color: var(--danger-input-border-color);
+  --component-input-border-color: var(--danger-input-border-color);
 }

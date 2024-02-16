@@ -21,7 +21,7 @@
     $minimum-text-contrast: 54%,
     $border-contrast: 10%,
     $hover-contrast: 7%,
-    $input-border-contrast: 30%,
+    $input-border-contrast: 25%,
   );
 }
 
@@ -93,6 +93,7 @@ h1, h2, h3, h4, h5, h6 {
 
 nav {
   border-radius: var(--navbar-border-radius);
+  margin: var(--component-margin);
   a {
     color: inherit;
     text-decoration: none;
@@ -113,7 +114,7 @@ nav {
   border-style: var(--component-border-style);
   box-shadow: inset 1px 1px 0.2em #0002;
 
-  border-color: var(--input-border-color, var(--primary-input-border-color));
+  border-color: var(--component-input-border-color, var(--primary-input-border-color));
 
   &:focus {
     box-shadow: 0 0 5px var(--input-border-color, var(--primary-input-border-color));
