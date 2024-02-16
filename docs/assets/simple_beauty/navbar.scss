@@ -21,6 +21,7 @@ nav {
   }
 
   .header {
+    border-radius: var(--navbar-border-radius);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,6 +49,7 @@ nav {
 
   &.open {
     .header {
+      border-radius: var(--navbar-border-radius) var(--navbar-border-radius) 0 0 ; 
       border-color: inherit;
     }
     .collapse {

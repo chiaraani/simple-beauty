@@ -47,6 +47,13 @@ h1, h2, h3, h4, h5, h6 {
   --component-border-radius: 12px;
   --component-border-width: 2px;
   --component-border-style: solid;
+  --component-background-image: linear-gradient(to bottom, #fff2, #0000, #0002);
+}
+
+#{selectors.$clickable-components} { 
+  &:active {
+    background-image: linear-gradient(to bottom, #0002, #0000, #fff2);
+  }
 }
 
 .card { 
@@ -55,9 +62,11 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--component-border-radius);
   border-width: var(--component-border-width);
   border-style: var(--component-border-style);
+  background-image: var(--component-background-image);
 }
 
 #{selectors.$button} {
+  background-image: var(--component-background-image);
   padding: 0.5em 0.7em;
   margin: 0.05em;
   border-radius: 1em;
@@ -70,6 +79,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: var(--component-margin);
   --group-border-radius: var(--component-border-radius);
   & > * {
+    background-image: linear-gradient(to bottom, #fff1, #0000, #0001);
     padding: var(--component-padding);
     border-width: var(--component-border-width);
     border-style: var(--component-border-style);
@@ -92,9 +102,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 nav {
+  background-image: var(--component-background-image);
+  .header {
+    background: inherit;
+  }
   border-radius: var(--navbar-border-radius);
   margin: var(--component-margin);
   a {
+    background-image: var(--component-background-image);
     color: inherit;
     text-decoration: none;
   }
@@ -112,7 +127,7 @@ nav {
   border-radius: 0.7em;
   border-width:var(--component-border-width);
   border-style: var(--component-border-style);
-  box-shadow: inset 1px 1px 0.2em #0002;
+  box-shadow: inset 1px 1px 0.3em #0003;
 
   border-color: var(--component-input-border-color, var(--primary-input-border-color));
 
