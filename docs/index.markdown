@@ -51,7 +51,7 @@ And, make a navbar this easily:
 <nav>
   <div class="header">
     <a href="#" class="site-name">Site name</a>
-    <button class="open-button" onclick="toggleNavbar()"></button>
+    <button class="toggle-navbar" onclick="toggleNavbar()"></button>
   </div>
   <div class="collapse">
     <div>

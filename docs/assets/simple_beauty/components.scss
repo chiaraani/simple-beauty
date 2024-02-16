@@ -4,7 +4,7 @@
   cursor: pointer;
 }
 
-.card {
+#{selectors.$card} {
   @extend %color-component-default-inherit;
 }
 
@@ -22,7 +22,6 @@
   padding: 0;
   & > * {
     @extend %color-component-default-inherit;
-    display: block;
     &:last-child {
       border-radius: 0 0 var(--group-border-radius) var(--group-border-radius);
     }
@@ -34,7 +33,12 @@
     }
   }
   & > a {
+    display: block;
     @extend %color-clickable-default-inherit;
     text-decoration: none;
   }
+}
+
+ul.group, ol.group {
+  margin-left: 1em;
 }

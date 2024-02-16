@@ -37,7 +37,11 @@ a {
 
 // Headings
 h1, h2, h3, h4, h5, h6 {
-  border-bottom: 1px solid var(--inherit-border-color);
+  border-bottom: var(--component-border-width) var(--component-border-style) var(--inherit-border-color);
+}
+hr {
+  border-top: var(--component-border-width) var(--component-border-style) var(--inherit-border-color);
+  margin: 1em 0;
 }
 
 // Components
@@ -56,7 +60,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.card { 
+#{selectors.$card} { 
   padding: var(--component-padding);
   margin: var(--component-margin);
   border-radius: var(--component-border-radius);
@@ -102,6 +106,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 nav {
+  box-shadow: #0007 0px 4px 8px;
   background-image: var(--component-background-image);
   .header {
     background: inherit;
@@ -127,7 +132,7 @@ nav {
   border-radius: 0.7em;
   border-width:var(--component-border-width);
   border-style: var(--component-border-style);
-  box-shadow: inset 1px 1px 0.3em #0003;
+  box-shadow: inset 1px 1px 0.3em 0.2em #0002;
 
   border-color: var(--component-input-border-color, var(--primary-input-border-color));
 
@@ -151,5 +156,21 @@ nav {
   &.danger label, &.danger [for] {
     font-weight: bold;
     opacity: 1;
+  }
+}
+
+// Modal
+
+.modal {
+  transition-duration: 1s;
+  box-shadow: 1em 1em 50vmax 50vmax #0007;
+  .close {
+    float: right;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    &::before {
+      content: '✘';
+    }
   }
 }

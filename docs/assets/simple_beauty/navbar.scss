@@ -31,7 +31,7 @@ nav {
     }
   }
 
-  .open-button::before {
+  .toggle-navbar::before {
     content: '☰';
   }
 
@@ -65,7 +65,7 @@ nav {
       border-top-style: none;
       border-left-style: var(--navbar-border-style);
     }
-    .open-button {
+    .toggle-navbar {
       display: none;
     }
     .collapse {

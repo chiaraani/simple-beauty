@@ -10,7 +10,7 @@ This a navbar:
 <nav>
   <div class="header">
     <a href="#" class="site-name">Site name</a>
-    <button class="open-button" onclick="toggleNavbar()"></button>
+    <button class="toggle-navbar" onclick="toggleNavbar()"></button>
   </div>
   <div class="collapse">
     <div>
@@ -36,7 +36,7 @@ Add `open` class to open `.collapse`.
 <nav class="open">
   <div class="header">
     <a href="#" class="site-name">Site name</a>
-    <button class="open-button"></button>
+    <button class="toggle-navbar"></button>
   </div>
   <div class="collapse">
     <div>
@@ -62,7 +62,7 @@ Add `fixed` class to navbar, and `navbar-push` class to body or website content.
 <nav class="fixed">
   <div class="header">
     <a href="#" class="site-name">Site name</a>
-    <button class="open-button" onclick="toggleNavbar()"></button>
+    <button class="toggle-navbar" onclick="toggleNavbar()"></button>
   </div>
   <div class="collapse">
     <div>

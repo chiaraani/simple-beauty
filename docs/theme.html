@@ -13,7 +13,7 @@
       <nav class="fixed">
         <div class="header">
           <a href="/" class="site-name">Simple Beauty</a>
-          <button class="open-button" onclick="toggleNavbar()"></button>
+          <button class="toggle-navbar" onclick="toggleNavbar()"></button>
         </div>
         <div class="collapse">
           <div>
@@ -68,7 +68,7 @@
       <nav>
         <div class="header">
           <a href="#" class="site-name">Site name</a>
-          <button class="open-button" onclick="toggleNavbar()"></button>
+          <button class="toggle-navbar" onclick="toggleNavbar()"></button>
         </div>
         <div class="collapse">
           <div>
@@ -86,7 +86,7 @@
       <nav class="tertiary">
         <div class="header">
           <a href="#" class="site-name">Site name</a>
-          <button class="open-button" onclick="toggleNavbar()"></button>
+          <button class="toggle-navbar" onclick="toggleNavbar()"></button>
         </div>
         <div class="collapse">
           <div>
@@ -160,6 +160,17 @@
         <span class="warning-text">Warning</span>
         <span class="info-text">Info</span>
       </p>
+
+      <h2>Modal</h2>
+      <a class="open-modal button" href="#modal">Open modal</a>
+      <div class="container modal" id="modal">
+        <a class="close" href="#"></a>
+        <h2>Modal</h2>
+        <p>Content...</p>
+        <hr />
+        <a href="#" class="danger button">Cancel</a>
+        <a href="#" class="success button">Accept</a>
+      </div>
     </main>
   </body>
 </html>

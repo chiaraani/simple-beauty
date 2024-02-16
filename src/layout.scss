@@ -1,3 +1,4 @@
+$small-device: 600px;
 $medium-device: 800px;
 $large-device: 1000px;
 $extra-extra-large-device: 1400px;
@@ -11,8 +12,8 @@ $extra-extra-large-device: 1400px;
 }
 
 .container {
-  margin: 0 10px;
-  max-width: 100%;
+  width: 90%;
+  margin: auto;
   @media only screen and (min-width: $medium-device) {
     margin: auto;
     width: $medium-device;
