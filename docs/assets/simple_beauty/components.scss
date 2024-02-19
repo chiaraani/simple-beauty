@@ -1,11 +1,11 @@
 @use 'selectors';
 
-#{selectors.$clickable-components} {
+#{selectors.$clickable-component} {
   cursor: pointer;
 }
 
 #{selectors.$card} {
-  @extend %color-component-default-inherit;
+  @extend %color-component-default-canvas;
 }
 
 #{selectors.$button} {
@@ -16,12 +16,12 @@
   cursor: pointer;
 }
 
-.group {
-  @extend %color-component-default-inherit;
+#{selectors.$group}  {
+  @extend %color-component-default-canvas;
   border-radius: var(--group-border-radius);
   padding: 0;
   & > * {
-    @extend %color-component-default-inherit;
+    @extend %color-component-default-canvas;
     &:last-child {
       border-radius: 0 0 var(--group-border-radius) var(--group-border-radius);
     }
@@ -32,9 +32,10 @@
       border-bottom: none;
     }
   }
-  & > a {
+  a {
+    @extend %color-component-default-canvas;
+    @extend %color-clickable-default-canvas;
     display: block;
-    @extend %color-clickable-default-inherit;
     text-decoration: none;
   }
 }

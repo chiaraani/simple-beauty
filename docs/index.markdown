@@ -48,7 +48,7 @@ And, make a navbar this easily:
 ```html
 <style>body { height: 15em; }</style>
 
-<nav>
+<nav class="navbar">
   <div class="header">
     <a href="#" class="site-name">Site name</a>
     <button class="toggle-navbar" onclick="toggleNavbar()"></button>

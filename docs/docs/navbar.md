@@ -7,7 +7,7 @@ This a navbar:
 ```html
 <style>body { height: 10em; }</style>
 
-<nav>
+<nav class="navbar">
   <div class="header">
     <a href="#" class="site-name">Site name</a>
     <button class="toggle-navbar" onclick="toggleNavbar()"></button>
@@ -33,7 +33,7 @@ Add `open` class to open `.collapse`.
 ```html
 <style>body { height: 10em; }</style>
 
-<nav class="open">
+<nav class="open navbar">
   <div class="header">
     <a href="#" class="site-name">Site name</a>
     <button class="toggle-navbar"></button>
@@ -59,7 +59,7 @@ Add `fixed` class to navbar, and `navbar-push` class to body or website content.
 ```html
 <style>body { height: 10em; }</style>
 
-<nav class="fixed">
+<nav class="fixed navbar">
   <div class="header">
     <a href="#" class="site-name">Site name</a>
     <button class="toggle-navbar" onclick="toggleNavbar()"></button>

@@ -71,11 +71,11 @@ Primary group:
 </div>
 ```
 
-`link` group
+Link group:
 
 ```html
-<div class="group">
-  <a href="#">Item</a>
+<nav class="group">
+  <a href="#" class="canvas">Item</a>
   <a href="#" class="primary">Item</a>
   <a href="#" class="secondary">Item</a>
   <a href="#" class="tertiary">Item</a>
@@ -83,7 +83,7 @@ Primary group:
   <a href="#" class="danger">Item</a>
   <a href="#" class="warning" >Item</a>
   <a href="#" class="info">Item</a>
-</div>
+</nav>
 ```
 
 You can add this class to a `ul` as well.

@@ -10,8 +10,8 @@
     $colors: (
       "canvas": white,
       "primary": #002b6f,
-      "secondary": #005b52,
-      "tertiary": #29005b,
+      "secondary": #29005b,
+      "tertiary": #005b52,
       "success": #005b15,
       "danger": #970000,
       "warning": #e78f00,
@@ -54,7 +54,7 @@ hr {
   --component-background-image: linear-gradient(to bottom, #fff2, #0000, #0002);
 }
 
-#{selectors.$clickable-components} { 
+#{selectors.$clickable-component} { 
   &:active {
     background-image: linear-gradient(to bottom, #0002, #0000, #fff2);
   }
@@ -79,7 +79,7 @@ hr {
   font: inherit;
 }
 
-.group {
+#{selectors.$group} {
   margin: var(--component-margin);
   --group-border-radius: var(--component-border-radius);
   & > * {
@@ -102,10 +102,10 @@ hr {
 
 .site-name {
   font-size: x-large;
-  padding: calc( var(--navbar-padding) / 2);
+  padding: calc( var(--navbar-padding) / 2) !important;
 }
 
-nav {
+.navbar {
   box-shadow: #0007 0px 4px 8px;
   background-image: var(--component-background-image);
   .header {
