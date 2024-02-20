@@ -1,7 +1,8 @@
 <footer class="card">
-  <div class="container slice-in-3-m">
-    <p>Created by {{ site.author.name | escape }}</p>
-    <p>{{ site.description | escape }}</p>
+  <div class="container slice-in-2-l">
+    <p>Created by {{ site.author.name }}</p>
+    <p>{{ site.description }}</p>
+    <p>Contact: <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
     <p>
       <a href="https://github.com/chiaraani/simple-beauty" target="_blank">
         <svg class="svg-icon" height="1em" width="1.5em"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg>
