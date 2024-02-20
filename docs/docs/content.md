@@ -44,6 +44,16 @@ Just add class `COLOUR-NAME-text`.
 </p>
 ```
 
+## Small and big font size
+
+Just add `small`  and `big` classes.
+
+```html
+<span class="big">Big</span>
+<span class="small">Small</span>
+```
+
+
 ## `ul` and `ol`
 
 ```html

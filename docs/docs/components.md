@@ -32,6 +32,16 @@ These are buttons:
 <button class="info">Info</button>
 ```
 
+## Small and big
+
+Just add `small`  and `big` classes.
+
+```html
+<button class="big">Big</button>
+<button>Default</button>
+<button class="small">Small</button>
+```
+
 Make links look like buttons:
 
 ```html
