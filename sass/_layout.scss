@@ -32,22 +32,6 @@ $breakpoints: (
   }
 }
 
-// // Part
-// [class*="part-"] {
-//   float: left;
-//   width: 100%;
-// }
-// @for $i from 1 through 12 {
-//   @each $infix, $breakpoint in $breakpoints {
-//     @media only screen and (min-width: $breakpoint) {
-//       .part-#{$i}-of-#{$infix} {
-//         width: calc(100% / $i);
-//       }
-//     }
-//   }
-// }
-
-
 // Part and slice
 [class*="part-"] {
   float: left;
@@ -64,10 +48,10 @@ $breakpoints: (
       $screen-min-width: calc( $breakpoint / $i * $x );
       @if $screen-min-width >= map-get($breakpoints, 's') {
         @media only screen and (min-width: $screen-min-width) {
-          .part-#{$i}-of-#{$infix} {
+          .part-#{$i}-#{$infix} {
             width: calc(100% / $x);
           }
-          .slice-#{$infix}-in-#{$i} {
+          .slice-in-#{$i}-#{$infix} {
             grid-template-columns: repeat($x, 1fr);
           }
         }

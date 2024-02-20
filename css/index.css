@@ -534,1434 +534,1434 @@ ul li:before {
 }
 
 @media only screen and (min-width: 1200px) {
-  .part-1-of-s {
+  .part-1-s {
     width: 50%;
   }
-  .slice-s-in-1 {
+  .slice-in-1-s {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-1-of-s {
+  .part-1-s {
     width: 100%;
   }
-  .slice-s-in-1 {
+  .slice-in-1-s {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 @media only screen and (min-width: 1600px) {
-  .part-1-of-m {
+  .part-1-m {
     width: 50%;
   }
-  .slice-m-in-1 {
+  .slice-in-1-m {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-1-of-m {
+  .part-1-m {
     width: 100%;
   }
-  .slice-m-in-1 {
+  .slice-in-1-m {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 @media only screen and (min-width: 2000px) {
-  .part-1-of-l {
+  .part-1-l {
     width: 50%;
   }
-  .slice-l-in-1 {
+  .slice-in-1-l {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-1-of-l {
+  .part-1-l {
     width: 100%;
   }
-  .slice-l-in-1 {
+  .slice-in-1-l {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 @media only screen and (min-width: 2400px) {
-  .part-1-of-xl {
+  .part-1-xl {
     width: 50%;
   }
-  .slice-xl-in-1 {
+  .slice-in-1-xl {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-1-of-xl {
+  .part-1-xl {
     width: 100%;
   }
-  .slice-xl-in-1 {
+  .slice-in-1-xl {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 @media only screen and (min-width: 2800px) {
-  .part-1-of-xxl {
+  .part-1-xxl {
     width: 50%;
   }
-  .slice-xxl-in-1 {
+  .slice-in-1-xxl {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-1-of-xxl {
+  .part-1-xxl {
     width: 100%;
   }
-  .slice-xxl-in-1 {
+  .slice-in-1-xxl {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-2-of-s {
+  .part-2-s {
     width: 50%;
   }
-  .slice-s-in-2 {
+  .slice-in-2-s {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-2-of-m {
+  .part-2-m {
     width: 50%;
   }
-  .slice-m-in-2 {
+  .slice-in-2-m {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-2-of-l {
+  .part-2-l {
     width: 50%;
   }
-  .slice-l-in-2 {
+  .slice-in-2-l {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-2-of-xl {
+  .part-2-xl {
     width: 50%;
   }
-  .slice-xl-in-2 {
+  .slice-in-2-xl {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-2-of-xxl {
+  .part-2-xxl {
     width: 50%;
   }
-  .slice-xxl-in-2 {
+  .slice-in-2-xxl {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-3-of-s {
+  .part-3-s {
     width: 33.3333333333%;
   }
-  .slice-s-in-3 {
+  .slice-in-3-s {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-3-of-m {
+  .part-3-m {
     width: 33.3333333333%;
   }
-  .slice-m-in-3 {
+  .slice-in-3-m {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 666.6666666667px) {
-  .part-3-of-l {
+  .part-3-l {
     width: 50%;
   }
-  .slice-l-in-3 {
+  .slice-in-3-l {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-3-of-l {
+  .part-3-l {
     width: 33.3333333333%;
   }
-  .slice-l-in-3 {
+  .slice-in-3-l {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-3-of-xl {
+  .part-3-xl {
     width: 50%;
   }
-  .slice-xl-in-3 {
+  .slice-in-3-xl {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-3-of-xl {
+  .part-3-xl {
     width: 33.3333333333%;
   }
-  .slice-xl-in-3 {
+  .slice-in-3-xl {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 933.3333333333px) {
-  .part-3-of-xxl {
+  .part-3-xxl {
     width: 50%;
   }
-  .slice-xxl-in-3 {
+  .slice-in-3-xxl {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-3-of-xxl {
+  .part-3-xxl {
     width: 33.3333333333%;
   }
-  .slice-xxl-in-3 {
+  .slice-in-3-xxl {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-4-of-s {
+  .part-4-s {
     width: 25%;
   }
-  .slice-s-in-4 {
+  .slice-in-4-s {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-4-of-m {
+  .part-4-m {
     width: 33.3333333333%;
   }
-  .slice-m-in-4 {
+  .slice-in-4-m {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-4-of-m {
+  .part-4-m {
     width: 25%;
   }
-  .slice-m-in-4 {
+  .slice-in-4-m {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 750px) {
-  .part-4-of-l {
+  .part-4-l {
     width: 33.3333333333%;
   }
-  .slice-l-in-4 {
+  .slice-in-4-l {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-4-of-l {
+  .part-4-l {
     width: 25%;
   }
-  .slice-l-in-4 {
+  .slice-in-4-l {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-4-of-xl {
+  .part-4-xl {
     width: 50%;
   }
-  .slice-xl-in-4 {
+  .slice-in-4-xl {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 900px) {
-  .part-4-of-xl {
+  .part-4-xl {
     width: 33.3333333333%;
   }
-  .slice-xl-in-4 {
+  .slice-in-4-xl {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-4-of-xl {
+  .part-4-xl {
     width: 25%;
   }
-  .slice-xl-in-4 {
+  .slice-in-4-xl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 700px) {
-  .part-4-of-xxl {
+  .part-4-xxl {
     width: 50%;
   }
-  .slice-xxl-in-4 {
+  .slice-in-4-xxl {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media only screen and (min-width: 1050px) {
-  .part-4-of-xxl {
+  .part-4-xxl {
     width: 33.3333333333%;
   }
-  .slice-xxl-in-4 {
+  .slice-in-4-xxl {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-4-of-xxl {
+  .part-4-xxl {
     width: 25%;
   }
-  .slice-xxl-in-4 {
+  .slice-in-4-xxl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-5-of-s {
+  .part-5-s {
     width: 20%;
   }
-  .slice-s-in-5 {
+  .slice-in-5-s {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 640px) {
-  .part-5-of-m {
+  .part-5-m {
     width: 25%;
   }
-  .slice-m-in-5 {
+  .slice-in-5-m {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-5-of-m {
+  .part-5-m {
     width: 20%;
   }
-  .slice-m-in-5 {
+  .slice-in-5-m {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-5-of-l {
+  .part-5-l {
     width: 33.3333333333%;
   }
-  .slice-l-in-5 {
+  .slice-in-5-l {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-5-of-l {
+  .part-5-l {
     width: 25%;
   }
-  .slice-l-in-5 {
+  .slice-in-5-l {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-5-of-l {
+  .part-5-l {
     width: 20%;
   }
-  .slice-l-in-5 {
+  .slice-in-5-l {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 720px) {
-  .part-5-of-xl {
+  .part-5-xl {
     width: 33.3333333333%;
   }
-  .slice-xl-in-5 {
+  .slice-in-5-xl {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 960px) {
-  .part-5-of-xl {
+  .part-5-xl {
     width: 25%;
   }
-  .slice-xl-in-5 {
+  .slice-in-5-xl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-5-of-xl {
+  .part-5-xl {
     width: 20%;
   }
-  .slice-xl-in-5 {
+  .slice-in-5-xl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 840px) {
-  .part-5-of-xxl {
+  .part-5-xxl {
     width: 33.3333333333%;
   }
-  .slice-xxl-in-5 {
+  .slice-in-5-xxl {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 1120px) {
-  .part-5-of-xxl {
+  .part-5-xxl {
     width: 25%;
   }
-  .slice-xxl-in-5 {
+  .slice-in-5-xxl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-5-of-xxl {
+  .part-5-xxl {
     width: 20%;
   }
-  .slice-xxl-in-5 {
+  .slice-in-5-xxl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-6-of-s {
+  .part-6-s {
     width: 16.6666666667%;
   }
-  .slice-s-in-6 {
+  .slice-in-6-s {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 666.6666666667px) {
-  .part-6-of-m {
+  .part-6-m {
     width: 20%;
   }
-  .slice-m-in-6 {
+  .slice-in-6-m {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-6-of-m {
+  .part-6-m {
     width: 16.6666666667%;
   }
-  .slice-m-in-6 {
+  .slice-in-6-m {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 666.6666666667px) {
-  .part-6-of-l {
+  .part-6-l {
     width: 25%;
   }
-  .slice-l-in-6 {
+  .slice-in-6-l {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 833.3333333333px) {
-  .part-6-of-l {
+  .part-6-l {
     width: 20%;
   }
-  .slice-l-in-6 {
+  .slice-in-6-l {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-6-of-l {
+  .part-6-l {
     width: 16.6666666667%;
   }
-  .slice-l-in-6 {
+  .slice-in-6-l {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-6-of-xl {
+  .part-6-xl {
     width: 33.3333333333%;
   }
-  .slice-xl-in-6 {
+  .slice-in-6-xl {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-6-of-xl {
+  .part-6-xl {
     width: 25%;
   }
-  .slice-xl-in-6 {
+  .slice-in-6-xl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-6-of-xl {
+  .part-6-xl {
     width: 20%;
   }
-  .slice-xl-in-6 {
+  .slice-in-6-xl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-6-of-xl {
+  .part-6-xl {
     width: 16.6666666667%;
   }
-  .slice-xl-in-6 {
+  .slice-in-6-xl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 700px) {
-  .part-6-of-xxl {
+  .part-6-xxl {
     width: 33.3333333333%;
   }
-  .slice-xxl-in-6 {
+  .slice-in-6-xxl {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 933.3333333333px) {
-  .part-6-of-xxl {
+  .part-6-xxl {
     width: 25%;
   }
-  .slice-xxl-in-6 {
+  .slice-in-6-xxl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 1166.6666666667px) {
-  .part-6-of-xxl {
+  .part-6-xxl {
     width: 20%;
   }
-  .slice-xxl-in-6 {
+  .slice-in-6-xxl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-6-of-xxl {
+  .part-6-xxl {
     width: 16.6666666667%;
   }
-  .slice-xxl-in-6 {
+  .slice-in-6-xxl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-7-of-s {
+  .part-7-s {
     width: 14.2857142857%;
   }
-  .slice-s-in-7 {
+  .slice-in-7-s {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 685.7142857143px) {
-  .part-7-of-m {
+  .part-7-m {
     width: 16.6666666667%;
   }
-  .slice-m-in-7 {
+  .slice-in-7-m {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-7-of-m {
+  .part-7-m {
     width: 14.2857142857%;
   }
-  .slice-m-in-7 {
+  .slice-in-7-m {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 714.2857142857px) {
-  .part-7-of-l {
+  .part-7-l {
     width: 20%;
   }
-  .slice-l-in-7 {
+  .slice-in-7-l {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 857.1428571429px) {
-  .part-7-of-l {
+  .part-7-l {
     width: 16.6666666667%;
   }
-  .slice-l-in-7 {
+  .slice-in-7-l {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-7-of-l {
+  .part-7-l {
     width: 14.2857142857%;
   }
-  .slice-l-in-7 {
+  .slice-in-7-l {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 685.7142857143px) {
-  .part-7-of-xl {
+  .part-7-xl {
     width: 25%;
   }
-  .slice-xl-in-7 {
+  .slice-in-7-xl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 857.1428571429px) {
-  .part-7-of-xl {
+  .part-7-xl {
     width: 20%;
   }
-  .slice-xl-in-7 {
+  .slice-in-7-xl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 1028.5714285714px) {
-  .part-7-of-xl {
+  .part-7-xl {
     width: 16.6666666667%;
   }
-  .slice-xl-in-7 {
+  .slice-in-7-xl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-7-of-xl {
+  .part-7-xl {
     width: 14.2857142857%;
   }
-  .slice-xl-in-7 {
+  .slice-in-7-xl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-7-of-xxl {
+  .part-7-xxl {
     width: 33.3333333333%;
   }
-  .slice-xxl-in-7 {
+  .slice-in-7-xxl {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-7-of-xxl {
+  .part-7-xxl {
     width: 25%;
   }
-  .slice-xxl-in-7 {
+  .slice-in-7-xxl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-7-of-xxl {
+  .part-7-xxl {
     width: 20%;
   }
-  .slice-xxl-in-7 {
+  .slice-in-7-xxl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-7-of-xxl {
+  .part-7-xxl {
     width: 16.6666666667%;
   }
-  .slice-xxl-in-7 {
+  .slice-in-7-xxl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-7-of-xxl {
+  .part-7-xxl {
     width: 14.2857142857%;
   }
-  .slice-xxl-in-7 {
+  .slice-in-7-xxl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-8-of-s {
+  .part-8-s {
     width: 12.5%;
   }
-  .slice-s-in-8 {
+  .slice-in-8-s {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-8-of-m {
+  .part-8-m {
     width: 16.6666666667%;
   }
-  .slice-m-in-8 {
+  .slice-in-8-m {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 700px) {
-  .part-8-of-m {
+  .part-8-m {
     width: 14.2857142857%;
   }
-  .slice-m-in-8 {
+  .slice-in-8-m {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-8-of-m {
+  .part-8-m {
     width: 12.5%;
   }
-  .slice-m-in-8 {
+  .slice-in-8-m {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 625px) {
-  .part-8-of-l {
+  .part-8-l {
     width: 20%;
   }
-  .slice-l-in-8 {
+  .slice-in-8-l {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 750px) {
-  .part-8-of-l {
+  .part-8-l {
     width: 16.6666666667%;
   }
-  .slice-l-in-8 {
+  .slice-in-8-l {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 875px) {
-  .part-8-of-l {
+  .part-8-l {
     width: 14.2857142857%;
   }
-  .slice-l-in-8 {
+  .slice-in-8-l {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-8-of-l {
+  .part-8-l {
     width: 12.5%;
   }
-  .slice-l-in-8 {
+  .slice-in-8-l {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-8-of-xl {
+  .part-8-xl {
     width: 25%;
   }
-  .slice-xl-in-8 {
+  .slice-in-8-xl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 750px) {
-  .part-8-of-xl {
+  .part-8-xl {
     width: 20%;
   }
-  .slice-xl-in-8 {
+  .slice-in-8-xl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 900px) {
-  .part-8-of-xl {
+  .part-8-xl {
     width: 16.6666666667%;
   }
-  .slice-xl-in-8 {
+  .slice-in-8-xl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 1050px) {
-  .part-8-of-xl {
+  .part-8-xl {
     width: 14.2857142857%;
   }
-  .slice-xl-in-8 {
+  .slice-in-8-xl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-8-of-xl {
+  .part-8-xl {
     width: 12.5%;
   }
-  .slice-xl-in-8 {
+  .slice-in-8-xl {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 700px) {
-  .part-8-of-xxl {
+  .part-8-xxl {
     width: 25%;
   }
-  .slice-xxl-in-8 {
+  .slice-in-8-xxl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 875px) {
-  .part-8-of-xxl {
+  .part-8-xxl {
     width: 20%;
   }
-  .slice-xxl-in-8 {
+  .slice-in-8-xxl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 1050px) {
-  .part-8-of-xxl {
+  .part-8-xxl {
     width: 16.6666666667%;
   }
-  .slice-xxl-in-8 {
+  .slice-in-8-xxl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 1225px) {
-  .part-8-of-xxl {
+  .part-8-xxl {
     width: 14.2857142857%;
   }
-  .slice-xxl-in-8 {
+  .slice-in-8-xxl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-8-of-xxl {
+  .part-8-xxl {
     width: 12.5%;
   }
-  .slice-xxl-in-8 {
+  .slice-in-8-xxl {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-9-of-s {
+  .part-9-s {
     width: 11.1111111111%;
   }
-  .slice-s-in-9 {
+  .slice-in-9-s {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 622.2222222222px) {
-  .part-9-of-m {
+  .part-9-m {
     width: 14.2857142857%;
   }
-  .slice-m-in-9 {
+  .slice-in-9-m {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 711.1111111111px) {
-  .part-9-of-m {
+  .part-9-m {
     width: 12.5%;
   }
-  .slice-m-in-9 {
+  .slice-in-9-m {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-9-of-m {
+  .part-9-m {
     width: 11.1111111111%;
   }
-  .slice-m-in-9 {
+  .slice-in-9-m {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 666.6666666667px) {
-  .part-9-of-l {
+  .part-9-l {
     width: 16.6666666667%;
   }
-  .slice-l-in-9 {
+  .slice-in-9-l {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 777.7777777778px) {
-  .part-9-of-l {
+  .part-9-l {
     width: 14.2857142857%;
   }
-  .slice-l-in-9 {
+  .slice-in-9-l {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 888.8888888889px) {
-  .part-9-of-l {
+  .part-9-l {
     width: 12.5%;
   }
-  .slice-l-in-9 {
+  .slice-in-9-l {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-9-of-l {
+  .part-9-l {
     width: 11.1111111111%;
   }
-  .slice-l-in-9 {
+  .slice-in-9-l {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 666.6666666667px) {
-  .part-9-of-xl {
+  .part-9-xl {
     width: 20%;
   }
-  .slice-xl-in-9 {
+  .slice-in-9-xl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-9-of-xl {
+  .part-9-xl {
     width: 16.6666666667%;
   }
-  .slice-xl-in-9 {
+  .slice-in-9-xl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 933.3333333333px) {
-  .part-9-of-xl {
+  .part-9-xl {
     width: 14.2857142857%;
   }
-  .slice-xl-in-9 {
+  .slice-in-9-xl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 1066.6666666667px) {
-  .part-9-of-xl {
+  .part-9-xl {
     width: 12.5%;
   }
-  .slice-xl-in-9 {
+  .slice-in-9-xl {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-9-of-xl {
+  .part-9-xl {
     width: 11.1111111111%;
   }
-  .slice-xl-in-9 {
+  .slice-in-9-xl {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 622.2222222222px) {
-  .part-9-of-xxl {
+  .part-9-xxl {
     width: 25%;
   }
-  .slice-xxl-in-9 {
+  .slice-in-9-xxl {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 @media only screen and (min-width: 777.7777777778px) {
-  .part-9-of-xxl {
+  .part-9-xxl {
     width: 20%;
   }
-  .slice-xxl-in-9 {
+  .slice-in-9-xxl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 933.3333333333px) {
-  .part-9-of-xxl {
+  .part-9-xxl {
     width: 16.6666666667%;
   }
-  .slice-xxl-in-9 {
+  .slice-in-9-xxl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 1088.8888888889px) {
-  .part-9-of-xxl {
+  .part-9-xxl {
     width: 14.2857142857%;
   }
-  .slice-xxl-in-9 {
+  .slice-in-9-xxl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 1244.4444444444px) {
-  .part-9-of-xxl {
+  .part-9-xxl {
     width: 12.5%;
   }
-  .slice-xxl-in-9 {
+  .slice-in-9-xxl {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-9-of-xxl {
+  .part-9-xxl {
     width: 11.1111111111%;
   }
-  .slice-xxl-in-9 {
+  .slice-in-9-xxl {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-10-of-s {
+  .part-10-s {
     width: 10%;
   }
-  .slice-s-in-10 {
+  .slice-in-10-s {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 640px) {
-  .part-10-of-m {
+  .part-10-m {
     width: 12.5%;
   }
-  .slice-m-in-10 {
+  .slice-in-10-m {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 720px) {
-  .part-10-of-m {
+  .part-10-m {
     width: 11.1111111111%;
   }
-  .slice-m-in-10 {
+  .slice-in-10-m {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-10-of-m {
+  .part-10-m {
     width: 10%;
   }
-  .slice-m-in-10 {
+  .slice-in-10-m {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-10-of-l {
+  .part-10-l {
     width: 16.6666666667%;
   }
-  .slice-l-in-10 {
+  .slice-in-10-l {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 700px) {
-  .part-10-of-l {
+  .part-10-l {
     width: 14.2857142857%;
   }
-  .slice-l-in-10 {
+  .slice-in-10-l {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-10-of-l {
+  .part-10-l {
     width: 12.5%;
   }
-  .slice-l-in-10 {
+  .slice-in-10-l {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 900px) {
-  .part-10-of-l {
+  .part-10-l {
     width: 11.1111111111%;
   }
-  .slice-l-in-10 {
+  .slice-in-10-l {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-10-of-l {
+  .part-10-l {
     width: 10%;
   }
-  .slice-l-in-10 {
+  .slice-in-10-l {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-10-of-xl {
+  .part-10-xl {
     width: 20%;
   }
-  .slice-xl-in-10 {
+  .slice-in-10-xl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 720px) {
-  .part-10-of-xl {
+  .part-10-xl {
     width: 16.6666666667%;
   }
-  .slice-xl-in-10 {
+  .slice-in-10-xl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 840px) {
-  .part-10-of-xl {
+  .part-10-xl {
     width: 14.2857142857%;
   }
-  .slice-xl-in-10 {
+  .slice-in-10-xl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 960px) {
-  .part-10-of-xl {
+  .part-10-xl {
     width: 12.5%;
   }
-  .slice-xl-in-10 {
+  .slice-in-10-xl {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 1080px) {
-  .part-10-of-xl {
+  .part-10-xl {
     width: 11.1111111111%;
   }
-  .slice-xl-in-10 {
+  .slice-in-10-xl {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-10-of-xl {
+  .part-10-xl {
     width: 10%;
   }
-  .slice-xl-in-10 {
+  .slice-in-10-xl {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 700px) {
-  .part-10-of-xxl {
+  .part-10-xxl {
     width: 20%;
   }
-  .slice-xxl-in-10 {
+  .slice-in-10-xxl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 840px) {
-  .part-10-of-xxl {
+  .part-10-xxl {
     width: 16.6666666667%;
   }
-  .slice-xxl-in-10 {
+  .slice-in-10-xxl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 980px) {
-  .part-10-of-xxl {
+  .part-10-xxl {
     width: 14.2857142857%;
   }
-  .slice-xxl-in-10 {
+  .slice-in-10-xxl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 1120px) {
-  .part-10-of-xxl {
+  .part-10-xxl {
     width: 12.5%;
   }
-  .slice-xxl-in-10 {
+  .slice-in-10-xxl {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 1260px) {
-  .part-10-of-xxl {
+  .part-10-xxl {
     width: 11.1111111111%;
   }
-  .slice-xxl-in-10 {
+  .slice-in-10-xxl {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-10-of-xxl {
+  .part-10-xxl {
     width: 10%;
   }
-  .slice-xxl-in-10 {
+  .slice-in-10-xxl {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-11-of-s {
+  .part-11-s {
     width: 9.0909090909%;
   }
-  .slice-s-in-11 {
+  .slice-in-11-s {
     grid-template-columns: repeat(11, 1fr);
   }
 }
 @media only screen and (min-width: 654.5454545455px) {
-  .part-11-of-m {
+  .part-11-m {
     width: 11.1111111111%;
   }
-  .slice-m-in-11 {
+  .slice-in-11-m {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 727.2727272727px) {
-  .part-11-of-m {
+  .part-11-m {
     width: 10%;
   }
-  .slice-m-in-11 {
+  .slice-in-11-m {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-11-of-m {
+  .part-11-m {
     width: 9.0909090909%;
   }
-  .slice-m-in-11 {
+  .slice-in-11-m {
     grid-template-columns: repeat(11, 1fr);
   }
 }
 @media only screen and (min-width: 636.3636363636px) {
-  .part-11-of-l {
+  .part-11-l {
     width: 14.2857142857%;
   }
-  .slice-l-in-11 {
+  .slice-in-11-l {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 727.2727272727px) {
-  .part-11-of-l {
+  .part-11-l {
     width: 12.5%;
   }
-  .slice-l-in-11 {
+  .slice-in-11-l {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 818.1818181818px) {
-  .part-11-of-l {
+  .part-11-l {
     width: 11.1111111111%;
   }
-  .slice-l-in-11 {
+  .slice-in-11-l {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 909.0909090909px) {
-  .part-11-of-l {
+  .part-11-l {
     width: 10%;
   }
-  .slice-l-in-11 {
+  .slice-in-11-l {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-11-of-l {
+  .part-11-l {
     width: 9.0909090909%;
   }
-  .slice-l-in-11 {
+  .slice-in-11-l {
     grid-template-columns: repeat(11, 1fr);
   }
 }
 @media only screen and (min-width: 654.5454545455px) {
-  .part-11-of-xl {
+  .part-11-xl {
     width: 16.6666666667%;
   }
-  .slice-xl-in-11 {
+  .slice-in-11-xl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 763.6363636364px) {
-  .part-11-of-xl {
+  .part-11-xl {
     width: 14.2857142857%;
   }
-  .slice-xl-in-11 {
+  .slice-in-11-xl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 872.7272727273px) {
-  .part-11-of-xl {
+  .part-11-xl {
     width: 12.5%;
   }
-  .slice-xl-in-11 {
+  .slice-in-11-xl {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 981.8181818182px) {
-  .part-11-of-xl {
+  .part-11-xl {
     width: 11.1111111111%;
   }
-  .slice-xl-in-11 {
+  .slice-in-11-xl {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 1090.9090909091px) {
-  .part-11-of-xl {
+  .part-11-xl {
     width: 10%;
   }
-  .slice-xl-in-11 {
+  .slice-in-11-xl {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-11-of-xl {
+  .part-11-xl {
     width: 9.0909090909%;
   }
-  .slice-xl-in-11 {
+  .slice-in-11-xl {
     grid-template-columns: repeat(11, 1fr);
   }
 }
 @media only screen and (min-width: 636.3636363636px) {
-  .part-11-of-xxl {
+  .part-11-xxl {
     width: 20%;
   }
-  .slice-xxl-in-11 {
+  .slice-in-11-xxl {
     grid-template-columns: repeat(5, 1fr);
   }
 }
 @media only screen and (min-width: 763.6363636364px) {
-  .part-11-of-xxl {
+  .part-11-xxl {
     width: 16.6666666667%;
   }
-  .slice-xxl-in-11 {
+  .slice-in-11-xxl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 890.9090909091px) {
-  .part-11-of-xxl {
+  .part-11-xxl {
     width: 14.2857142857%;
   }
-  .slice-xxl-in-11 {
+  .slice-in-11-xxl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 1018.1818181818px) {
-  .part-11-of-xxl {
+  .part-11-xxl {
     width: 12.5%;
   }
-  .slice-xxl-in-11 {
+  .slice-in-11-xxl {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 1145.4545454545px) {
-  .part-11-of-xxl {
+  .part-11-xxl {
     width: 11.1111111111%;
   }
-  .slice-xxl-in-11 {
+  .slice-in-11-xxl {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 1272.7272727273px) {
-  .part-11-of-xxl {
+  .part-11-xxl {
     width: 10%;
   }
-  .slice-xxl-in-11 {
+  .slice-in-11-xxl {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-11-of-xxl {
+  .part-11-xxl {
     width: 9.0909090909%;
   }
-  .slice-xxl-in-11 {
+  .slice-in-11-xxl {
     grid-template-columns: repeat(11, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-12-of-s {
+  .part-12-s {
     width: 8.3333333333%;
   }
-  .slice-s-in-12 {
+  .slice-in-12-s {
     grid-template-columns: repeat(12, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-12-of-m {
+  .part-12-m {
     width: 11.1111111111%;
   }
-  .slice-m-in-12 {
+  .slice-in-12-m {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 666.6666666667px) {
-  .part-12-of-m {
+  .part-12-m {
     width: 10%;
   }
-  .slice-m-in-12 {
+  .slice-in-12-m {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 733.3333333333px) {
-  .part-12-of-m {
+  .part-12-m {
     width: 9.0909090909%;
   }
-  .slice-m-in-12 {
+  .slice-in-12-m {
     grid-template-columns: repeat(11, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-12-of-m {
+  .part-12-m {
     width: 8.3333333333%;
   }
-  .slice-m-in-12 {
+  .slice-in-12-m {
     grid-template-columns: repeat(12, 1fr);
   }
 }
 @media only screen and (min-width: 666.6666666667px) {
-  .part-12-of-l {
+  .part-12-l {
     width: 12.5%;
   }
-  .slice-l-in-12 {
+  .slice-in-12-l {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 750px) {
-  .part-12-of-l {
+  .part-12-l {
     width: 11.1111111111%;
   }
-  .slice-l-in-12 {
+  .slice-in-12-l {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 833.3333333333px) {
-  .part-12-of-l {
+  .part-12-l {
     width: 10%;
   }
-  .slice-l-in-12 {
+  .slice-in-12-l {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 916.6666666667px) {
-  .part-12-of-l {
+  .part-12-l {
     width: 9.0909090909%;
   }
-  .slice-l-in-12 {
+  .slice-in-12-l {
     grid-template-columns: repeat(11, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-12-of-l {
+  .part-12-l {
     width: 8.3333333333%;
   }
-  .slice-l-in-12 {
+  .slice-in-12-l {
     grid-template-columns: repeat(12, 1fr);
   }
 }
 @media only screen and (min-width: 600px) {
-  .part-12-of-xl {
+  .part-12-xl {
     width: 16.6666666667%;
   }
-  .slice-xl-in-12 {
+  .slice-in-12-xl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 700px) {
-  .part-12-of-xl {
+  .part-12-xl {
     width: 14.2857142857%;
   }
-  .slice-xl-in-12 {
+  .slice-in-12-xl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 800px) {
-  .part-12-of-xl {
+  .part-12-xl {
     width: 12.5%;
   }
-  .slice-xl-in-12 {
+  .slice-in-12-xl {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 900px) {
-  .part-12-of-xl {
+  .part-12-xl {
     width: 11.1111111111%;
   }
-  .slice-xl-in-12 {
+  .slice-in-12-xl {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 1000px) {
-  .part-12-of-xl {
+  .part-12-xl {
     width: 10%;
   }
-  .slice-xl-in-12 {
+  .slice-in-12-xl {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 1100px) {
-  .part-12-of-xl {
+  .part-12-xl {
     width: 9.0909090909%;
   }
-  .slice-xl-in-12 {
+  .slice-in-12-xl {
     grid-template-columns: repeat(11, 1fr);
   }
 }
 @media only screen and (min-width: 1200px) {
-  .part-12-of-xl {
+  .part-12-xl {
     width: 8.3333333333%;
   }
-  .slice-xl-in-12 {
+  .slice-in-12-xl {
     grid-template-columns: repeat(12, 1fr);
   }
 }
 @media only screen and (min-width: 700px) {
-  .part-12-of-xxl {
+  .part-12-xxl {
     width: 16.6666666667%;
   }
-  .slice-xxl-in-12 {
+  .slice-in-12-xxl {
     grid-template-columns: repeat(6, 1fr);
   }
 }
 @media only screen and (min-width: 816.6666666667px) {
-  .part-12-of-xxl {
+  .part-12-xxl {
     width: 14.2857142857%;
   }
-  .slice-xxl-in-12 {
+  .slice-in-12-xxl {
     grid-template-columns: repeat(7, 1fr);
   }
 }
 @media only screen and (min-width: 933.3333333333px) {
-  .part-12-of-xxl {
+  .part-12-xxl {
     width: 12.5%;
   }
-  .slice-xxl-in-12 {
+  .slice-in-12-xxl {
     grid-template-columns: repeat(8, 1fr);
   }
 }
 @media only screen and (min-width: 1050px) {
-  .part-12-of-xxl {
+  .part-12-xxl {
     width: 11.1111111111%;
   }
-  .slice-xxl-in-12 {
+  .slice-in-12-xxl {
     grid-template-columns: repeat(9, 1fr);
   }
 }
 @media only screen and (min-width: 1166.6666666667px) {
-  .part-12-of-xxl {
+  .part-12-xxl {
     width: 10%;
   }
-  .slice-xxl-in-12 {
+  .slice-in-12-xxl {
     grid-template-columns: repeat(10, 1fr);
   }
 }
 @media only screen and (min-width: 1283.3333333333px) {
-  .part-12-of-xxl {
+  .part-12-xxl {
     width: 9.0909090909%;
   }
-  .slice-xxl-in-12 {
+  .slice-in-12-xxl {
     grid-template-columns: repeat(11, 1fr);
   }
 }
 @media only screen and (min-width: 1400px) {
-  .part-12-of-xxl {
+  .part-12-xxl {
     width: 8.3333333333%;
   }
-  .slice-xxl-in-12 {
+  .slice-in-12-xxl {
     grid-template-columns: repeat(12, 1fr);
   }
 }

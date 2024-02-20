@@ -51,22 +51,22 @@ Add a class to push footer:
 
 ```html
 <style type="text/css"> body { margin: 0; }</style>
-<div class="part-1-of-xxl">
+<div class="part-1-xxl">
   <div class="primary card">part-1-of-xxl</div>
 </div>
-<div class="part-2-of-xxl">
+<div class="part-2-xxl">
   <div class="primary card">part-2-of-xxl</div>
 </div>
-<div class="part-3-of-xxl">
+<div class="part-3-xxl">
   <div class="primary card">part-3-of-xxl</div>
 </div>
-<div class="part-4-of-xxl">
+<div class="part-4-xxl">
   <div class="primary card">part-4-of-xxl</div>
 </div>
-<div class="part-6-of-xxl">
+<div class="part-6-xxl">
   <div class="primary card">part-6-of-xxl</div>
 </div>
-<div class="part-12-of-xxl">
+<div class="part-12-xxl">
   <div class="primary card">part-12-of-xxl</div>
 </div>
 ```
@@ -77,32 +77,32 @@ Add a class to push footer:
 
 ```html
 <style type="text/css"> body { margin: 0; }</style>
-<div class="slice-xxl-in-1">
+<div class="slice-in-1-xxl">
   <div>
     <div class="primary card">slice-xxl-in-1</div>
   </div>
 </div>
-<div class="slice-xxl-in-2">
+<div class="slice-in-2-xxl">
   <div>
     <div class="primary card">slice-xxl-in-2</div>
   </div>
 </div>
-<div class="slice-xxl-in-3">
+<div class="slice-in-3-xxl">
   <div>
     <div class="primary card">slice-xxl-in-3</div>
   </div>
 </div>
-<div class="slice-xxl-in-4">
+<div class="slice-in-4-xxl">
   <div>
     <div class="primary card">slice-xxl-in-4</div>
   </div>
 </div>
-<div class="slice-xxl-in-6">
+<div class="slice-in-6-xxl">
   <div>
     <div class="primary card">slice-xxl-in-6</div>
   </div>
 </div>
-<div class="slice-xxl-in-12">
+<div class="slice-in-12-xxl">
   <div>
     <div class="primary card">slice-xxl-in-12</div>
   </div>
