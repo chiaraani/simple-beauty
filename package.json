@@ -1,9 +1,11 @@
 {
   "name": "simple-beauty",
-  "version": "0.0.1",
+  "version": "0.1.0-alpha",
   "description": "Framework for super fast, easy and beautiful web layout development.",
-  "main": "src/index.scss",
+  "main": "src/index.js",
   "scripts": {
+    "build": "sass sass:css --style-compressed --future-deprecation",
+    "watch": "sass --watch sass:css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

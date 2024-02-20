@@ -1,0 +1,77 @@
+$breakpoints: (
+  "s": 600px,
+  "m": 800px,
+  "l": 1000px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  display: inline-block;
+}
+
+.container {
+  width: 90%;
+  margin: 0.5em auto;
+  @media only screen and (min-width: map-get($breakpoints, 'm')) {
+    width: map-get($breakpoints, 'm');
+  }
+}
+
+.push-footer {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+  footer {
+    margin-top: auto;
+  }
+}
+
+// // Part
+// [class*="part-"] {
+//   float: left;
+//   width: 100%;
+// }
+// @for $i from 1 through 12 {
+//   @each $infix, $breakpoint in $breakpoints {
+//     @media only screen and (min-width: $breakpoint) {
+//       .part-#{$i}-of-#{$infix} {
+//         width: calc(100% / $i);
+//       }
+//     }
+//   }
+// }
+
+
+// Part and slice
+[class*="part-"] {
+  float: left;
+  width: 100%;
+}
+
+[class*="slice-"] {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+@for $i from 1 through 12 {
+  @each $infix, $breakpoint in $breakpoints {
+    @for $x from 2 through $i {
+      $screen-min-width: calc( $breakpoint / $i * $x );
+      @if $screen-min-width >= map-get($breakpoints, 's') {
+        @media only screen and (min-width: $screen-min-width) {
+          .part-#{$i}-of-#{$infix} {
+            width: calc(100% / $x);
+          }
+          .slice-#{$infix}-in-#{$i} {
+            grid-template-columns: repeat($x, 1fr);
+          }
+        }
+      }
+    }
+  }
+}

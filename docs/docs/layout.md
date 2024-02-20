@@ -21,64 +21,90 @@ It's responsive. Its width is 800px or less to fit the device.
 </div>
 ```
 
-## Part
+## Push footer
 
-`.part-NUMBER` width is going to be 1400px ÷ NUMBER or, if it is in a `.container`, 800px ÷ NUMBER. Then it is automatically going to adapt to smaller devices.
+Add a class to push footer:
 
 ```html
-<div class="part-1">
-  <div class="primary card">part-1</div>
+<style type="text/css"> body { margin: 0; }</style>
+<div class="push-footer">
+  <main class="card">Content...</main>
+  <footer class="card">Footer</footer>
 </div>
-<div class="part-2">
-  <div class="primary card">part-2</div>
+```
+
+## Breakpoints 
+
+| Breakpoint |  Class infix | Dimensions |
+| ---------- |--------------|------------|
+| Extra small | None |  <600px |
+| Small | s |  ≥600px |
+| Medium | m |  ≥800px |
+| Large | l | ≥1000px |
+| Extra large | xl |  ≥1200px |
+| Extra extra large | xxl | ≥1400px |
+
+
+## Part
+
+`.part-NUMBER-of-BREAKPOINT_INFIX` width is going to be > (parent's width at BREAKPOINT) ÷ NUMBER. Then it is automatically going to adapt to smaller devices.
+
+```html
+<style type="text/css"> body { margin: 0; }</style>
+<div class="part-1-of-xxl">
+  <div class="primary card">part-1-of-xxl</div>
 </div>
-<div class="part-3">
-  <div class="primary card">part-3</div>
+<div class="part-2-of-xxl">
+  <div class="primary card">part-2-of-xxl</div>
 </div>
-<div class="part-4">
-  <div class="primary card">part-4</div>
+<div class="part-3-of-xxl">
+  <div class="primary card">part-3-of-xxl</div>
 </div>
-<div class="part-6">
-  <div class="primary card">part-6</div>
+<div class="part-4-of-xxl">
+  <div class="primary card">part-4-of-xxl</div>
 </div>
-<div class="part-12">
-  <div class="primary card">part-12</div>
+<div class="part-6-of-xxl">
+  <div class="primary card">part-6-of-xxl</div>
+</div>
+<div class="part-12-of-xxl">
+  <div class="primary card">part-12-of-xxl</div>
 </div>
 ```
 
 ## Sliced
 
-`.sliced-in-NUMBER` child width is going to be 1400px ÷ NUMBER or, if it is in a `.container`, 800px ÷ NUMBER. Then they are automatically going to adapt to smaller devices.
+`.slice-BREAKPOINT_INFIX-in-NUMBER` child width is going to be > (parent's width at BREAKPOINT) ÷ NUMBER. Then they are automatically going to adapt to smaller devices.
 
 ```html
-<div class="sliced-in-1">
+<style type="text/css"> body { margin: 0; }</style>
+<div class="slice-xxl-in-1">
   <div>
-    <div class="primary card">sliced-in-1</div>
+    <div class="primary card">slice-xxl-in-1</div>
   </div>
 </div>
-<div class="sliced-in-2">
+<div class="slice-xxl-in-2">
   <div>
-    <div class="primary card">sliced-in-2</div>
+    <div class="primary card">slice-xxl-in-2</div>
   </div>
 </div>
-<div class="sliced-in-3">
+<div class="slice-xxl-in-3">
   <div>
-    <div class="primary card">sliced-in-3</div>
+    <div class="primary card">slice-xxl-in-3</div>
   </div>
 </div>
-<div class="sliced-in-4">
+<div class="slice-xxl-in-4">
   <div>
-    <div class="primary card">sliced-in-4</div>
+    <div class="primary card">slice-xxl-in-4</div>
   </div>
 </div>
-<div class="sliced-in-6">
+<div class="slice-xxl-in-6">
   <div>
-    <div class="primary card">sliced-in-6</div>
+    <div class="primary card">slice-xxl-in-6</div>
   </div>
 </div>
-<div class="sliced-in-12">
+<div class="slice-xxl-in-12">
   <div>
-    <div class="primary card">sliced-in-12</div>
+    <div class="primary card">slice-xxl-in-12</div>
   </div>
 </div>
 ```

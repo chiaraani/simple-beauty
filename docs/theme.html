@@ -1,176 +1,167 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Theme - Simple Beauty</title>
-    <script src="/assets/simple_beauty/index.js"></script>
-    <link rel="stylesheet" type="text/css" href="/assets/simple_beauty.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/simple_beauty/themes/default.css" />
-  </head>
-  <body class="navbar-push">
-    <header>
-      <nav class="fixed navbar">
-        <div class="header">
-          <a href="/" class="site-name">Simple Beauty</a>
-          <button class="toggle-navbar" onclick="toggleNavbar()"></button>
-        </div>
-        <div class="collapse">
-          <div>
-            <a href="/">Home</a>
-            <a href="/docs">Documentation</a>
-          </div>
-          <div>
-            <p><i>Default Theme</i></p>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <main class="container">
-      <h1>All in Simple beauty</h1>
-      <h2>Framework for super fast, easy and beautiful web layout development.</h2>
-
-      <h2>Components</h2>
-      <h3>Cards</h3>
-      <div class="sliced-in-4">
-        <div class="card">Card</div>
-        <div class="primary card">Primary Card</div>
-        <div class="secondary card">Secondary Card</div>
-        <div class="tertiary card">Tertiary Card</div>
-        <div class="success card">Success Card</div>
-        <div class="danger card">Danger Card</div>
-        <div class="warning card" >Warning Card</div>
-        <div class="info card">Info Card</div>
+---
+title: Theme
+layout: example
+---
+<header>
+  <nav class="fixed navbar">
+    <div class="header">
+      <a href="/" class="site-name">Simple Beauty</a>
+      <button class="toggle-navbar" onclick="toggleNavbar()"></button>
+    </div>
+    <div class="collapse">
+      <div>
+        <a href="/">Home</a>
+        <a href="/docs">Documentation</a>
       </div>
-      <h3>Buttons</h3>
-      <button class="canvas">Canvas</button>
-      <button class="primary">Primary</button>
-      <button class="secondary">Secondary</button>
-      <button class="tertiary">Tertiary</button>
-      <button class="success">Success</button>
-      <button class="danger">Danger</button>
-      <button class="warning">Warning</button>
-      <button class="info">Info</button>
-      <h3>Groups</h3>
-      <div class="group">
-        <div>Item 1</div>
-        <div>Item 2</div>
-        <div>Item 3</div>      
+      <div>
+        <p><i>Default Theme</i></p>
       </div>
-      <h4>Group of links</h4>
-      <div class="group">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
+    </div>
+  </nav>
+</header>
+<main class="navbar-push container">
+  <h1>All in Simple beauty</h1>
+  <h2>Framework for super fast, easy and beautiful web layout development.</h2>
+
+  <h2>Components</h2>
+  <h3>Cards</h3>
+  <div class="sliced-in-4">
+    <div class="card">Card</div>
+    <div class="primary card">Primary Card</div>
+    <div class="secondary card">Secondary Card</div>
+    <div class="tertiary card">Tertiary Card</div>
+    <div class="success card">Success Card</div>
+    <div class="danger card">Danger Card</div>
+    <div class="warning card" >Warning Card</div>
+    <div class="info card">Info Card</div>
+  </div>
+  <h3>Buttons</h3>
+  <button class="canvas">Canvas</button>
+  <button class="primary">Primary</button>
+  <button class="secondary">Secondary</button>
+  <button class="tertiary">Tertiary</button>
+  <button class="success">Success</button>
+  <button class="danger">Danger</button>
+  <button class="warning">Warning</button>
+  <button class="info">Info</button>
+  <h3>Groups</h3>
+  <div class="group">
+    <div>Item 1</div>
+    <div>Item 2</div>
+    <div>Item 3</div>      
+  </div>
+  <h4>Group of links</h4>
+  <div class="group">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>
+
+  <h2>Navbar</h2>
+  <nav class="navbar">
+    <div class="header">
+      <a href="#" class="site-name">Site name</a>
+      <button class="toggle-navbar" onclick="toggleNavbar()"></button>
+    </div>
+    <div class="collapse">
+      <div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
       </div>
-
-      <h2>Navbar</h2>
-      <nav class="navbar">
-        <div class="header">
-          <a href="#" class="site-name">Site name</a>
-          <button class="toggle-navbar" onclick="toggleNavbar()"></button>
-        </div>
-        <div class="collapse">
-          <div>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-          </div>
-          <div>
-            <p><em>Slogan...</em></p>
-            <a href="#" class="success">Sign up</a>
-            <a href="#">Sign in</a>
-          </div>
-        </div>
-      </nav>
-
-      <nav class="secondary navbar">
-        <div class="header">
-          <a href="#" class="site-name">Site name</a>
-          <button class="toggle-navbar" onclick="toggleNavbar()"></button>
-        </div>
-        <div class="collapse">
-          <div>
-            <a href="#">Home</a>
-            <a href="#">About</a>
-          </div>
-          <div>
-            <p><em>Slogan...</em></p>
-            <a href="#" class="success">Sign up</a>
-            <a href="#">Sign in</a>
-          </div>
-        </div>
-      </nav>
-
-      <h2>Forms</h2>
-      <input type="button" value="Input button">
-      <input type="date">
-      <input type="datetime-local">
-      <input type="email" placeholder="email">
-      <input type="month">
-      <input type="number" placeholder="number">
-      <input type="password" placeholder="password">
-      <input type="reset">
-      <input type="search" placeholder="search">
-      <input type="submit">
-      <input type="tel" placeholder="tel">
-      <input type="text" placeholder="text">
-      <input type="time">
-      <input type="url" placeholder="url">
-      <input type="week">
-      <button>Button</button>
-      <select>
-        <option disabled selected>Select an option</option>
-        <option>Option 1</option>
-        <option>Option 2</option>
-      </select>
-      <textarea placeholder="textarea"></textarea>
-
-      <div class="primary card">
-        <h2>Log in</h2>
-        <div class="field">
-          <p><label for="exampleInputEmail1">Email address</label></p>
-          <p><input type="email" id="exampleInputEmail1"></p>
-        </div>
-        <div class="field danger">
-          <p><label for="exampleInputPassword1">Password</label></p>
-          <p><input type="password" id="exampleInputPassword1" aria-describedby="passwordHelp"></p>
-          <p for="passwordHelp"><em>It is wrong.</em></p>
-        </div>
+      <div>
+        <p><em>Slogan...</em></p>
+        <a href="#" class="success">Sign up</a>
+        <a href="#">Sign in</a>
       </div>
+    </div>
+  </nav>
 
-      <h3>Input colors</h3>
-      <input type="text" class="canvas" placeholder="canvas">
-      <input type="text" class="primary" placeholder="primary">
-      <input type="text" class="secondary" placeholder="secondary">
-      <input type="text" class="tertiary" placeholder="tertiary">
-      <input type="text" class="success" placeholder="success">
-      <input type="text" class="danger" placeholder="danger">
-      <input type="text" class="warning" placeholder="warning">
-      <input type="text" class="info" placeholder="info">
-
-      <h2>Typography</h2>
-      <a href="#">Link</a>
-      <p>
-        <span class="canvas-text">Canvas</span>
-        <span class="primary-text">Primary</span>
-        <span class="secondary-text">Secondary</span>
-        <span class="tertiary-text">Tertiary</span>
-        <span class="success-text">Success</span>
-        <span class="danger-text">Danger</span>
-        <span class="warning-text">Warning</span>
-        <span class="info-text">Info</span>
-      </p>
-
-      <h2>Modal</h2>
-      <a class="open-modal button" href="#modal">Open modal</a>
-      <div class="container modal" id="modal">
-        <a class="close" href="#"></a>
-        <h2>Modal</h2>
-        <p>Content...</p>
-        <hr />
-        <a href="#" class="danger button">Cancel</a>
-        <a href="#" class="success button">Accept</a>
+  <nav class="secondary navbar">
+    <div class="header">
+      <a href="#" class="site-name">Site name</a>
+      <button class="toggle-navbar" onclick="toggleNavbar()"></button>
+    </div>
+    <div class="collapse">
+      <div>
+        <a href="#">Home</a>
+        <a href="#">About</a>
       </div>
-    </main>
-  </body>
-</html>
+      <div>
+        <p><em>Slogan...</em></p>
+        <a href="#" class="success">Sign up</a>
+        <a href="#">Sign in</a>
+      </div>
+    </div>
+  </nav>
+
+  <h2>Forms</h2>
+  <input type="button" value="Input button">
+  <input type="date">
+  <input type="datetime-local">
+  <input type="email" placeholder="email">
+  <input type="month">
+  <input type="number" placeholder="number">
+  <input type="password" placeholder="password">
+  <input type="reset">
+  <input type="search" placeholder="search">
+  <input type="submit">
+  <input type="tel" placeholder="tel">
+  <input type="text" placeholder="text">
+  <input type="time">
+  <input type="url" placeholder="url">
+  <input type="week">
+  <button>Button</button>
+  <select>
+    <option disabled selected>Select an option</option>
+    <option>Option 1</option>
+    <option>Option 2</option>
+  </select>
+  <textarea placeholder="textarea"></textarea>
+
+  <div class="primary card">
+    <h2>Log in</h2>
+    <div class="field">
+      <p><label for="exampleInputEmail1">Email address</label></p>
+      <p><input type="email" id="exampleInputEmail1"></p>
+    </div>
+    <div class="field danger">
+      <p><label for="exampleInputPassword1">Password</label></p>
+      <p><input type="password" id="exampleInputPassword1" aria-describedby="passwordHelp"></p>
+      <p for="passwordHelp"><em>It is wrong.</em></p>
+    </div>
+  </div>
+
+  <h3>Input colors</h3>
+  <input type="text" class="canvas" placeholder="canvas">
+  <input type="text" class="primary" placeholder="primary">
+  <input type="text" class="secondary" placeholder="secondary">
+  <input type="text" class="tertiary" placeholder="tertiary">
+  <input type="text" class="success" placeholder="success">
+  <input type="text" class="danger" placeholder="danger">
+  <input type="text" class="warning" placeholder="warning">
+  <input type="text" class="info" placeholder="info">
+
+  <h2>Typography</h2>
+  <a href="#">Link</a>
+  <p>
+    <span class="canvas-text">Canvas</span>
+    <span class="primary-text">Primary</span>
+    <span class="secondary-text">Secondary</span>
+    <span class="tertiary-text">Tertiary</span>
+    <span class="success-text">Success</span>
+    <span class="danger-text">Danger</span>
+    <span class="warning-text">Warning</span>
+    <span class="info-text">Info</span>
+  </p>
+
+  <h2>Modal</h2>
+  <p><a class="open-modal button" href="#modal">Open modal</a></p>
+  <div class="container modal" id="modal">
+    <a class="close" href=""></a>
+    <h2>Modal</h2>
+    <p>Content...</p>
+    <hr />
+    <a href="#" class="danger button">Cancel</a>
+    <a href="#" class="success button">Accept</a>
+  </div>
+</main>

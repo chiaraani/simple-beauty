@@ -1,23 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Example - Simple beauty</title>
-    <script src="/assets/simple_beauty/index.js"></script>
-    <link rel="stylesheet" type="text/css" href="/assets/simple_beauty.css" />
-    <link rel="stylesheet" type="text/css" href="/assets/simple_beauty/themes/default.css" />
-    <style type="text/css">
-      :root {
-        min-height: auto;
-      }
-    </style>
-  </head>
-  <body>
-    <script>
-      const queryString = window.location.search
-      const urlParams = new URLSearchParams(queryString)
-      document.body.innerHTML = urlParams.get('code')
-    </script>
-  </body>
-</html>
+---
+title: Example
+layout: example
+---
+
+<script>
+  const queryString = window.location.search
+  const urlParams = new URLSearchParams(queryString)
+  document.body.innerHTML = urlParams.get('code')
+</script>

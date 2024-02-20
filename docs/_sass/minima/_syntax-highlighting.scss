@@ -12,11 +12,20 @@ ul, ol, dl, figure,
 }
 
 
+:not(pre) > code {
+  background: #eef;
+  border: 1px solid #e8e8e8;
+  padding: 0.1em;
+}
+
+
 .highlight {
   @extend %vertical-rhythm;
 
   pre, highlighter-rouge {
     background: #eef;
+    border: 1px solid #e8e8e8;
+    padding: 8px 12px;
   }
 
   .c     { color: #998; font-style: italic } // Comment

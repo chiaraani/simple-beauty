@@ -2,6 +2,9 @@
 
 #{selectors.$clickable-component} {
   cursor: pointer;
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 #{selectors.$card} {
@@ -13,7 +16,6 @@
   @extend %color-clickable-default-primary;
   display: inline-block;
   text-decoration: none;
-  cursor: pointer;
 }
 
 #{selectors.$group}  {
@@ -38,8 +40,4 @@
     display: block;
     text-decoration: none;
   }
-}
-
-ul.group, ol.group {
-  margin-left: 1em;
 }

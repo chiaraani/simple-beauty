@@ -1,4 +1,4 @@
-nav {
+.navbar {
   display: flex;
   flex-direction: column;
   @extend %color-component-default-primary;
@@ -58,8 +58,8 @@ nav {
   } 
 }
 
-@media only screen and (min-width: $large-device)  {
-  nav {
+@media only screen and (min-width: map-get($breakpoints, 'l'))  {
+  .navbar {
     flex-direction: row;
     a {
       border-top-style: none;
@@ -93,7 +93,7 @@ nav {
  padding-top: var(--navbar-height);
 }
 
-nav.fixed {
+.navbar.fixed {
   margin: 0;
   z-index: 2000;
   --navbar-border-radius: 0;

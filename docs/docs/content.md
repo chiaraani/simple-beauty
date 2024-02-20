@@ -43,3 +43,27 @@ Just add class `COLOUR-NAME-text`.
   <span class="info-text">Info</span>
 </p>
 ```
+
+## `ul` and `ol`
+
+```html
+<ol class="responsive">
+  <li>Item</li>
+  <li>Item</li>
+</ol>
+<ul class="responsive">
+  <li>Item</li>
+  <li>Item</li>
+</ul>
+```
+
+## Pre
+
+Responsive by overflow auto.
+
+```html
+<pre>
+<code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"responsive primary card"</span> <span class="na">style=</span><span class="s">"width: 200px; height: 3em;"</span><span class="nt">&gt;</span>Item<span class="nt">&lt;/div&gt;</span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"responsive primary card"</span> <span class="na">style=</span><span class="s">"width: 300px; height: 3em;"</span><span class="nt">&gt;</span>Item<span class="nt">&lt;/div&gt;</span>
+</code>
+</pre>
+```

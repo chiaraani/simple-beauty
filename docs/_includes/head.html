@@ -4,8 +4,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {%- seo -%}
-  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-  <script src="/assets/snippet.js" defer></script>
+  <script src="/assets/simple-beauty/js/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/simple-beauty/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/simple-beauty/css/themes/default.css" />
+
+  {{ include.content }}
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}

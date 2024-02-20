@@ -7,7 +7,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   &:not(.open):not(:target) {
-    box-shadow: 0 0 0 0 50vmax #0000;
+    box-shadow: 0 0 0 0 #0000;
     transform: translate(-50%, -200vh);
   }
 }
