@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Layout | Simple Beauty</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Layout" />
+<meta name="author" content="Chiara Nunez" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Framework for super fast, easy and beautiful web layout development." />
+<meta property="og:description" content="Framework for super fast, easy and beautiful web layout development." />
+<link rel="canonical" href="/docs/layout.html" />
+<meta property="og:url" content="/docs/layout.html" />
+<meta property="og:site_name" content="Simple Beauty" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Layout" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Chiara Nunez"},"description":"Framework for super fast, easy and beautiful web layout development.","headline":"Layout","url":"/docs/layout.html"}</script>
+<!-- End Jekyll SEO tag -->
+<script src="/assets/simple-beauty/js/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/simple-beauty/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/simple-beauty/css/themes/default.css" />
+
+  
+  <link rel="stylesheet" href="/assets/main.css" />
+  <script src="/assets/snippet.js" defer></script>
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Simple Beauty" /></head><body>
+  <div class="push-footer"><header class="site-header" role="banner">
+  <nav class="fixed navbar">
+    <div class="header">
+      <a href="/" class="site-name">Simple Beauty</a>
+      <button class="toggle-navbar" onclick="toggleNavbar()"></button>
+    </div>
+    <div class="collapse">
+      <div class="left">
+        <a href="/">Home</a>
+        <a href="/docs.html">Documentation</a>
+      </div>
+      <div class="right">
+        <a href="/theme.html">Theme</a>
+      </div>
+    </div>
+  </nav>
+</header><main class="navbar-push container" aria-label="Content">
+    <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Layout</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="responsive-class">Responsive class</h2>
+
+<p>Add responsive class and it’s easy to be responsive.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"responsive primary card"</span> <span class="na">style=</span><span class="s">"width: 200px; height: 3em;"</span><span class="nt">&gt;</span>Item<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"responsive primary card"</span> <span class="na">style=</span><span class="s">"width: 300px; height: 3em;"</span><span class="nt">&gt;</span>Item<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="container">Container</h2>
+
+<p>It’s responsive. Its width is 800px or less to fit the device.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"secondary card"</span><span class="nt">&gt;</span>Content...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="push-footer">Push footer</h2>
+
+<p>Add a class to push footer:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span> <span class="nt">body</span> <span class="p">{</span> <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="p">}</span><span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"push-footer"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;main</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>Content...<span class="nt">&lt;/main&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>Footer<span class="nt">&lt;/footer&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="breakpoints">Breakpoints</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Breakpoint</th>
+      <th>Class infix</th>
+      <th>Dimensions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Extra small</td>
+      <td>None</td>
+      <td>&lt;600px</td>
+    </tr>
+    <tr>
+      <td>Small</td>
+      <td>s</td>
+      <td>≥600px</td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td>m</td>
+      <td>≥800px</td>
+    </tr>
+    <tr>
+      <td>Large</td>
+      <td>l</td>
+      <td>≥1000px</td>
+    </tr>
+    <tr>
+      <td>Extra large</td>
+      <td>xl</td>
+      <td>≥1200px</td>
+    </tr>
+    <tr>
+      <td>Extra extra large</td>
+      <td>xxl</td>
+      <td>≥1400px</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="part">Part</h2>
+
+<p><code class="language-plaintext highlighter-rouge">.part-NUMBER-of-BREAKPOINT_INFIX</code> width is going to be &gt; (parent’s width at BREAKPOINT) ÷ NUMBER. Then it is automatically going to adapt to smaller devices.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span> <span class="nt">body</span> <span class="p">{</span> <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="p">}</span><span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"part-1-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>part-1-of-xxl<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"part-2-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>part-2-of-xxl<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"part-3-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>part-3-of-xxl<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"part-4-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>part-4-of-xxl<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"part-6-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>part-6-of-xxl<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"part-12-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>part-12-of-xxl<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h2 id="sliced">Sliced</h2>
+
+<p><code class="language-plaintext highlighter-rouge">.slice-BREAKPOINT_INFIX-in-NUMBER</code> child width is going to be &gt; (parent’s width at BREAKPOINT) ÷ NUMBER. Then they are automatically going to adapt to smaller devices.</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style </span><span class="na">type=</span><span class="s">"text/css"</span><span class="nt">&gt;</span> <span class="nt">body</span> <span class="p">{</span> <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span><span class="p">;</span> <span class="p">}</span><span class="nt">&lt;/style&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slice-in-1-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>slice-xxl-in-1<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slice-in-2-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>slice-xxl-in-2<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slice-in-3-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>slice-xxl-in-3<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slice-in-4-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>slice-xxl-in-4<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slice-in-6-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>slice-xxl-in-6<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"slice-in-12-xxl"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"primary card"</span><span class="nt">&gt;</span>slice-xxl-in-12<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
+  </main><footer class="card">
+  <div class="container slice-in-2-l">
+    <p>Created by Chiara Nunez</p>
+    <p>Framework for super fast, easy and beautiful web layout development.</p>
+    <p>Contact: <a class="u-email" href="mailto:chiaraez@mailfence.com">chiaraez@mailfence.com</a></p>
+    <p>
+      <a href="https://github.com/chiaraani/simple-beauty" target="_blank">
+        <svg class="svg-icon" height="1em" width="1.5em"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg>
+        Github page
+      </a>
+    </p>
+  </div>
+</footer></div>
+
+</body>
+
+
+
+</html>

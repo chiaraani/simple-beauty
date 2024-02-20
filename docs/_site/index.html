@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Simple Beauty | Framework for super fast, easy and beautiful web layout development.</title>
+<meta name="generator" content="Jekyll v4.3.3" />
+<meta property="og:title" content="Simple Beauty" />
+<meta name="author" content="Chiara Nunez" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Framework for super fast, easy and beautiful web layout development." />
+<meta property="og:description" content="Framework for super fast, easy and beautiful web layout development." />
+<link rel="canonical" href="/" />
+<meta property="og:url" content="/" />
+<meta property="og:site_name" content="Simple Beauty" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Simple Beauty" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"Chiara Nunez"},"description":"Framework for super fast, easy and beautiful web layout development.","headline":"Simple Beauty","name":"Simple Beauty","url":"/"}</script>
+<!-- End Jekyll SEO tag -->
+<script src="/assets/simple-beauty/js/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="/assets/simple-beauty/css/index.css" />
+  <link rel="stylesheet" type="text/css" href="/assets/simple-beauty/css/themes/default.css" />
+
+  
+  <link rel="stylesheet" href="/assets/main.css" />
+  <script src="/assets/snippet.js" defer></script>
+<link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Simple Beauty" /></head><body>
+  <div class="push-footer"><header class="site-header" role="banner">
+  <nav class="fixed navbar">
+    <div class="header">
+      <a href="/" class="site-name">Simple Beauty</a>
+      <button class="toggle-navbar" onclick="toggleNavbar()"></button>
+    </div>
+    <div class="collapse">
+      <div class="left">
+        <a href="/">Home</a>
+        <a href="/docs.html">Documentation</a>
+      </div>
+      <div class="right">
+        <a href="/theme.html">Theme</a>
+      </div>
+    </div>
+  </nav>
+</header><main class="navbar-push container" aria-label="Content">
+    <div class="home"><h1 id="framework-for-super-fast-easy-and-beautiful-web-layout-development">Framework for super fast, easy and beautiful web layout development.</h1>
+<h2 id="responsive-build-utilise-prebuilt-grid-system-and-customize-with-sass-and-components">Responsive. Build, utilise prebuilt grid system, and customize with Sass and components.</h2>
+
+<p>Hate adding tons of classes to forms? Well, forms are styled automatically!</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">value=</span><span class="s">"Input button"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"date"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"datetime-local"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"email"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"month"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"number"</span> <span class="na">placeholder=</span><span class="s">"number"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"password"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"reset"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"search"</span> <span class="na">placeholder=</span><span class="s">"search"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">placeholder=</span><span class="s">"tel"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"text"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"time"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"url"</span> <span class="na">placeholder=</span><span class="s">"url"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"week"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;select&gt;</span>
+    <span class="nt">&lt;option</span> <span class="na">disabled</span> <span class="na">selected</span><span class="nt">&gt;</span>Select an option<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Option 1<span class="nt">&lt;/option&gt;</span>
+    <span class="nt">&lt;option&gt;</span>Option 2<span class="nt">&lt;/option&gt;</span>
+  <span class="nt">&lt;/select&gt;</span>
+  <span class="nt">&lt;textarea</span> <span class="na">placeholder=</span><span class="s">"textarea"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+</code></pre></div></div>
+
+<p>Add a few short classes to button:</p>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"canvas"</span><span class="nt">&gt;</span>Canvas<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"secondary"</span><span class="nt">&gt;</span>Secondary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"tertiary"</span><span class="nt">&gt;</span>Tertiary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"success"</span><span class="nt">&gt;</span>Success<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"info"</span><span class="nt">&gt;</span>Info<span class="nt">&lt;/button&gt;</span>
+</code></pre></div></div>
+
+<p>And, make a navbar this easily:</p>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;style&gt;body</span> <span class="p">{</span> <span class="nl">height</span><span class="p">:</span> <span class="m">15em</span><span class="p">;</span> <span class="p">}</span><span class="nt">&lt;/style&gt;</span>
+
+<span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"header"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"site-name"</span><span class="nt">&gt;</span>Site name<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"toggle-navbar"</span> <span class="na">onclick=</span><span class="s">"toggleNavbar()"</span><span class="nt">&gt;&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"collapse"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>About<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div&gt;</span>
+      <span class="nt">&lt;p&gt;&lt;em&gt;</span>Slogan...<span class="nt">&lt;/em&gt;&lt;/p&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"success"</span><span class="nt">&gt;</span>Sign up<span class="nt">&lt;/a&gt;</span>
+      <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Sign in<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+</code></pre></div></div>
+
+<h2 id="find-out-more-about-simple-beauty-here-or-have-look-at-an-example">Find out more about Simple beauty <a class="success button" href="/docs">here</a>, or have look at an <a class="success button" href="/theme">example</a>.</h2>
+</div>
+  </main><footer class="card">
+  <div class="container slice-in-2-l">
+    <p>Created by Chiara Nunez</p>
+    <p>Framework for super fast, easy and beautiful web layout development.</p>
+    <p>Contact: <a class="u-email" href="mailto:chiaraez@mailfence.com">chiaraez@mailfence.com</a></p>
+    <p>
+      <a href="https://github.com/chiaraani/simple-beauty" target="_blank">
+        <svg class="svg-icon" height="1em" width="1.5em"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg>
+        Github page
+      </a>
+    </p>
+  </div>
+</footer></div>
+
+</body>
+
+
+
+</html>
