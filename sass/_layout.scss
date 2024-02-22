@@ -1,4 +1,5 @@
 $breakpoints: (
+  "xs": 0,
   "s": 600px,
   "m": 800px,
   "l": 1000px,
@@ -32,29 +33,19 @@ $breakpoints: (
   }
 }
 
-// Part and slice
-[class*="part-"] {
+// Grid system
+.row {
+  padding: 0;
+}
+[class*="col-"] {
   float: left;
   width: 100%;
 }
-
-[class*="slice-"] {
-  display: grid;
-  grid-template-columns: 1fr;
-}
-@for $i from 1 through 12 {
-  @each $infix, $breakpoint in $breakpoints {
-    @for $x from 2 through $i {
-      $screen-min-width: calc( $breakpoint / $i * $x );
-      @if $screen-min-width >= map-get($breakpoints, 's') {
-        @media only screen and (min-width: $screen-min-width) {
-          .part-#{$i}-#{$infix} {
-            width: calc(100% / $x);
-          }
-          .slice-in-#{$i}-#{$infix} {
-            grid-template-columns: repeat($x, 1fr);
-          }
-        }
+@each $infix, $breakpoint in $breakpoints {
+  @media only screen and (min-width: $breakpoint) {
+    @for $i from 1 through 12 {
+      .col-#{$i}-#{$infix} {
+        width: calc(100% / 12 * $i);
       }
     }
   }

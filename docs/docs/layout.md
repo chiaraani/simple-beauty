@@ -37,7 +37,7 @@ Add a class to push footer:
 
 | Breakpoint |  Class infix | Dimensions |
 | ---------- |--------------|------------|
-| Extra small | None |  <600px |
+| Extra small | xs |  <600px |
 | Small | s |  ≥600px |
 | Medium | m |  ≥800px |
 | Large | l | ≥1000px |
@@ -45,66 +45,47 @@ Add a class to push footer:
 | Extra extra large | xxl | ≥1400px |
 
 
-## Part
+## Grid system
 
-`.part-NUMBER-of-BREAKPOINT_INFIX` width is going to be > (parent's width at BREAKPOINT) ÷ NUMBER. Then it is automatically going to adapt to smaller devices.
-
-```html
-<style type="text/css"> body { margin: 0; }</style>
-<div class="part-1-xxl">
-  <div class="primary card">part-1-of-xxl</div>
-</div>
-<div class="part-2-xxl">
-  <div class="primary card">part-2-of-xxl</div>
-</div>
-<div class="part-3-xxl">
-  <div class="primary card">part-3-of-xxl</div>
-</div>
-<div class="part-4-xxl">
-  <div class="primary card">part-4-of-xxl</div>
-</div>
-<div class="part-6-xxl">
-  <div class="primary card">part-6-of-xxl</div>
-</div>
-<div class="part-12-xxl">
-  <div class="primary card">part-12-of-xxl</div>
-</div>
-```
-
-## Sliced
-
-`.slice-BREAKPOINT_INFIX-in-NUMBER` child width is going to be > (parent's width at BREAKPOINT) ÷ NUMBER. Then they are automatically going to adapt to smaller devices.
+A `.row` has 12 columns. `.col-NUMBER-BREAKPOINT` sets how many columns must the element fill when screen width is BREAKPOINT or greater.
 
 ```html
-<style type="text/css"> body { margin: 0; }</style>
-<div class="slice-in-1-xxl">
-  <div>
-    <div class="primary card">slice-xxl-in-1</div>
+<div class="row">
+  <div class="col-1-l">
+    <div class="tertiary card">col-1-l</div>
   </div>
-</div>
-<div class="slice-in-2-xxl">
-  <div>
-    <div class="primary card">slice-xxl-in-2</div>
+  <div class="col-2-s">
+    <div class="tertiary card">col-2-s</div>
   </div>
-</div>
-<div class="slice-in-3-xxl">
-  <div>
-    <div class="primary card">slice-xxl-in-3</div>
+  <div class="col-3-s">
+    <div class="tertiary card">col-3-s</div>
   </div>
-</div>
-<div class="slice-in-4-xxl">
-  <div>
-    <div class="primary card">slice-xxl-in-4</div>
+  <div class="col-4-s">
+    <div class="tertiary card">col-4-s</div>
   </div>
-</div>
-<div class="slice-in-6-xxl">
-  <div>
-    <div class="primary card">slice-xxl-in-6</div>
+  <div class="col-5-s">
+    <div class="tertiary card">col-5-s</div>
   </div>
-</div>
-<div class="slice-in-12-xxl">
-  <div>
-    <div class="primary card">slice-xxl-in-12</div>
+  <div class="col-6-s">
+    <div class="tertiary card">col-6-s</div>
+  </div>
+  <div class="col-7-s">
+    <div class="tertiary card">col-7-s</div>
+  </div>
+  <div class="col-8-s">
+    <div class="tertiary card">col-8-s</div>
+  </div>
+  <div class="col-9-s">
+    <div class="tertiary card">col-9-s</div>
+  </div>
+  <div class="col-10-s">
+    <div class="tertiary card">col-10-s</div>
+  </div>
+  <div class="col-11-s">
+    <div class="tertiary card">col-11-s</div>
+  </div>
+  <div class="col-12-s">
+    <div class="tertiary card">col-12-s</div>
   </div>
 </div>
 ```
