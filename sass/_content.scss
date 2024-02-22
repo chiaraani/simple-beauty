@@ -7,27 +7,5 @@ pre {
 }
 
 ol, ul {
-  padding-right: 1em;
-  li {
-    display: block; 
-    &:before {
-      display: block;
-      float: left;
-      margin-right: 1em;
-    }
-  }
-}
-
-ol { 
-  counter-reset: item; 
-  li { 
-    &:before {
-      content: counter(item) ".";
-      counter-increment: item;
-    }
-  }
-}
-
-ul li:before {
-  content: "●";
+  list-style-position: inside;
 }

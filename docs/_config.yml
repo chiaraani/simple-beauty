@@ -29,8 +29,8 @@ author:
   email: chiaraez@mailfence.com
 github_username:  chiaraani
 
-
-#livereload: true
+host: 0.0.0.0
+livereload: true
 
 defaults:
   - scope:
