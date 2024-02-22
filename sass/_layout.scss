@@ -13,8 +13,8 @@ $breakpoints: (
 
 .responsive {
   display: inline-block;
+  overflow: auto;
 }
-
 .container {
   width: 90%;
   margin: 0.5em auto;
@@ -35,14 +35,22 @@ $breakpoints: (
 
 // Grid system
 .row {
-  padding: 0;
+  display: flex;
+  flex-flow: row wrap;
 }
 [class*="col-"] {
-  float: left;
   width: 100%;
+  margin: 0 !important;
 }
 [class*="slice-in-"] {
   display: grid;
+  & > * {
+    margin: 0 !important;
+  }
+  &.gap {
+    margin: var(--component-margin);
+    gap: calc(var(--component-margin) * 2);
+  }
 }
 @each $infix, $breakpoint in $breakpoints {
   @media only screen and (min-width: $breakpoint) {
@@ -56,3 +64,4 @@ $breakpoints: (
     }
   }
 }
+
