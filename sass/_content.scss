@@ -14,8 +14,11 @@ ol, ul {
   list-style-position: inside;
 }
 
-table {
+.responsive-table {
   overflow: auto;
+}
+
+table {
   td {
     @extend %color-component-default-canvas;
   }

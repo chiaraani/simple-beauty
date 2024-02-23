@@ -117,15 +117,3 @@ A `.row` has 12 columns. `.col-NUMBER-BREAKPOINT_INFIX` sets how many columns mu
   <div>Item 12</div>
 </div>
 ```
-
-### Gap
-
-Leave a gap between elements with `gap` class.
-
-```html
-<div class="gap slice-in-3-xs">
-  <div class="info card">Item 1</div>
-  <div class="info card">Item 2</div>
-  <div class="info card">Item 3</div>
-</div>
-```

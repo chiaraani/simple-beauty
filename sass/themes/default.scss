@@ -46,15 +46,15 @@ hr {
 
 // Table
 table {
-  width: 95%;
+  width: calc(100% - var(--component-margin) * 2);
   box-shadow: var(--component-box-shadow);
   border-collapse: collapse;
-  margin: var(--component-margin);
+  
   td, th {
     padding: var(--component-padding);
     border-width: var(--component-border-width);
     border-style: var(--component-border-style);
-  background-image: var(--component-background-image);
+    background-image: var(--component-background-image);
   }
 }
 
@@ -130,6 +130,7 @@ table {
   --navbar-border-radius: var(--component-border-radius);
   --navbar-border-width: var(--component-border-width);
   --navbar-border-style: var(--component-border-style);
+  --navbar-background-image: linear-gradient(to bottom, #fff2, #0000, #0002);
 }
 
 .site-name {
@@ -139,14 +140,14 @@ table {
 
 .navbar {
   box-shadow: #0007 0px 4px 8px;
-  background-image: linear-gradient(to bottom, #fff2, #0000, #0002);
+  background-image: var(--navbar-background-image);
   .header {
     background: inherit;
   }
   border-radius: var(--navbar-border-radius);
   margin: var(--component-margin);
   a {
-    background-image: var(--component-background-image);
+    background-image: var(--navbar-background-image)  ;
     color: inherit;
     text-decoration: none;
   }

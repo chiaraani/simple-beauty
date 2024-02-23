@@ -21,7 +21,7 @@ title: Content
 <h6>Heading 6</h6>
 ```
 
-## Horizontal Rule `<hr />`
+## Horizontal Rule `hr`
 ```html
 <p>Hey!</p>
 <hr />
@@ -56,24 +56,53 @@ Just add `small`  and `big` classes.
 ## Table
 
 ```html
-<table>
-  <thead>
-    <tr>
-      <th>Species</th>
-      <th>Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Dog</td>
-      <td>Jack</td>
-    </tr>
-    <tr>
-      <td>Cat</td>
-      <td>Michi</td>
-    </tr>
-  </tbody>
-</table>
+<div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+          <th scope="col">Heading</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+          <td>Cell</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+      </tbody>
+    </table>
+  </div>
 ```
 
 

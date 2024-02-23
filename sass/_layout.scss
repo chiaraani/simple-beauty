@@ -40,13 +40,6 @@ $breakpoints: (
 }
 [class*="slice-in-"] {
   display: grid;
-  & > * {
-    margin: 0;
-  }
-  &.gap {
-    margin: var(--component-margin);
-    gap: calc(var(--component-margin) * 2);
-  }
 }
 @each $infix, $breakpoint in $breakpoints {
   @media only screen and (min-width: $breakpoint) {
