@@ -5,7 +5,7 @@
 :root {
   @include generate-color-variables.globals(
     $colors: (
-      "canvas": #fefefe,
+      "canvas": white,
       "primary": #002b6f,
       "secondary": #29005b,
       "tertiary": #005b52,
