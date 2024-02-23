@@ -6,7 +6,7 @@ title: Modal
 <style>body { height: 20em; }</style>
 <a class="open-modal button" href="#modal">Open modal</a>
 <div class="modal" id="modal">
-  <a class="close" href=""></a>
+  <a class="close" href="#"></a>
   <h2>Modal</h2>
   <p>Content...</p>
   <hr />
@@ -20,7 +20,7 @@ title: Modal
 ```html
 <style>body { height: 20em; }</style>
 <div class="open modal" id="modal">
-  <a class="close" href=""></a>
+  <a class="close" href="#"></a>
   <h2>Modal</h2>
   <p>Content...</p>
   <hr />
@@ -35,7 +35,7 @@ title: Modal
 ```html
 <style>body { height: 10em; }</style>
 <div class="open modal part-1" id="modal">
-  <a class="close" href=""></a>
+  <a class="close" href="#"></a>
   <h2>Modal</h2>
   <ol class="group">
     <li>Item abc def ghi jkl mno pqrs tuv wxyz</li>

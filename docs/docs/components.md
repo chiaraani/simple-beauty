@@ -32,7 +32,7 @@ These are buttons:
 <button class="info">Info</button>
 ```
 
-## Small and big
+### Small and big
 
 Just add `small`  and `big` classes.
 
@@ -55,7 +55,16 @@ Make links look like buttons:
 <a href="#" class="info button">Info</a>
 ```
 
-## Group
+## Panels
+
+```html
+<div class="panel">
+  <div class="header">Header</div>
+  <div class="body">Body</div>
+</div>
+```
+
+## Groups
 
 This a group component:
 
@@ -113,6 +122,6 @@ You can add this class to a `ul` as well.
   <div>item 1</div>
   <div>item 2</div>
   <div>item 3</div>
-  <div>item 4</div>
+  <div class="success">item 4</div>
 </div>
 ```

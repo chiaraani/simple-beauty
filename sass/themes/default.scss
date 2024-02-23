@@ -5,7 +5,7 @@
 :root {
   @include generate-color-variables.globals(
     $colors: (
-      "canvas": white,
+      "canvas": #fefefe,
       "primary": #002b6f,
       "secondary": #29005b,
       "tertiary": #005b52,
@@ -14,7 +14,7 @@
       "warning": #e78f00,
       "info": #00b8cf,
     ),
-    $default-text-contrast: 95%,
+    $default-text-contrast: 90%,
     $minimum-text-contrast: 54%,
     $border-contrast: 10%,
     $hover-contrast: 7%,
@@ -44,6 +44,10 @@ hr {
   margin: 1em 0;
 }
 
+// Sizes
+.big { font-size: x-large }
+.small { font-size: x-small }
+
 // Table
 table {
   width: calc(100% - var(--component-margin) * 2);
@@ -66,14 +70,14 @@ table {
   --component-border-radius: 12px;
   --component-border-width: 2px;
   --component-border-style: solid;
-  --component-background-image: linear-gradient(to bottom, #fff1, #0000, #0001);
+  --component-background-image: linear-gradient(to bottom, #fff1, transparent, #0001);
   --component-box-shadow: #0005 0px 2px 8px 0px;
   --close-symbol: '✘';
 }
 
 #{selectors.$clickable-component} { 
   &:active {
-    background-image: linear-gradient(to bottom, #0002, #0000, #fff2);
+    background-image: linear-gradient(to bottom, #0002, transparent, #fff2);
   }
 }
 
@@ -88,13 +92,25 @@ table {
 }
 
 #{selectors.$button} {
-  background-image: linear-gradient(to bottom, #fff2, #0000, #0002);
+  background-image: linear-gradient(to bottom, #fff3, transparent, #0003);
   padding: 0.5em 0.7em;
   margin: 0.05em;
   border-radius: 1em;
   border-width: var(--component-border-width);
   border-style: var(--component-border-style);
   font: inherit;
+}
+
+.panel {  
+  border-width: var(--component-border-width);
+  border-style: var(--component-border-style);
+  box-shadow: var(--component-box-shadow);
+  margin: var(--component-margin);
+  --panel-border-radius: var(--component-border-radius);
+  & > * {
+    background-image: var(--component-background-image);
+    padding: var(--component-padding);
+  }
 }
 
 #{selectors.$group} {
@@ -130,7 +146,7 @@ table {
   --navbar-border-radius: var(--component-border-radius);
   --navbar-border-width: var(--component-border-width);
   --navbar-border-style: var(--component-border-style);
-  --navbar-background-image: linear-gradient(to bottom, #fff2, #0000, #0002);
+  --navbar-background-image: linear-gradient(to bottom, #fff2, transparent, #0002);
 }
 
 .site-name {

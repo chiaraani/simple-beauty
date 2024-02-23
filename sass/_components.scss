@@ -18,21 +18,39 @@
   text-decoration: none;
 }
 
+.panel {
+  @extend %color-component-default-primary; 
+  padding: 0; 
+  border-radius: var(--panel-border-radius);
+  & > * {
+  }
+  .header {
+    border-radius: var(--panel-border-radius) var(--panel-border-radius) 0 0;
+    font-weight: bold;
+    border-bottom: inherit;
+  }
+  .body {
+    @extend %color-component-default-canvas;
+    border-radius: 0 0 var(--panel-border-radius) var(--panel-border-radius);
+    border-bottom: none;
+  }
+}
+
 #{selectors.$group}  {
   @extend %color-component-default-canvas;
   border-radius: var(--group-border-radius);
   padding: 0;
   & > * {
     @extend %color-component-default-canvas;
-    &:last-child {
-      border-radius: 0 0 var(--group-border-radius) var(--group-border-radius);
-    }
-    &:first-child {
-      border-radius: var(--group-border-radius) var(--group-border-radius) 0 0;
-    } 
-    &:not(:last-child) {
-      border-bottom: none;
-    }
+  }
+  :first-child {
+    border-radius: var(--group-border-radius) var(--group-border-radius) 0 0;
+  }
+  :not(:last-child) {
+    border-bottom: none;
+  } 
+  :last-child {
+    border-radius: 0 0 var(--group-border-radius) var(--group-border-radius);
   }
   a {
     @extend %color-component-default-canvas;
