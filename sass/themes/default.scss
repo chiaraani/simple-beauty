@@ -37,22 +37,38 @@ a {
 }
 
 // Headings
-h1, h2, h3, h4, h5, h6 {
-  border-bottom: var(--component-border-width) var(--component-border-style) var(--inherit-border-color);
+h1, h2, h3, h4, h5, h6, hr {
+  border-bottom: var(--component-border-width) var(--component-border-style) var(--border-color);
 }
 hr {
-  border-top: var(--component-border-width) var(--component-border-style) var(--inherit-border-color);
   margin: 1em 0;
 }
 
+// Table
+table {
+  width: 95%;
+  box-shadow: var(--component-box-shadow);
+  border-collapse: collapse;
+  margin: var(--component-margin);
+  td, th {
+    padding: var(--component-padding);
+    border-width: var(--component-border-width);
+    border-style: var(--component-border-style);
+  background-image: var(--component-background-image);
+  }
+}
+
+
 // Components
 :root {
-  --component-padding: 1em;
-  --component-margin: 0.2em;
+  --component-padding: 0.5em;
+  --component-margin: 0.5em;
   --component-border-radius: 12px;
   --component-border-width: 2px;
   --component-border-style: solid;
-  --component-background-image: linear-gradient(to bottom, #fff2, #0000, #0002);
+  --component-background-image: linear-gradient(to bottom, #fff1, #0000, #0001);
+  --component-box-shadow: #0005 0px 2px 8px 0px;
+  --close-symbol: '✘';
 }
 
 #{selectors.$clickable-component} { 
@@ -68,10 +84,11 @@ hr {
   border-width: var(--component-border-width);
   border-style: var(--component-border-style);
   background-image: var(--component-background-image);
+  box-shadow: var(--component-box-shadow);
 }
 
 #{selectors.$button} {
-  background-image: var(--component-background-image);
+  background-image: linear-gradient(to bottom, #fff2, #0000, #0002);
   padding: 0.5em 0.7em;
   margin: 0.05em;
   border-radius: 1em;
@@ -81,20 +98,34 @@ hr {
 }
 
 #{selectors.$group} {
+  box-shadow: var(--component-box-shadow);
   margin: var(--component-margin);
   --group-border-radius: var(--component-border-radius);
   & > * {
-    background-image: linear-gradient(to bottom, #fff1, #0000, #0001);
+    background-image: var(--component-background-image);
     padding: var(--component-padding);
     border-width: var(--component-border-width);
     border-style: var(--component-border-style);
   }
 }
 
+.grid {
+  box-shadow: var(--component-box-shadow);
+  border-width: calc(var(--component-border-width) / 2);
+  border-style: var(--component-border-style); 
+  margin: var(--component-margin); 
+  & > * {
+    padding: var(--component-padding);
+    border-width: calc(var(--component-border-width) / 2);
+    border-style: var(--component-border-style);
+    background-image: var(--component-background-image);
+  }
+}
+
 // Navbar
 :root {
   --navbar-height: calc(53px + var(--navbar-margin));
-  --navbar-padding: var(--component-padding);
+  --navbar-padding: 1em;
   --navbar-margin: var(--component-margin);
   --navbar-border-radius: var(--component-border-radius);
   --navbar-border-width: var(--component-border-width);
@@ -108,7 +139,7 @@ hr {
 
 .navbar {
   box-shadow: #0007 0px 4px 8px;
-  background-image: var(--component-background-image);
+  background-image: linear-gradient(to bottom, #fff2, #0000, #0002);
   .header {
     background: inherit;
   }
@@ -167,11 +198,5 @@ hr {
   box-shadow: 1em 1em 50vmax 50vmax #0007;
   .close {
     float: right;
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    &::before {
-      content: '✘';
-    }
   }
 }

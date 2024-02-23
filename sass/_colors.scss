@@ -8,6 +8,7 @@ $colors: ( "canvas", "primary", "secondary", "tertiary",
   .#{$color}-bg { 
     background-color: var(--#{$color}-color);
     color: var(--text-contrast-#{$color}-color);
+    --border-color:  var(--#{$color}-border-color);
     @extend %#{$color}-foreground-contrast;
   }
 
@@ -47,6 +48,7 @@ $colors: ( "canvas", "primary", "secondary", "tertiary",
   %color-component-default-#{$color} {
     background-color: var(--component-background-color, var(--#{$color}-color));
     border-color: var(--component-border-color, var(--#{$color}-border-color));
+    --border-color:  var(--component-border-color, var(--#{$color}-border-color));
 
     // Text contrasts background colors
     color: var(--component-text-color, var(--text-contrast-#{$color}-color));

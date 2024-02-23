@@ -2,10 +2,24 @@ body {
   @extend .canvas-bg
 }
 
+hr {
+  border: none;
+}
+
 pre {
   overflow: auto;
 }
 
 ol, ul {
   list-style-position: inside;
+}
+
+table {
+  overflow: auto;
+  td {
+    @extend %color-component-default-canvas;
+  }
+  th {
+    @extend %color-component-default-primary;
+  }
 }

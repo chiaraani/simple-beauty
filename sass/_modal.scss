@@ -10,4 +10,12 @@
     box-shadow: 0 0 0 0 #0000;
     transform: translate(-50%, -200vh);
   }
+  .close {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    &::before {
+      content: var(--close-symbol);
+    }
+  }
 }

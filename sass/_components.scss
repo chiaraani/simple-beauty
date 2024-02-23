@@ -41,3 +41,11 @@
     text-decoration: none;
   }
 }
+
+.grid {
+  @extend %color-component-default-canvas;  
+  background: none;
+  & > * {
+    @extend %color-component-default-canvas;
+  }
+}

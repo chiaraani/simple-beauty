@@ -53,18 +53,43 @@ Just add `small`  and `big` classes.
 <span class="small">Small</span>
 ```
 
+## Table
+
+```html
+<table>
+  <thead>
+    <tr>
+      <th>Species</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Dog</td>
+      <td>Jack</td>
+    </tr>
+    <tr>
+      <td>Cat</td>
+      <td>Michi</td>
+    </tr>
+  </tbody>
+</table>
+```
+
 
 ## `ul` and `ol`
 
 ```html
-<ol class="responsive">
-  <li>Item</li>
-  <li>Item</li>
-</ol>
-<ul class="responsive">
-  <li>Item</li>
-  <li>Item</li>
-</ul>
+<div class="slice-in-2-s">
+  <ol>
+    <li>Item</li>
+    <li>Item</li>
+  </ol>
+  <ul>
+    <li>Item</li>
+    <li>Item</li>
+  </ul>
+</div>
 ```
 
 ## Pre
@@ -73,7 +98,6 @@ Responsive by overflow auto.
 
 ```html
 <pre>
-<code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"responsive primary card"</span> <span class="na">style=</span><span class="s">"width: 200px; height: 3em;"</span><span class="nt">&gt;</span>Item<span class="nt">&lt;/div&gt;</span><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"responsive primary card"</span> <span class="na">style=</span><span class="s">"width: 300px; height: 3em;"</span><span class="nt">&gt;</span>Item<span class="nt">&lt;/div&gt;</span>
-</code>
+<code><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"responsive"</span><span class="nt">&gt;</span><span class="nt">&lt;li&gt;</span>Item<span class="nt">&lt;/li&gt;</span><span class="nt">&lt;li&gt;</span>Item<span class="nt">&lt;/li&gt;</span><span class="nt">&lt;/ol&gt;</span><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"responsive"</span><span class="nt">&gt;</span><span class="nt">&lt;li&gt;</span>Item<span class="nt">&lt;/li&gt;</span><span class="nt">&lt;li&gt;</span>Item<span class="nt">&lt;/li&gt;</span><span class="nt">&lt;/ol&gt;</span><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"responsive"</span><span class="nt">&gt;</span><span class="nt">&lt;li&gt;</span>Item<span class="nt">&lt;/li&gt;</span><span class="nt">&lt;li&gt;</span>Item<span class="nt">&lt;/li&gt;</span><span class="nt">&lt;/ol&gt;</span></code>
 </pre>
 ```
