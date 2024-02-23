@@ -30,7 +30,7 @@
     border-bottom: inherit;
   }
   .body {
-    @extend %color-component-default-canvas;
+    @extend .canvas-bg;
     border-radius: 0 0 var(--panel-border-radius) var(--panel-border-radius);
     border-bottom: none;
   }

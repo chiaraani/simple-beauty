@@ -77,12 +77,12 @@ table {
 
 #{selectors.$clickable-component} { 
   &:active {
-    background-image: linear-gradient(to bottom, #0002, transparent, #fff2);
+    background-image: linear-gradient(to bottom, #0001, transparent, #fff1);
   }
 }
 
 #{selectors.$card} { 
-  padding: var(--component-padding);
+  padding: 0.8em 1.2em;
   margin: var(--component-margin);
   border-radius: var(--component-border-radius);
   border-width: var(--component-border-width);
@@ -119,7 +119,7 @@ table {
   --group-border-radius: var(--component-border-radius);
   & > * {
     background-image: var(--component-background-image);
-    padding: var(--component-padding);
+    padding: 0.8em;
     border-width: var(--component-border-width);
     border-style: var(--component-border-style);
   }

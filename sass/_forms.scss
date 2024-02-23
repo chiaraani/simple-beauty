@@ -1,8 +1,7 @@
 @use 'selectors';
 
 #{selectors.$input} {
-  background-color: var(--canvas-color);
-  color: var(--text-contrast-canvas-color);
+  @extend .canvas-bg;
 }
 
 textarea {
