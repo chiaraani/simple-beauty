@@ -2,15 +2,6 @@
 title: Layout
 ---
 
-## Responsive class
-
-Add responsive class and it's easy to be responsive.
-
-```html
-<div class="responsive primary card" style="width: 200px;">Item</div>
-<div class="responsive primary card" style="width: 300px;">Item</div>
-```
-
 ## Container
 
 It's responsive. Its width is 800px or less to fit the device.
