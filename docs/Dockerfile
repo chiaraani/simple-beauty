@@ -8,6 +8,4 @@ WORKDIR /docker/app/docs
 
 RUN gem install bundler
 
-RUN bundle install
-
-CMD jekyll serve
+CMD bundle && jekyll serve
