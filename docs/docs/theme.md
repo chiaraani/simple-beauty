@@ -2,6 +2,8 @@
 title: Theme
 ---
 
+Make your theme with CSS variables, SCSS helpers, and hard coded CSS with `!important` rule if necessary. Use [default.scss](https://github.com/chiaraani/simple-beauty/blob/main/sass/themes/default.scss) as a base.
+
 ## Colors
 
 Color variables in CSS:
@@ -17,22 +19,24 @@ Color variables in CSS:
 In SCSS, there is a mixin to generate variables more easily:
 
 ```scss
-@include generate-color-variables.globals(
-  $colors: (
-    "canvas": white,
-    "primary": #002b6f,
-    "secondary": #005b52,
-    "tertiary": #29005b,
-    "success": #005b15,
-    "danger": #970000,
-    "warning": #e78f00,
-    "info": #00b8cf,
-  ),
-  $text-contrast: 95%,
-  $border-contrast: 30%,
-  $hover-contrast: 10%,
-  $active-contrast: 20%,
-);
+:root {
+  @include generate-color-variables.globals(
+    $colors: (
+      "canvas": ...,
+      "primary": ...,
+      "secondary": ...,
+      "tertiary": ...,
+      "success": ...,
+      "danger": ...,
+      "warning": ...,
+      "info": ...,
+    ),
+    $text-contrast: ...,
+    $border-contrast: ...,
+    $hover-contrast: ...,
+    $input-border-contrast: ...,
+  );
+}
 ```
 
 
@@ -64,7 +68,7 @@ In the next example, `.my-class` would receive adapted text colors that contrast
 
 ```css
 .my-class {
-  color: var(--secondary-text-color)
+  color: var(--secondary-text-color);
 }
 ```
 
@@ -89,5 +93,20 @@ You may want to change color of clickable elements when hovered. You can set the
   --canvas-hover-color: ...;
   --primary-hover-color: ...;
   ...
+}
+```
+
+### Input border
+
+Input border colour behaves in similar way to text colour, with automatic contrast.
+
+```css
+:root {
+  --input-border-contrast-canvas-color: ...;
+  --canvas-input-border-contrast-canvas-color: ...;
+  ...
+}
+.my-class {
+  border-color: var(--input-border-color);
 }
 ```
