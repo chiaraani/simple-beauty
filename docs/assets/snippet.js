@@ -6,8 +6,7 @@ function addSnippets() {
     example.classList.add('example')
 
     // Building source URL
-    const url = new URL('../example.html', document.baseURI)
-    url.searchParams.append('code', codeExample.textContent)
+    const url = buildExampleURL(codeExample.textContent)
     
     const link = document.createElement('a')
     link.textContent = 'Open example in a new tab ⇱'
@@ -16,20 +15,28 @@ function addSnippets() {
     example.append(link)
 
     const iframe = document.createElement('iframe')
-    iframe.src = url.href
+    iframe.src = url
+    iframe.onload = () => {
+      iframe.style.height =
+        iframe.contentWindow.document.documentElement.offsetHeight + 20 + 'px'
+    }
     example.append(iframe)
     
     codeExample.after(example)
   }
-  iframeResizing()
 }
 
-function iframeResizing() {
-  for (let example of document.querySelectorAll('.example iframe')) {
-    // Automatic resizing of iframes
-    example.onload = () => {
-      example.style.height =
-        example.contentWindow.document.documentElement.offsetHeight + 5 + 'px'
-    }
-  }
+function buildExampleURL(code) {
+  const url = new URL('/example.html', document.baseURI)
+  url.searchParams.append('code', code)
+  return url
+}
+
+refreshIframe()
+function refreshIframe() {
+  const playground = document.getElementById('playground')
+  const code = playground.value
+  const url = buildExampleURL(code)
+  const iframe = document.getElementById('result')
+  iframe.src = url
 }

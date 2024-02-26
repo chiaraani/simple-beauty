@@ -16,9 +16,9 @@
     ),
     $default-text-contrast: 90%,
     $minimum-text-contrast: 54%,
-    $border-contrast: 10%,
+    $border-contrast: 15%,
     $hover-contrast: 7%,
-    $input-border-contrast: 25%,
+    $input-border-contrast: 50%,
   );
 }
 
@@ -194,9 +194,14 @@ table {
   border-color: var(--component-input-border-color, var(--primary-input-border-color));
 
   &:focus {
-    box-shadow: 0 0 5px var(--input-border-color, var(--primary-input-border-color));
+    border-color: var(--component-input-border-color, var(--primary-input-border-color));
+    box-shadow: 0 0 5px var(--component-input-border-color, var(--primary-input-border-color));
     outline: none;
   }
+}
+
+textarea {
+  width: 95%;
 }
 
 .field {
