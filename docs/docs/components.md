@@ -144,6 +144,17 @@ You can add this class to a `ul` as well.
 </ul>
 ```
 
+### Hover class
+
+You can make it change element background color when hovered by adding `hover` class to group.
+
+```html
+<ul class="hover group">
+  <li>Item</li>
+  <li>Item</li>
+</ul>
+```
+
 
 ## Grid
 

@@ -1,6 +1,6 @@
 @use 'selectors';
 
-#{selectors.$clickable-component} {
+#{selectors.$clickable-component}, .group.hover > * {
   cursor: pointer;
   &:hover {
     text-decoration: none;
@@ -52,9 +52,12 @@
   :last-child {
     border-radius: 0 0 var(--group-border-radius) var(--group-border-radius);
   }
-  a {
+  & > a, &.hover > * {
     @extend %color-component-default-canvas;
     @extend %color-clickable-default-canvas;
+  }
+
+  & > a {
     display: block;
     text-decoration: none;
   }
