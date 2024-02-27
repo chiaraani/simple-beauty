@@ -199,13 +199,13 @@ layout: example
   <input type="text" class="info" placeholder="info">
 
   <h2>Modal</h2>
-  <p><a class="open-modal button" href="#modal">Open modal</a></p>
-  <div class="container modal" id="modal">
-    <a class="close" href="#"></a>
+  <p><button onclick="openModal('modal')">Open modal</button></p>
+  <div class="modal" id="modal">
+    <button class="close" onclick="closeModal()"></button>
     <h2>Modal</h2>
     <p>Content...</p>
     <hr />
-    <a href="#" class="danger button">Cancel</a>
-    <a href="#" class="success button">Accept</a>
+    <button href="#" class="danger" onclick="closeModal()">Cancel</button>
+    <button class="success">Accept</button>
   </div>
 </main>

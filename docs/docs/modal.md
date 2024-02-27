@@ -4,14 +4,14 @@ title: Modal
 
 ```html
 <style>body { height: 20em; }</style>
-<a class="open-modal button" href="#modal">Open modal</a>
+<button onclick="openModal('modal')">Open modal</button>
 <div class="modal" id="modal">
-  <a class="close" href="#"></a>
+  <button class="close" onclick="closeModal()"></button>
   <h2>Modal</h2>
   <p>Content...</p>
   <hr />
-  <a href="#" class="danger button">Cancel</a>
-  <a href="#" class="success button">Accept</a>
+  <button href="#" class="danger" onclick="closeModal()">Cancel</button>
+  <button class="success">Accept</button>
 </div>
 ```
 
@@ -20,12 +20,12 @@ title: Modal
 ```html
 <style>body { height: 20em; }</style>
 <div class="open modal" id="modal">
-  <a class="close" href="#"></a>
+  <button class="close"></button>
   <h2>Modal</h2>
   <p>Content...</p>
   <hr />
-  <a href="#" class="danger button">Cancel</a>
-  <a href="#" class="success button">Accept</a>
+  <button href="#" class="danger">Cancel</button>
+  <button class="success">Accept</button>
 </div>
 ```
 
@@ -35,7 +35,7 @@ title: Modal
 ```html
 <style>body { height: 10em; }</style>
 <div class="open modal part-1" id="modal">
-  <a class="close" href="#"></a>
+  <button class="close"></button>
   <h2>Modal</h2>
   <ol class="group">
     <li>Item abc def ghi jkl mno pqrs tuv wxyz</li>
@@ -45,7 +45,7 @@ title: Modal
     <li>Item abc dejkl mno pqrs tuv wxyz ABC DEF GHI JKLO PQRS TUV WXYZ</li>
   </ol>
   <hr />
-  <a href="#" class="danger button">Cancel</a>
-  <a href="#" class="success button">Accept</a>
+  <button href="#" class="danger">Cancel</button>
+  <button class="success">Accept</button>
 </div>
 ```

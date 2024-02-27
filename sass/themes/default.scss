@@ -228,6 +228,9 @@ textarea {
   transition-duration: 1s;
   box-shadow: 1em 1em 50vmax 50vmax #0007;
   .close {
+    background: none;
+    border: none;
+    color: inherit;
     float: right;
   }
 }

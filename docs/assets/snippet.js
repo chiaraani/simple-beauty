@@ -1,5 +1,3 @@
-addSnippets()
-
 function addSnippets() {
   for (let codeExample of document.getElementsByClassName('language-html')) {
     const example = document.createElement('div')
@@ -32,11 +30,4 @@ function buildExampleURL(code) {
   return url
 }
 
-refreshIframe()
-function refreshIframe() {
-  const playground = document.getElementById('playground')
-  const code = playground.value
-  const url = buildExampleURL(code)
-  const iframe = document.getElementById('result')
-  iframe.src = url
-}
+window.addEventListener('load', addSnippets)

@@ -22,3 +22,14 @@ title: Playground
     </iframe>
   </div>
 </div>
+
+<script>
+  window.addEventListener('load', refreshIframe)
+  function refreshIframe() {
+    const playground = document.getElementById('playground')
+    const code = playground.value
+    const url = buildExampleURL(code)
+    const iframe = document.getElementById('result')
+    iframe.src = url
+  }
+</script>
