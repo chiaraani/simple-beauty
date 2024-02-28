@@ -1,0 +1,35 @@
+@use 'sass:color';
+
+@function is-light($color-code) {
+  @return lightness($color-code) > 50%;
+}
+
+@function contrast($color, $amount) {
+  @if is-light($color) {
+    @return darken($color, $amount);
+  }
+  @else {
+    @return lighten($color, $amount);
+  }
+}
+
+@function contrast-background($background, $contrast, $base: false) {
+  @if $base {
+    @if is-light($background) {
+      @if lightness($background) - lightness($base) >= $contrast {
+        @return  $base
+      } @else {
+        @return color.change($base, $lightness: clamp(0%, color.lightness($background) - $contrast, 100%))
+      }
+    } @else {
+      @if lightness($base) - lightness($background) >=  $contrast {
+        @return $base;
+      }
+      @else {
+        @return color.change($base, $lightness: clamp(0%, color.lightness($background) + $contrast, 100%))
+      }
+    }
+    } @else {
+      @return contrast-background($background, $contrast, $base: $background);
+    }
+}

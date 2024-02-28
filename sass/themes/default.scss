@@ -1,29 +1,28 @@
-@use '../generate-color-variables';
+@use '../colors';
 @use '../selectors';
 
 // Colors
-:root {
-  @include generate-color-variables.globals(
-    $colors: (
-      "canvas": white,
-      "primary": #002b6f,
-      "secondary": #29005b,
-      "tertiary": #005b52,
-      "success": #005b15,
-      "danger": #970000,
-      "warning": #e78f00,
-      "info": #00b8cf,
-    ),
-    $default-text-contrast: 90%,
-    $minimum-text-contrast: 54%,
-    $border-contrast: 15%,
-    $hover-contrast: 7%,
-    $input-border-contrast: 50%,
-  );
-}
+@include colors.generate(
+  $colors: (
+    "canvas": white,
+    "primary": #002b6f,
+    "secondary": #29005b,
+    "tertiary": #005b52,
+    "success": #005b15,
+    "danger": #970000,
+    "warning": #e78f00,
+    "info": #00b8cf,
+  ),
+  $default-text-contrast: 90%,
+  $minimum-text-contrast: 54%,
+  $border-contrast: 15%,
+  $hover-contrast: 7%,
+  $input-border-contrast: 50%,
+);
 
 // Font
 body {
+  @include colors.background('canvas');
   font-family: sans-serif;
 }
 
@@ -56,6 +55,7 @@ hr {
 
 // Table
 table {
+  @include colors.default('primary');
   width: calc(100% - var(--component-margin) * 2);
   box-shadow: var(--component-box-shadow);
   border-collapse: collapse;
@@ -65,6 +65,10 @@ table {
     border-width: var(--component-border-width);
     border-style: var(--component-border-style);
     background-image: var(--component-background-image);
+  }
+
+  td {
+    @include colors.default('canvas');
   }
 }
 
@@ -88,6 +92,7 @@ table {
 }
 
 #{selectors.$card} { 
+  @include colors.default('canvas');
   padding: 0.8em 1.2em;
   margin: var(--component-margin);
   border-radius: var(--component-border-radius);
@@ -98,6 +103,7 @@ table {
 }
 
 #{selectors.$button} {
+  @include colors.default('primary');
   font-size: 0.9em;
   background-image: linear-gradient(to bottom, #fff3, transparent, #0003);
   padding: 0.5em 0.7em;
@@ -110,6 +116,7 @@ table {
 }
 
 .panel {  
+  @include colors.default('primary');
   border-width: var(--component-border-width);
   border-style: var(--component-border-style);
   box-shadow: var(--component-box-shadow);
@@ -119,9 +126,13 @@ table {
     background-image: var(--component-background-image);
     padding: var(--component-padding);
   }
+  .header {
+    @include colors.default('canvas');
+  }
 }
 
 #{selectors.$group} {
+  @include colors.default('canvas');
   box-shadow: var(--component-box-shadow);
   margin: var(--component-margin);
   --group-border-radius: var(--component-border-radius);
@@ -134,6 +145,7 @@ table {
 }
 
 .grid {
+  @include colors.default('canvas');
   box-shadow: var(--component-box-shadow);
   border-width: calc(var(--component-border-width) / 2);
   border-style: var(--component-border-style); 
@@ -164,6 +176,7 @@ table {
 }
 
 .navbar {
+  @include colors.default('primary');
   box-shadow: #0007 0px 4px 8px;
   background-image: var(--navbar-background-image);
   .header {
@@ -183,19 +196,19 @@ table {
 
 // // Forms //
 // Inputs
+@include colors.input-default('primary');
 #{selectors.$input} {
+  border-color: var(--input-border-color);
+  background-color: var(--canvas-color);
+  color: var(--text-contrast-canvas-color);
   padding: 0.5em;
-  margin: var(--component-margin);
+  margin: 2px 0;
   border-radius: 0.7em;
   border-width:var(--component-border-width);
   border-style: var(--component-border-style);
   box-shadow: inset 1px 1px 0.3em 0.2em #0002;
-
-  border-color: var(--component-input-border-color, var(--primary-input-border-color));
-
   &:focus {
-    border-color: var(--component-input-border-color, var(--primary-input-border-color));
-    box-shadow: 0 0 5px var(--component-input-border-color, var(--primary-input-border-color));
+    box-shadow: 0 0 5px var(--input-border-color);
     outline: none;
   }
 }

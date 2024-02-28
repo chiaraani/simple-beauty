@@ -1,14 +1,14 @@
 @use 'selectors';
 
-#{selectors.$input} {
-  @extend .canvas-bg;
-}
-
 textarea {
   display: block;
 }
 
 .field.danger {
-  @extend .danger-text;
-  --component-input-border-color: var(--danger-input-border-color);
+  --danger-text-color: inherit;
+  --danger-input-border-color: inherit;
+  color: var(--danger-text-color);
+  #{selectors.$input} {
+    --input-border-color: var(--danger-input-border-color);
+  }
 }

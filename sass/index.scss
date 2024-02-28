@@ -1,2 +1,6 @@
-@import 'colors', 'content', 'layout', 'components',
-  'navbar', 'forms', 'modal';
+@use 'content';
+@use 'layout';
+@use 'components';
+@use 'navbar';
+@use 'forms';
+@use 'modal';

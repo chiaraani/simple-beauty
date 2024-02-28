@@ -1,0 +1,79 @@
+@use 'functions' as *;
+@use '../selectors';
+
+@mixin generate($colors, $default-text-contrast, $minimum-text-contrast, $border-contrast, $hover-contrast, $input-border-contrast) {
+  :root {
+    @each $color-name, $color-code in $colors {
+      --#{$color-name}-color: #{$color-code};
+      // Text
+      --text-contrast-#{$color-name}-color: #{contrast-background($color-code, $default-text-contrast)};
+      @each $color-name2, $color-code2 in $colors {
+        --#{$color-name2}-text-contrast-#{$color-name}-color: #{contrast-background($color-code, $minimum-text-contrast, $base: $color-code2)};
+        // Input border
+        --#{$color-name2}-input-border-contrast-#{$color-name}-color: #{contrast-background($color-code, $input-border-contrast, $base: $color-code2)};
+      }
+      // Border
+      --#{$color-name}-border-color: #{contrast($color-code, $border-contrast)};
+      // Hover
+      --#{$color-name}-hover-color: #{contrast($color-code, $hover-contrast)};
+    }
+  }
+
+  $color-names: map-keys($colors) !global;
+  @include classes;
+}
+
+@mixin background($color-name) {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  @include set-variables($color-name);
+}
+
+@mixin set-variables($color-name) {
+  --background-color: var(--#{$color-name}-color);
+  --border-color:  var(--#{$color-name}-border-color);
+
+  // Text contrasts background colors
+  --text-color: var(--text-contrast-#{$color-name}-color);
+  @each $color-name2 in $color-names {
+    --#{$color-name2}-text-color: var(--#{$color-name2}-text-contrast-#{$color-name}-color);
+    --#{$color-name2}-input-border-color: var(--#{$color-name2}-input-border-contrast-#{$color-name}-color);
+  }
+
+  --hover-color: var(--#{$color-name}-hover-color);
+}
+
+@mixin default($color-name) {
+  :where(&) {   
+    @include set-variables($color-name);
+  }
+}
+
+@mixin input-default($color-name) {
+  #{selectors.$input} {
+    :where(&) {
+      --input-border-color: var(--#{$color-name}-input-border-color);
+    }
+    @each $color-name in $color-names {
+      --#{$color-name}-input-border-color: inherit;
+    }
+  }
+}
+
+// Classes
+@mixin classes {
+  @each $color-name in $color-names {
+   .#{$color-name}-bg {
+      @include background($color-name);
+   }
+
+   .#{$color-name}-text {
+      color: var(--#{$color-name}-text-color);
+    }
+
+    .#{$color-name} {
+      @include set-variables($color-name);
+      --input-border-color:  var(--#{$color-name}-input-border-color);
+    }
+  }
+}

@@ -1,0 +1,10 @@
+$breakpoints: (
+  "xs": 0,
+  "s": 600px,
+  "m": 800px,
+  "l": 1000px,
+  "xl": 1200px,
+  "xxl": 1400px,
+);
+
+$navbar-breakpoint: map-get($breakpoints, 'l')

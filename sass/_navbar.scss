@@ -1,12 +1,14 @@
+@use 'components';
+@use 'breakpoints' as *;
+
 .navbar {
+  @include components.color;
   display: flex;
   flex-direction: column;
-  @extend %color-component-default-primary;
   border-width: var(--navbar-border-width);
   border-style: var(--navbar-border-style);
   a {
-    @extend %color-component-default-primary;
-    @extend %color-clickable-default-primary;
+    @include components.color;
     border-width: var(--navbar-border-width);
     border-top-style: var(--navbar-border-style);
     display: block;
@@ -58,7 +60,7 @@
   } 
 }
 
-@media only screen and (min-width: map-get($breakpoints, 'l'))  {
+@media only screen and (min-width: $navbar-breakpoint)  {
   .navbar {
     flex-direction: row;
     a {
