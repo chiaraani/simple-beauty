@@ -6,12 +6,14 @@
     </div>
     <div class="collapse">
       <div class="left">
-        <a href="/">Home</a>
-        <a href="/docs.html">Documentation</a>
-        <a href="/playground.html">Playground</a>
+        {% for link in site.data.navbar.left %}
+          {% include link.html text=link.text path=link.path %}
+        {% endfor %}
       </div>
       <div class="right">
-        <a href="/theme.html">Theme</a>
+        {% for link in site.data.navbar.right %}
+          {% include link.html text=link.text path=link.path %}
+        {% endfor %}
       </div>
     </div>
   </nav>

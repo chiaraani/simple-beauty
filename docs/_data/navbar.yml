@@ -1,0 +1,10 @@
+left:
+  - text: Home
+    path: '/'
+  - text: Documentation
+    path: '/docs.html'
+  - text: Playground
+    path: '/playground.html'
+right: 
+  - text: Theme
+    path: '/theme.html'

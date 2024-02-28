@@ -6,7 +6,7 @@
   color: var(--text-color);
 }
 
-#{selectors.$clickable-component}, .group.hover > * {
+#{selectors.$clickable-component}  {
   cursor: pointer;
   &:hover {
     background-color: var(--hover-color);
@@ -39,7 +39,7 @@
   }
 }
 
-#{selectors.$group}  {
+.list-group  {
   @include color;
   border-radius: var(--group-border-radius);
   padding: 0;

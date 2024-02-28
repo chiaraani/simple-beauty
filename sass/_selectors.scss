@@ -4,12 +4,11 @@ $button: (".button", "button", "input[type=submit]",
   "input[type=button]", "input[type=reset]", "select",
 );
 
-$group: (".group");
+$group: ".list-group, .grid";
 
-$clickable-component: join($button, (".group > a", "nav a"));
+$clickable-component: join($button, (":is(.clickable)", ":is(#{$group}):is(.clickable) > *", ":is(#{$group}) > a", "nav a"));
 
 $background-component: join($card, ('nav', '.group', '.group > *'));
-
 
 $input: ("input[type=text]", "input[type=date]", "input[type=datetime-local]", "input[type=email]",
   "input[type=month]", "input[type=number]", "input[type=password]", "input[type=search]",

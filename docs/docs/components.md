@@ -17,6 +17,12 @@ This is a card:
 <div class="info card">Info Card</div>
 ```
 
+### Clickable Cards
+
+```html
+<div class="clickable card">Card</div>
+```
+
 ## Buttons
 
 These are buttons:
@@ -94,12 +100,12 @@ Make links look like buttons:
 </div>
 ```
 
-## Groups
+## List groups
 
-This a group component:
+This a list group component:
 
 ```html
-<div class="group">
+<div class="list-group">
   <div>Item</div>
   <div class="primary">Item</div>
   <div class="secondary">Item</div>
@@ -111,19 +117,19 @@ This a group component:
 </div>
 ```
 
-Primary group:
+Primary list group:
 
 ```html
-<div class="primary group">
+<div class="primary list-group">
   <div>Item</div>
   <div>Item</div>
 </div>
 ```
 
-Link group:
+Link list group:
 
 ```html
-<nav class="group">
+<nav class="list-group">
   <a href="#" class="canvas">Item</a>
   <a href="#" class="primary">Item</a>
   <a href="#" class="secondary">Item</a>
@@ -138,18 +144,18 @@ Link group:
 You can add this class to a `ul` as well.
 
 ```html
-<ul class="group">
+<ul class="list-group">
   <li>Item</li>
   <li>Item</li>
 </ul>
 ```
 
-### Hover class
+### Clickable class
 
-You can make it change element background color when hovered by adding `hover` class to group.
+You can make elements look clickable by adding `clickable` class to list-group.
 
 ```html
-<ul class="hover group">
+<ul class="clickable list-group">
   <li>Item</li>
   <li>Item</li>
 </ul>

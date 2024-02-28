@@ -42,6 +42,7 @@
     overflow: auto;
     flex-direction: inherit;
     div {
+      display: flex;
       flex-direction: inherit;
     }
     :last-child :last-child {
@@ -76,9 +77,6 @@
       height: auto;
       justify-content: space-between;
       flex-grow: 1;
-      div {
-        display: flex;
-      }
       :first-child a:last-child {
         border-right-style: var(--navbar-border-style);
       }

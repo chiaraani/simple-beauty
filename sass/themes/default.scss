@@ -15,20 +15,18 @@
   ),
   $default-text-contrast: 90%,
   $minimum-text-contrast: 54%,
-  $border-contrast: 15%,
-  $hover-contrast: 7%,
   $input-border-contrast: 50%,
+  $component-contrast: (
+    "border": 15%,
+    "hover": 7%,
+    "active": 10%,
+  ),
 );
 
 // Font
 body {
   @include colors.background('canvas');
   font-family: sans-serif;
-}
-
-// Transition
-* {
-  transition: 0.5s all;
 }
 
 // Links
@@ -86,8 +84,11 @@ table {
 }
 
 #{selectors.$clickable-component} { 
-  &:active {
-    background-image: linear-gradient(to bottom, #0001, transparent, #fff1);
+  transition: background-color 0.3s;
+  &:active, &.active {
+    background-color: var(--active-color);
+    box-shadow: inset 0 0 10px #0005;
+    background-image: none;
   }
 }
 
@@ -131,7 +132,7 @@ table {
   }
 }
 
-#{selectors.$group} {
+.list-group {
   @include colors.default('canvas');
   box-shadow: var(--component-box-shadow);
   margin: var(--component-margin);
@@ -191,6 +192,10 @@ table {
 
   p {
     opacity: 0.95;
+  }
+
+  .collapse {
+    transition: max-height 0.5s;
   }
 }
 

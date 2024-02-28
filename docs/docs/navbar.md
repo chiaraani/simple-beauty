@@ -14,7 +14,7 @@ This a navbar:
   </div>
   <div class="collapse">
     <div>
-      <a href="#">Home</a>
+      <a class="active" href="#">Home</a>
       <a href="#">About</a>
     </div>
     <div>

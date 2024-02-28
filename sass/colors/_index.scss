@@ -1,7 +1,7 @@
 @use 'functions' as *;
 @use '../selectors';
 
-@mixin generate($colors, $default-text-contrast, $minimum-text-contrast, $border-contrast, $hover-contrast, $input-border-contrast) {
+@mixin generate($colors, $default-text-contrast, $minimum-text-contrast, $input-border-contrast, $component-contrast) {
   :root {
     @each $color-name, $color-code in $colors {
       --#{$color-name}-color: #{$color-code};
@@ -12,40 +12,49 @@
         // Input border
         --#{$color-name2}-input-border-contrast-#{$color-name}-color: #{contrast-background($color-code, $input-border-contrast, $base: $color-code2)};
       }
-      // Border
-      --#{$color-name}-border-color: #{contrast($color-code, $border-contrast)};
-      // Hover
-      --#{$color-name}-hover-color: #{contrast($color-code, $hover-contrast)};
+      
+      // Components
+      --#{$color-name}-background-color: var(--#{$color-name}-color);
+      @each $variable-name, $contrast in $component-contrast {
+        --#{$color-name}-#{$variable-name}-color: #{contrast($color-code, $contrast)};
+      }
     }
   }
 
   $color-names: map-keys($colors) !global;
+  $component-variable-names: join(('background'), map-keys($component-contrast)) !global;
   @include classes;
 }
 
 @mixin background($color-name) {
-  background-color: var(--background-color);
+  background-color: var(--#{$color-name}-color);
   color: var(--text-color);
-  @include set-variables($color-name);
+  @include background-variables($color-name);
 }
 
-@mixin set-variables($color-name) {
-  --background-color: var(--#{$color-name}-color);
-  --border-color:  var(--#{$color-name}-border-color);
-
-  // Text contrasts background colors
+@mixin background-variables($color-name) {
+  // Foreground contrasts background colors
   --text-color: var(--text-contrast-#{$color-name}-color);
   @each $color-name2 in $color-names {
     --#{$color-name2}-text-color: var(--#{$color-name2}-text-contrast-#{$color-name}-color);
     --#{$color-name2}-input-border-color: var(--#{$color-name2}-input-border-contrast-#{$color-name}-color);
   }
 
-  --hover-color: var(--#{$color-name}-hover-color);
+  @each $variable-name in $component-variable-names {
+    --inherit-#{$variable-name}-color: var(--#{$color-name}-#{$variable-name}-color);
+  }
+}
+
+@mixin component-variables($color-name) {
+  @include background-variables($color-name);
+  @each $variable-name in $component-variable-names {
+    --#{$variable-name}-color: var(--#{$color-name}-#{$variable-name}-color);
+  }
 }
 
 @mixin default($color-name) {
   :where(&) {   
-    @include set-variables($color-name);
+    @include component-variables($color-name);
   }
 }
 
@@ -72,7 +81,7 @@
     }
 
     .#{$color-name} {
-      @include set-variables($color-name);
+      @include component-variables($color-name);
       --input-border-color:  var(--#{$color-name}-input-border-color);
     }
   }
