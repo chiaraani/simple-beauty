@@ -17,6 +17,8 @@ These are the colours of simple beauty:
 </ul>
 ```
 
+Those are recommendations for using colours, but you can change defaults them by [making your theme](/docs/theme.html).
+
 ## Background
 
 Just add class `COLOUR-NAME-bg`.
