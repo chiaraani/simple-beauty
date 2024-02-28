@@ -34,7 +34,6 @@
     border-bottom: inherit;
   }
   .body {
-    @include color;
     border-radius: 0 0 var(--panel-border-radius) var(--panel-border-radius);
     border-bottom: none;
   }

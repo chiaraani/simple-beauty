@@ -126,8 +126,8 @@ table {
     background-image: var(--component-background-image);
     padding: var(--component-padding);
   }
-  .header {
-    @include colors.default('canvas');
+  .body {
+    @include colors.background('canvas');
   }
 }
 

@@ -17,7 +17,7 @@ These are the colours of simple beauty:
 </ul>
 ```
 
-Those are recommendations for using colours, but you can change defaults them by [making your theme](/docs/theme.html).
+Those are recommendations for using colours, but you can change defaults and even add more colours by [making your theme](/docs/theme.html) .
 
 ## Background
 
