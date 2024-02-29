@@ -1,0 +1,6 @@
+<h2>Documentation</h2>
+<ol class="clickable list-group">
+   {% for item in site.data.docs.list %}
+      <li><a href="/docs/{{ item.path }}.html">{{ item.title }}</a></li>
+   {% endfor %}
+</ol>

@@ -42,6 +42,10 @@ defaults:
       type: "pages"
     values:
       layout: "page"
+  - scope:
+      path: "docs/"
+    values:
+      page_index: true
 # Build settings
 theme: minima
 # plugins:

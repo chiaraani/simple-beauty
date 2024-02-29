@@ -1,6 +1,8 @@
 list:
   - title: 'Installation'
     path: installation
+  - title: 'Helpers'
+    path: helpers
   - title: 'Layout: Container, grid system...'
     path: layout
   - title: 'Colours'

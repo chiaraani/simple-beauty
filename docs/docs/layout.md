@@ -2,13 +2,15 @@
 title: Layout
 ---
 
-## Container
+## Responsive-wrapper
 
-It's responsive. Its width is 800px or less to fit the device.
+With `responsive-wrapper` class elements would automatically adapt to device.
 
 ```html
-<div class="container">
-  <p class="secondary card">Content...</p>
+<div class="responsive-wrapper">
+  <div class="primary card" style="width: 100px">Item 1</div>
+  <div class="primary card" style="width: 300px">Item 2</div>
+  <div class="primary card" style="width: 700px">Item 3</div>
 </div>
 ```
 
@@ -115,5 +117,28 @@ A `.row` has 12 columns. `.col-NUMBER-BREAKPOINT_INFIX` sets how many columns mu
   <div>Item 10</div>
   <div>Item 11</div>
   <div>Item 12</div>
+</div>
+```
+
+## Hide and show classes
+
+`hide-BREAKPOINT_INFIX` classes would hide elements when screen width is greater than or equalt to BREAKPOINT. `show-BREAKPOINT_INFIX` classes would show only elements when screen width is greater than or equalt to BREAKPOINT.
+
+```html
+<div class="responsive-wrapper">
+  <div class="primary card hide-xs">Hide xs</div>
+  <div class="primary card hide-s">Hide s</div>
+  <div class="primary card hide-m">Hide m</div>
+  <div class="primary card hide-l">Hide l</div>
+  <div class="primary card hide-xl">Hide xl</div>
+  <div class="primary card hide-xxl">Hide xxl</div>
+</div>
+<div class="responsive-wrapper">
+  <div class="primary card show-xs">Show xs</div>
+  <div class="primary card show-s">Show s</div>
+  <div class="primary card show-m">Show m</div>
+  <div class="primary card show-l">Show l</div>
+  <div class="primary card show-xl">Show xl</div>
+  <div class="primary card show-xxl">Show xxl</div>
 </div>
 ```

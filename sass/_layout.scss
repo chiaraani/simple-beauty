@@ -4,12 +4,9 @@
   box-sizing: border-box;
 }
 
-.container {
-  width: 90%;
-  margin: 0.5em auto;
-  @media only screen and (min-width: map-get($breakpoints, 'm')) {
-    width: map-get($breakpoints, 'm');
-  }
+.responsive-wrapper {
+  display: flex;
+  flex-flow: row wrap;
 }
 
 .push-footer {
@@ -27,12 +24,14 @@
   display: flex;
   flex-flow: row wrap;
 }
-[class*="col-"] {
+:where([class*="col-"]) {
   width: 100%;
-  margin: 0;
 }
 [class*="slice-in-"] {
   display: grid;
+  & > * {
+    max-width: 100%;
+  }
 }
 @each $infix, $breakpoint in $breakpoints {
   @media only screen and (min-width: $breakpoint) {
@@ -47,3 +46,17 @@
   }
 }
 
+// Hide and show
+@each $infix, $breakpoint in $breakpoints {
+  @media only screen and (min-width: #{$breakpoint}) {
+    .hide-#{$infix} {
+      display: none;
+    }
+    
+  }
+  @media only screen and (max-width: #{$breakpoint - 1px}) {
+    .show-#{$infix} {
+      display: none;
+    }
+  }
+}
