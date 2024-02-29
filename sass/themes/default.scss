@@ -163,7 +163,7 @@ table {
 
 // Navbar
 :root {
-  --navbar-height: calc(58px + var(--navbar-margin));
+  --navbar-push: calc(58px + var(--navbar-margin));
   --navbar-padding: 1em;
   --navbar-margin: var(--component-margin);
   --navbar-border-radius: var(--component-border-radius);
