@@ -163,7 +163,7 @@ table {
 
 // Navbar
 :root {
-  --navbar-height: calc(53px + var(--navbar-margin));
+  --navbar-height: calc(58px + var(--navbar-margin));
   --navbar-padding: 1em;
   --navbar-margin: var(--component-margin);
   --navbar-border-radius: var(--component-border-radius);
@@ -185,8 +185,6 @@ table {
   .header {
     background: inherit;
   }
-  border-radius: var(--navbar-border-radius);
-  margin: var(--component-margin);
   a {
     background-image: var(--navbar-background-image);
     text-decoration: none;

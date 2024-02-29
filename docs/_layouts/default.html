@@ -13,13 +13,13 @@ layout: global
   {%- include header.html -%}
   <div class="row">
     {% if page.page_index %}
-      <div class="padding col-3-xl show-xl">{%- include docs-index.html -%}</div>
+      <div class="sticky padding col-3-xl show-xl">{%- include docs-index.html -%}</div>
     {% endif %}
     <main class="padding center col-6-xl col-8-l col-10-m" aria-label="Content">
       {{ content }}
     </main>
     {% if page.page_index %}
-      <div class="padding col-3-l">{%- include page-index.html -%}</div>
+      <div class="sticky padding col-3-l">{%- include page-index.html -%}</div>
     {% endif %}
   </div>
 

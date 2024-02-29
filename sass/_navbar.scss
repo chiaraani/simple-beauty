@@ -3,6 +3,8 @@
 
 .navbar {
   @include components.color;
+  margin: var(--navbar-margin);
+  border-radius: var(--navbar-border-radius);
   display: flex;
   flex-direction: column;
   border-width: var(--navbar-border-width);
@@ -97,9 +99,7 @@
 
 .navbar.fixed {
   margin: 0;
-  z-index: 2000;
   --navbar-border-radius: 0;
-  position: fixed;
   width: 100%;
   top: 0;
   right: 0;

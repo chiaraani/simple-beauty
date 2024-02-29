@@ -1,0 +1,22 @@
+.center {
+  margin: auto !important;
+}
+
+.fixed {
+  z-index: 2000;
+  position: fixed;
+  max-height: 100vh;
+  overflow: auto;
+}
+
+.sticky {
+  position: sticky !important;
+  top: 0;
+  align-self: start;
+  max-height: 100vh;
+  overflow: auto;
+  .navbar-push & {
+    top: var(--navbar-height);
+    max-height: calc(100vh - var(--navbar-height));
+  }
+}
