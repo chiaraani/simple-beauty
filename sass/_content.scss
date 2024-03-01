@@ -1,4 +1,4 @@
-@use 'components';
+@use 'components/mixins' as *;
 
 hr {
   border: none;
@@ -18,6 +18,6 @@ ol, ul {
 
 table {
   th, td {
-    @include components.color();
+    @include color-component();
   }
 }

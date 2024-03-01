@@ -1,10 +1,10 @@
 left:
   - text: Home
-    path: '/'
+    url: '/'
   - text: Documentation
-    path: '/docs.html'
+    url: '/docs.html'
   - text: Playground
-    path: '/playground.html'
+    url: '/playground.html'
 right: 
   - text: Theme
-    path: '/theme.html'
+    url: '/theme.html'

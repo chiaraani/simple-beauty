@@ -1,5 +1,5 @@
 @use '../colors';
-@use '../selectors';
+@use '../config/selectors';
 
 // Colors
 @include colors.generate(
@@ -46,6 +46,10 @@ h1, h2, h3, h4, h5, h6, hr {
 hr {
   margin: 1em 0;
 }
+
+// Lists
+ul, ol { padding: 0; }
+li { padding-left: 1.5em !important; }
 
 // Sizes
 .big { font-size: 150% }
@@ -94,7 +98,7 @@ table {
   }
 }
 
-#{selectors.$card} { 
+.card, .modal { 
   @include colors.default('canvas');
   padding: 0.8em 1.2em;
   margin: var(--component-margin);
@@ -124,7 +128,7 @@ table {
   border-style: var(--component-border-style);
   box-shadow: var(--component-box-shadow);
   margin: var(--component-margin);
-  --panel-border-radius: var(--component-border-radius);
+  --border-radius: var(--component-border-radius);
   & > * {
     background-image: var(--component-background-image);
     padding: var(--component-padding);
@@ -138,12 +142,33 @@ table {
   @include colors.default('canvas');
   box-shadow: var(--component-box-shadow);
   margin: var(--component-margin);
-  --group-border-radius: var(--component-border-radius);
+  --border-radius: var(--component-border-radius);
   & > * {
     background-image: var(--component-background-image);
     padding: 0.8em;
     border-width: var(--component-border-width);
     border-style: var(--component-border-style);
+  }
+}
+
+nav { @include colors.default('primary') }
+#{selectors.$nav-list} {  
+  box-shadow: var(--component-box-shadow);
+  margin: var(--component-margin);
+  --border-radius: var(--component-border-radius);
+  border-color: var(--border-color);
+  border-width: var(--component-border-width);
+  border-style: var(--component-border-style);
+  li, .header {
+    background-image: linear-gradient(to right, #0001, transparent, #fff1);
+    padding: var(--component-padding);
+    &:not(:last-child) {
+      border-bottom-width: var(--component-border-width);
+      border-bottom-style: var(--component-border-style);
+    }
+  }
+  ol {
+    box-shadow: none;
   }
 }
 
@@ -166,7 +191,6 @@ table {
   --navbar-push: calc(58px + var(--navbar-margin));
   --navbar-padding: 1em;
   --navbar-margin: var(--component-margin);
-  --navbar-border-radius: var(--component-border-radius);
   --navbar-border-width: var(--component-border-width);
   --navbar-border-style: var(--component-border-style);
   --navbar-background-image: linear-gradient(to bottom, #fff2, transparent, #0002);
@@ -179,7 +203,7 @@ table {
 }
 
 .navbar {
-  @include colors.default('primary');
+  --border-radius: var(--component-border-radius);
   box-shadow: #0007 0px 4px 8px;
   background-image: var(--navbar-background-image);
   .header {

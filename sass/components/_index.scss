@@ -1,0 +1,34 @@
+@use '../config/selectors';
+@use 'mixins' as *;
+@use 'panel';
+@use 'list-group';
+@use 'nav-list';
+@use 'navbar';
+@use 'forms';
+@use 'modal';
+
+#{selectors.$clickable-component}  {
+  cursor: pointer;
+  &:hover {
+    background-color: var(--hover-color);
+    text-decoration: none;
+  }
+}
+
+.card {
+  @include color-component;
+}
+
+#{selectors.$button} {
+  @include color-component;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.grid {
+  border-color: var(--border-color);
+  background: none;
+  & > * {
+    @include color-component;
+  }
+}

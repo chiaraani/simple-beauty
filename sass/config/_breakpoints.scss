@@ -7,4 +7,4 @@ $breakpoints: (
   "xxl": 1400px,
 );
 
-$navbar-breakpoint: map-get($breakpoints, 'l')
+$navbar-breakpoint: map-get($breakpoints, 'l');

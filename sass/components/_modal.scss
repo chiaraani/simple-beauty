@@ -1,4 +1,7 @@
+@use 'mixins' as *;
+
 .modal {
+   @include color-component;
   width: max-content;
   max-width: 90vw;
   max-height: 90vh;

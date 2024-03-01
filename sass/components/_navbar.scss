@@ -1,20 +1,20 @@
-@use 'components';
-@use 'breakpoints' as *;
+@use 'mixins' as *;
+@use '../config/breakpoints' as *;
 
 .navbar {
-  @include components.color;
+  @include color-component;
   margin: var(--navbar-margin);
-  border-radius: var(--navbar-border-radius);
+  @include border-radius;
   display: flex;
   flex-direction: column;
   border-width: var(--navbar-border-width);
   border-style: var(--navbar-border-style);
   a {
-    @include components.color;
     border-width: var(--navbar-border-width);
     border-top-style: var(--navbar-border-style);
+    @include color-component;
     display: block;
-    color: inherit;
+    color: inherit; 
   }
 
   p, a {
@@ -25,14 +25,14 @@
   }
 
   .header {
-    border-radius: var(--navbar-border-radius);
+    border-radius: var(--border-radius);
     display: flex;
     align-items: center;
     .site-name {
       flex-grow: 1;
     }
-    :first-child {
-      border-radius: var(--navbar-border-radius) 0 0 var(--navbar-border-radius);
+    a:first-child {
+      @include border-radius('left');
       border: none;
     }
   }
@@ -50,17 +50,13 @@
       flex-direction: inherit;
     }
     :last-child :last-child {
-      border-radius: 0 0 var(--navbar-border-radius) var(--navbar-border-radius);
+      @include border-radius('bottom');
     }
   }
 
   &.open {
-    .header {
-      border-radius: var(--navbar-border-radius) var(--navbar-border-radius) 0 0 ; 
-      border-color: inherit;
-    }
     .collapse {
-      max-height: calc( 90vh - var(--navbar-height) * 1.5 );
+      max-height: calc( 100vh - var(--navbar-push));
     }
   } 
 }
@@ -85,7 +81,7 @@
         border-right-style: var(--navbar-border-style);
       }
       :last-child :last-child {
-        border-radius: 0 var(--navbar-border-radius) var(--navbar-border-radius) 0;
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
       }
     }
   }
@@ -99,7 +95,7 @@
 
 .navbar.fixed {
   margin: 0;
-  --navbar-border-radius: 0;
+  --border-radius: 0;
   width: 100%;
   top: 0;
   right: 0;

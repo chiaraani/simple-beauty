@@ -1,0 +1,16 @@
+@use 'mixins' as *;
+
+.list-group  {
+  @include border-radius;
+  & > * {
+    @include color-component;
+    @include child-border-radius;
+  }
+  :not(:last-child) {
+    border-bottom: none;
+  }
+  & > a {
+    display: block;
+    text-decoration: none;
+  }
+}

@@ -1,5 +1,5 @@
 @use 'functions' as *;
-@use '../selectors';
+@use '../config/selectors';
 
 @mixin generate($colors, $default-text-contrast, $minimum-text-contrast, $input-border-contrast, $component-contrast) {
   :root {

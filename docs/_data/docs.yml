@@ -1,23 +1,30 @@
-list:
+index:
   - title: 'Installation'
-    path: installation
+    path: 'installation'
   - title: 'Helpers'
-    path: helpers
+    path: 'helpers'
   - title: 'Layout: Container, grid system...'
-    path: layout
+    path: 'layout'
   - title: 'Colours'
-    path: colors
+    path: 'colors'
   - title: 'Content: Typography'
     path: 'content'
   - title: 'Components'
-    path: components
-  - title: 'Navbar'
-    path: navbar
-  - title: 'Forms'
-    path: forms
-  - title: 'Modal'
-    path: modal
+    path: 'components'
+    children:
+    - title: 'List groups'
+      path: 'list-groups'
+    - title: 'Panels'
+      path: 'panels'
+    - title: 'Nav lists'
+      path: 'nav-list'
+    - title: 'Navbar'
+      path: 'navbar'
+    - title: 'Forms'
+      path: 'forms'
+    - title: 'Modal'
+      path: 'modal'
   - title: 'Theme: make your own theme!'
-    path: theme
+    path: 'theme'
   - title: 'Principles of Simple beauty'
-    path: principles
+    path: 'principles'

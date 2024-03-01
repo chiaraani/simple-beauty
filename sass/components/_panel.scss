@@ -1,0 +1,14 @@
+@use 'mixins' as *;
+
+.panel {
+  @include color-component;
+  padding: 0; 
+  @include border-radius;
+  .header {
+    font-weight: bold;
+    border-bottom: inherit;
+  }
+  & > * {
+    @include child-border-radius;
+  }
+}

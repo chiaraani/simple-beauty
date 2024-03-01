@@ -1,0 +1,21 @@
+@use '../config/selectors';
+@use 'mixins' as *;
+
+#{selectors.$nav-list} {
+  @include border-radius;
+  @include color-component;
+  .header {
+    margin: 0;
+  }
+  li {
+    @include child-border-radius;
+    @include color-component;
+  }
+
+  a, a:hover {
+    display: inline-block;
+    width: calc(100% - 3em);
+    color: inherit; 
+    text-decoration: none;
+  }
+}
