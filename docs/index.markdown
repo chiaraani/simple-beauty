@@ -67,4 +67,4 @@ And, make a navbar this easily:
 </nav>
 ```
 
-## Find out more about Simple beauty <a class="success button" href="/docs">here</a>, or have look at an <a class="success button" href="/theme">example</a>.
+## Find out more about Simple beauty <a class="success button" href="/docs/installation.html">here</a>, or have look at an <a class="success button" href="/theme">example</a>.
