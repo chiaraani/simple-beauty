@@ -122,6 +122,15 @@ If you include mixin `colors.default(COLOR-NAME)` in a component, it will have t
 }
 ```
 
+#### Matching
+You can set default to `matching` so element colours match parent colours.
+
+```scss
+.grid {
+  @include colors.default('matching');
+}
+```
+
 ### Default input
 Include mixin `colors.input-default(COLOR-NAME)` to make inputs have that COLOR by default.
 ```scss

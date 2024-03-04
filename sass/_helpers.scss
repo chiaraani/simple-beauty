@@ -1,5 +1,5 @@
 .center {
-  margin: auto !important;
+  margin: auto;
 }
 
 .fixed {
@@ -10,7 +10,7 @@
 }
 
 .sticky {
-  position: sticky !important;
+  position: sticky;
   top: 0;
   align-self: start;
   max-height: 100vh;
@@ -19,4 +19,10 @@
     top: var(--navbar-push);
     max-height: calc(100vh - var(--navbar-push));
   }
+}
+
+.fluid {
+  border-radius: 0 !important;
+  --border-radius: 0 !important;
+  margin: 0 !important;
 }

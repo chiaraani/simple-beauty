@@ -1,4 +1,4 @@
-@use 'config/breakpoints' as *;
+@use 'config/breakpoints';
 
 * {
   box-sizing: border-box;
@@ -33,30 +33,27 @@
     max-width: 100%;
   }
 }
-@each $infix, $breakpoint in $breakpoints {
-  @media only screen and (min-width: $breakpoint) {
-    @for $i from 1 through 12 {
-      .col-#{$i}-#{$infix} {
-        width: calc(100% / 12 * $i);
-      }
-      .slice-in-#{$i}-#{$infix} {
-        grid-template-columns: repeat($i, 1fr);
-      }
+@include breakpoints.each-min using($infix) {
+  @for $i from 1 through 12 {
+    .col-#{$i}-#{$infix} {
+      width: calc(100% / 12 * $i);
+    }
+    .slice-in-#{$i}-#{$infix} {
+      grid-template-columns: repeat($i, 1fr);
     }
   }
 }
 
+
 // Hide and show
-@each $infix, $breakpoint in $breakpoints {
-  @media only screen and (min-width: #{$breakpoint}) {
-    .hide-#{$infix} {
-      display: none;
-    }
-    
+@include breakpoints.each-min using($infix) {
+  .hide-#{$infix} {
+    display: none;
   }
-  @media only screen and (max-width: #{$breakpoint - 1px}) {
-    .show-#{$infix} {
-      display: none;
-    }
+}
+
+@include breakpoints.each-min-not using($infix) {
+  .show-#{$infix} {
+    display: none;
   }
 }

@@ -1,19 +1,22 @@
 $button: (".button", "button", "input[type=submit]", 
-  "input[type=button]", "input[type=reset]", "select",
+  "input[type=button]", "input[type=reset]",
 );
 
 $group: ".list-group, .grid";
-$nav-list: "nav :where(ol, ul)";
 
-$clickable-component: join($button, (
+$clickable-in-group: (
   ":is(.clickable)",
   ":is(#{$group}):is(.clickable) > *",
   ":is(#{$group}) > a", 
-  ".navbar a",
-  "#{$nav-list} li",
-));
+  "nav a",
+);
+$clickable-component: join(join($button, $clickable-in-group), ('select'));
+
+$active: '&.active, &:active';
 
 $input: ("input[type=text]", "input[type=date]", "input[type=datetime-local]", "input[type=email]",
   "input[type=month]", "input[type=number]", "input[type=password]", "input[type=search]",
   "input[type=tel]", "input[type=time]", "input[type=url]", "textarea", "input[type=week]",
 );
+
+$offcanvas: "[class*='offcanvas-']";

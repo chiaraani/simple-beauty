@@ -5,7 +5,7 @@ title: Colours
 These are the colours of simple beauty:
 
 ```html
-<ul class="group">
+<ul class="list-group">
   <li class="canvas"><strong>Canvas:</strong> background colour of the site and some components.</li>
   <li class="primary"><strong>Primary:</strong> main colour of the website, for buttons, navbar, components, links, and forms by default.</li>
   <li class="secondary"><strong>Secondary:</strong> second colour for the site.</li>

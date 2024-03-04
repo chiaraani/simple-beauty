@@ -41,14 +41,20 @@
   }
 
   @each $variable-name in $component-variable-names {
-    --inherit-#{$variable-name}-color: var(--#{$color-name}-#{$variable-name}-color);
+    --matching-#{$variable-name}-color: var(--#{$color-name}-#{$variable-name}-color);
   }
 }
 
 @mixin component-variables($color-name) {
-  @include background-variables($color-name);
-  @each $variable-name in $component-variable-names {
-    --#{$variable-name}-color: var(--#{$color-name}-#{$variable-name}-color);
+  @if $color-name == 'matching' {
+    @each $variable-name in $component-variable-names {
+      --#{$variable-name}-color: var(--matching-#{$variable-name}-color);
+    }
+  } @else {
+    @include background-variables($color-name);
+    @each $variable-name in $component-variable-names {
+      --#{$variable-name}-color: var(--#{$color-name}-#{$variable-name}-color);
+    }
   }
 }
 

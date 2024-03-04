@@ -2,10 +2,8 @@
    {% for item in include.list %}
       {% capture url %}{{ include.prepend }}{{ item.path }}{{ include.append }}{% endcapture %}
 
-      <li {% if url == page.url %} class="active"{% endif %}>
-         <a href="{{ url }}"> 
-            {{ item.title }}
-         </a>
+      <li>
+         {% include link.html text=item.title url=url %}
          {% if item.children %}
             {% capture prepend_children %}{{ include.prepend }}{{ item.path }}/{% endcapture %}
             {% include link-list.html list=item.children prepend=prepend_children append=include.append  %}

@@ -2,7 +2,7 @@ left:
   - text: Home
     url: '/'
   - text: Documentation
-    url: '/docs.html'
+    url: '/docs/installation.html'
   - text: Playground
     url: '/playground.html'
 right: 

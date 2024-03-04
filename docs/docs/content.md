@@ -106,20 +106,12 @@ Just add `small`  and `big` classes.
 ```
 
 
-## `ul` and `ol`
+## Close button
 
 ```html
-<div class="slice-in-2-s">
-  <ol>
-    <li>Item</li>
-    <li>Item</li>
-  </ol>
-  <ul>
-    <li>Item</li>
-    <li>Item</li>
-  </ul>
-</div>
+<button class="close"></button>
 ```
+
 
 ## Pre
 

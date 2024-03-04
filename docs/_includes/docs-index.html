@@ -1,3 +1,5 @@
-<nav class="canvas">
+<nav class="sticky col-3-xl nav-list offcanvas-l-left col-6-m" id="docs-index">
+   <button onclick="closeOffcanvas()" class="close"></button>
+   <h2 class="header">Documentation</h2>
    {% include link-list.html list=site.data.docs.index prepend="/docs/" append=".html" %}
 </nav>

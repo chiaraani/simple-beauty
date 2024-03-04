@@ -12,18 +12,17 @@ layout: global
 <body class="navbar-push push-footer">
   {%- include header.html -%}
   <div class="row">
-    {% if page.page_index %}
-      <div class="sticky padding col-3-xl show-xl">
-        <h2>Documentation</h2>
-        {%- include docs-index.html -%}
-      </div>
-    {% endif %}
+    {% if page.page_index %}{%- include docs-index.html -%}{% endif %}
     <main class="padding center col-6-xl col-8-l col-10-m" aria-label="Content">
+      {% if page.page_index %}
+        <div class="hide-xl fluid card sticky"> 
+          <button class="hide-xl canvas" onclick="openOffcanvas('docs-index')">☰ Docs index</button>
+          <button class="hide-l canvas" onclick="openOffcanvas('page-index')">☰ Page index</button>
+        </div>
+      {% endif %}
       {{ content }}
     </main>
-    {% if page.page_index %}
-      <div class="sticky padding col-3-l">{%- include page-index.html -%}</div>
-    {% endif %}
+    {% if page.page_index %}{%- include page-index.html -%}{% endif %}
   </div>
 
   {%- include footer.html -%}

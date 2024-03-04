@@ -1,21 +1,35 @@
 @use '../config/selectors';
 @use 'mixins' as *;
 
-#{selectors.$nav-list} {
-  @include border-radius;
+.nav-list {
+  border: var(--border); 
   @include color-component;
   .header {
     margin: 0;
   }
   li {
-    @include child-border-radius;
+    display: block;
+  }
+  a {
     @include color-component;
+    display: block;
+  }
+  li:not(:first-child) a { 
+    border-top: var(--border);
   }
 
-  a, a:hover {
-    display: inline-block;
-    width: calc(100% - 3em);
-    color: inherit; 
-    text-decoration: none;
+  li :where(ul, ol) a {
+    border-top: var(--border); 
+  }
+
+  ol {
+    counter-reset: ol;
+    li {
+      counter-increment: ol;
+      a:before {
+        content: counter(ol) ". ";
+      }
+    }
   }
 }
+

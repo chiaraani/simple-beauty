@@ -14,3 +14,10 @@
     text-decoration: none;
   }
 }
+
+ol, ul {
+  &.list-group { 
+    padding: 0;
+    list-style-position: inside; 
+  }
+}

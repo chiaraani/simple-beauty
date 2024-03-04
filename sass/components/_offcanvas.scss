@@ -1,0 +1,29 @@
+@use '../config/breakpoints';
+@use '../config/selectors';
+
+@include breakpoints.each-max using ($infix) {
+  [class*="offcanvas-#{$infix}-"] {
+    position: fixed !important;
+    max-height: 100vh;
+    overflow: auto;
+    z-index: 2500;
+  }
+
+  .offcanvas-#{$infix}-left {
+    top: 0;
+    left: 0;
+    &:not(.open) { transform: translateX(-100vw); }
+  }
+
+  .offcanvas-#{$infix}-right {
+    top: 0;
+    right: 0;
+    &:not(.open) { transform: translateX(110vw); }
+  }
+}
+
+@include breakpoints.each-max-not using ($infix) {
+  [class*="offcanvas-#{$infix}-"] .close {
+    display: none;
+  }
+}

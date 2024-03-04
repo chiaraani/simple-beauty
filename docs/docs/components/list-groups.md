@@ -50,7 +50,7 @@ You can add this class to a `ul` as well.
 </ul>
 ```
 
-### Clickable class
+## Clickable class
 
 You can make elements look clickable by adding `clickable` class to list-group.
 

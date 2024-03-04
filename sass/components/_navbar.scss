@@ -1,5 +1,5 @@
 @use 'mixins' as *;
-@use '../config/breakpoints' as *;
+@use '../config/breakpoints';
 
 .navbar {
   @include color-component;
@@ -9,15 +9,21 @@
   flex-direction: column;
   border-width: var(--navbar-border-width);
   border-style: var(--navbar-border-style);
-  a {
+  :where(a, .item) {
     border-width: var(--navbar-border-width);
     border-top-style: var(--navbar-border-style);
     @include color-component;
     display: block;
-    color: inherit; 
+    align-self: stretch;
   }
 
-  p, a {
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  p, :where(a, .item) {
     display: flex;
     align-items: center;
     padding: var(--navbar-padding);
@@ -26,12 +32,11 @@
 
   .header {
     border-radius: var(--border-radius);
-    display: flex;
     align-items: center;
     .site-name {
       flex-grow: 1;
     }
-    a:first-child {
+    :where(a, .item):first-child {
       @include border-radius('left');
       border: none;
     }
@@ -45,26 +50,31 @@
     max-height: 0;
     overflow: auto;
     flex-direction: inherit;
+    transition-property: max-height;
+    align-items: stretch;
     div {
       display: flex;
       flex-direction: inherit;
     }
-    :last-child :last-child {
+    :last-child :where(a, .item):last-child {
       @include border-radius('bottom');
     }
   }
 
   &.open {
+    .header {
+      @include border-radius('top');
+    }
     .collapse {
       max-height: calc( 100vh - var(--navbar-push));
     }
   } 
 }
 
-@media only screen and (min-width: $navbar-breakpoint)  {
+@media only screen and (min-width: breakpoints.$navbar)  {
   .navbar {
     flex-direction: row;
-    a {
+    :where(a, .item) {
       border-top-style: none;
       border-left-style: var(--navbar-border-style);
     }
@@ -73,14 +83,13 @@
     }
     .collapse {
       max-height: initial;
-      display: flex;
       height: auto;
       justify-content: space-between;
       flex-grow: 1;
-      :first-child a:last-child {
+      :first-child :where(a, .item):last-child {
         border-right-style: var(--navbar-border-style);
       }
-      :last-child :last-child {
+      :last-child :where(a, .item):last-child {
         border-radius: 0 var(--border-radius) var(--border-radius) 0;
       }
     }
@@ -99,5 +108,4 @@
   width: 100%;
   top: 0;
   right: 0;
-  border-style: none none var(--navbar-border-style) none;
 }

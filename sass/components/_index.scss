@@ -6,6 +6,7 @@
 @use 'navbar';
 @use 'forms';
 @use 'modal';
+@use 'offcanvas';
 
 #{selectors.$clickable-component}  {
   cursor: pointer;

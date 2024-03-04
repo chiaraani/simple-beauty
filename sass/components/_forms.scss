@@ -1,7 +1,13 @@
 @use '../config/selectors';
+@use 'mixins' as *;
 
 textarea {
   display: block;
+}
+
+select {
+  @include color-component;
+  display: inline-block;
 }
 
 .field.danger {

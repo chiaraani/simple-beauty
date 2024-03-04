@@ -9,7 +9,7 @@ title: Helpers
 `center` class allows you to centre elements.
 
 ```html
-<div class="center secondary card" style="width: 100px">Center</div>
+<div class="secondary card center" style="width: 100px">Center</div>
 ```
 
 ### Sticky
@@ -21,7 +21,7 @@ Just add `sticky` class to make element sticky.
 <ol>
   <li>item</li>
   <li>item</li>
-<div class="sticky secondary card">Sticky</div>
+<div class="secondary card sticky">Sticky</div>
   <li>item</li>
   <li>item</li>
   <li>item</li>
@@ -46,6 +46,13 @@ Just add `fixed` class to make element fixed.
 </ol>
 ```
 
+## Fluid 
+
+It makes an element have neither margin nor border radius.
+```html
+<div class="card fluid">Fluid</div>
+```
+
 
 ## Padding
 
@@ -53,4 +60,12 @@ Just add `fixed` class to make element fixed.
 
 ```html
 <div class="padding primary-bg">Padding</div>
+```
+
+## Box shadow
+
+`box-shadow` class sets `box-shadow` to `var(--component-box-shadow)`;
+
+```html
+<div class="box-shadow">.box-shadow</div>
 ```

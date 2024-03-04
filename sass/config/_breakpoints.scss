@@ -1,5 +1,5 @@
-$breakpoints: (
-  "xs": 0,
+@use "sass:map";
+$min: (
   "s": 600px,
   "m": 800px,
   "l": 1000px,
@@ -7,4 +7,47 @@ $breakpoints: (
   "xxl": 1400px,
 );
 
-$navbar-breakpoint: map-get($breakpoints, 'l');
+$max: (
+  "xs": 599px,
+  "s": 799px,
+  "m": 999px,
+  "l": 1199px,
+  "xl": 1399px,
+);
+
+$navbar: map-get($min, 'l');
+
+
+@mixin each-min {
+  @content('xs');
+  @each $infix, $breakpoint in $min {
+    @media only screen and (min-width: $breakpoint) {
+      @content($infix);
+    }
+  }
+}
+
+@mixin each-max {
+  @content('xxl');
+  @each $infix, $breakpoint in $max {
+    @media only screen and (max-width: $breakpoint) {
+      @content($infix);
+    }
+  }
+}
+
+@mixin each-min-not {
+  @each $infix, $breakpoint in $min {
+    @media only screen and (max-width: #{$breakpoint - 1px}) {
+      @content($infix);
+    }
+  }
+}
+
+@mixin each-max-not {
+  @each $infix, $breakpoint in $max {
+    @media only screen and (min-width: #{$breakpoint + 1px}) {
+      @content($infix);
+    }
+  }
+}
