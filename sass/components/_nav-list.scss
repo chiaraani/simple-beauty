@@ -6,6 +6,7 @@
   @include color-component;
   .header {
     margin: 0;
+    border-bottom: var(--border); 
   }
   li {
     display: block;

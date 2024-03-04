@@ -23,10 +23,13 @@
   ),
 );
 
-// Font
 body {
   @include colors.background('canvas');
   font-family: sans-serif;
+}
+
+html { 
+  scroll-behavior: smooth;
 }
 
 // Links
