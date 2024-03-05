@@ -100,6 +100,14 @@
 
 .navbar-push {
  margin-top: var(--navbar-push);
+ overflow: auto;
+  * {
+    scroll-margin-top: calc(var(--navbar-push) + 1em);
+  }
+  .sticky {
+    top: var(--navbar-push);
+    max-height: calc(100vh - var(--navbar-push));
+  }
 }
 
 .navbar.fixed {
