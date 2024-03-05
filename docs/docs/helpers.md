@@ -53,6 +53,18 @@ It makes an element have neither margin nor border radius.
 <div class="card fluid">Fluid</div>
 ```
 
+## Grow
+
+`grow` sets `flex-grow: 1;` style.
+
+```html
+<div class="responsive-wrapper">
+  <div class="card">Item</div>
+  <div class="primary card grow">.grow</div>
+  <div class="card">Item</div>
+</div>
+```
+
 
 ## Padding
 

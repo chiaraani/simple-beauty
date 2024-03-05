@@ -1,14 +1,14 @@
 index:
   - title: 'Installation'
     path: 'installation'
-  - title: 'Helpers'
-    path: 'helpers'
   - title: 'Layout: Container, grid system...'
     path: 'layout'
   - title: 'Colours'
     path: 'colors'
   - title: 'Content: Typography'
     path: 'content'
+  - title: 'Helpers'
+    path: 'helpers'
   - title: 'Components'
     path: 'components'
     children:
