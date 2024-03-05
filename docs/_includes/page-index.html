@@ -1,17 +1,25 @@
 <nav class="nav-list sticky col-3-l offcanvas-m-right col-6-m" id="page-index">
   <button onclick="closeOffcanvas()" class="close"></button>
   <h2 class="header">Page index</h2>
-  <p class="header"><strong>{{ page.title | escape }}</strong></p>
-  <ol>
-  </ol>
+  <a class="header" href="#"><strong>{{ page.title | escape }}</strong></a>
 </nav>
 
 <script>
   window.addEventListener('load', () => {
-    const pageIndex = document.querySelector('#page-index ol')
-    document.querySelectorAll('main h2').forEach(h2 => {
-      const li = `<li><a href="#${h2.id}">${h2.textContent}</a></li>`
-      pageIndex.insertAdjacentHTML("beforeEnd", li)
-    })
+    const pageIndex = document.querySelector('#page-index')
+    pageIndex.insertAdjacentHTML("beforeEnd", 
+      subtitlesList(document.querySelector('main h1'))
+    )
+
+    function subtitlesList(hParent) {
+      const hNo = Number(hParent.tagName.substr(1))
+      let lis = ''
+      document
+        .querySelectorAll(`main #${hParent.id} ~ h${hNo + 1}:not(#${hParent.id} ~ h${hNo} ~ h${hNo + 1})`)
+        .forEach(h => (
+          lis += `<li><a href="#${h.id}">${h.textContent}</a></li>` + subtitlesList(h)
+        ))
+      return `<ol>${lis}</ol>`
+    }
   })
 </script>
