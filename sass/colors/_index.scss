@@ -33,25 +33,38 @@
 }
 
 @mixin background-variables($color-name) {
-  // Foreground contrasts background colors
-  --text-color: var(--text-contrast-#{$color-name}-color);
-  @each $color-name2 in $color-names {
-    --#{$color-name2}-text-color: var(--#{$color-name2}-text-contrast-#{$color-name}-color);
-    --#{$color-name2}-input-border-color: var(--#{$color-name2}-input-border-contrast-#{$color-name}-color);
-  }
+  @if $color-name == 'matching' {
+    // Foreground contrasts background colors
+    --text-color: inherit;
+    @each $color-name2 in $color-names {
+      --#{$color-name2}-text-color: inherit;
+      --#{$color-name2}-input-border-color: inherit;
+    }
 
-  @each $variable-name in $component-variable-names {
-    --matching-#{$variable-name}-color: var(--#{$color-name}-#{$variable-name}-color);
+    @each $variable-name in $component-variable-names {
+      --matching-#{$variable-name}-color: inherit;
+    }
+  } @else {
+    // Foreground contrasts background colors
+    --text-color: var(--text-contrast-#{$color-name}-color);
+    @each $color-name2 in $color-names {
+      --#{$color-name2}-text-color: var(--#{$color-name2}-text-contrast-#{$color-name}-color);
+      --#{$color-name2}-input-border-color: var(--#{$color-name2}-input-border-contrast-#{$color-name}-color);
+    }
+
+    @each $variable-name in $component-variable-names {
+      --matching-#{$variable-name}-color: var(--#{$color-name}-#{$variable-name}-color);
+    }
   }
 }
 
 @mixin component-variables($color-name) {
+  @include background-variables($color-name);
   @if $color-name == 'matching' {
     @each $variable-name in $component-variable-names {
       --#{$variable-name}-color: var(--matching-#{$variable-name}-color);
     }
   } @else {
-    @include background-variables($color-name);
     @each $variable-name in $component-variable-names {
       --#{$variable-name}-color: var(--#{$color-name}-#{$variable-name}-color);
     }
@@ -90,5 +103,18 @@
       @include component-variables($color-name);
       --input-border-color:  var(--#{$color-name}-input-border-color);
     }
+  }
+
+  .matching-bg {
+    @include background('matching');
+  }
+
+  .matching-text {
+    color: var(--text-color);
+  }
+
+  .matching {
+    @include component-variables('matching');
+    --input-border-color:  inherit;
   }
 }

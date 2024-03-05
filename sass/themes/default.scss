@@ -227,6 +227,8 @@ table {
   .collapse {
     transition-duration: 0.5s;
   }
+
+  .toggle-navbar { @include colors.default('matching') }
 }
 
 // // Forms //
