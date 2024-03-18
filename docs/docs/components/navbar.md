@@ -13,11 +13,11 @@ This a navbar:
     <button class="toggle-navbar" onclick="toggleNavbar()"><span class="menu-sb-icon"></span></button>
   </div>
   <div class="collapse">
-    <div>
+    <div class="left">
       <a class="active" href="#">Home</a>
       <a href="#">About</a>
     </div>
-    <div>
+    <div class="right">
       <p><em>Slogan...</em></p>
       <a href="#" class="success">Sign up</a>
       <a href="#">Sign in</a>
@@ -25,6 +25,21 @@ This a navbar:
   </div>
 </nav>
 ```
+
+## Simplest
+
+```html
+<style>html { height: 10em; }</style>
+
+<nav class="navbar">
+  <a href="#" class="site-name">Site name</a>
+  <a class="active" href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#" class="success">Sign up</a>
+  <a href="#">Sign in</a>
+</nav>
+```
+
 
 ## Open
 
@@ -39,11 +54,11 @@ Add `open` class to open `.collapse`.
     <button class="toggle-navbar"><span class="menu-sb-icon"></span></button>
   </div>
   <div class="collapse">
-    <div>
+    <div class="left">
       <a href="#">Home</a>
       <a href="#">About</a>
     </div>
-    <div>
+    <div class="right">
       <p><em>Slogan...</em></p>
       <a href="#" class="success">Sign up</a>
       <a href="#">Sign in</a>
@@ -67,11 +82,11 @@ Add `fixed` class to navbar, and `navbar-push` class to body or website content.
     <button class="toggle-navbar" onclick="toggleNavbar()"><span class="menu-sb-icon"></span></button>
   </div>
   <div class="collapse">
-    <div>
+    <div class="left">
       <a href="#">Home</a>
       <a href="#">About</a>
     </div>
-    <div>
+    <div class="right">
       <p><em>Slogan...</em></p>
       <a href="#" class="success">Sign up</a>
       <a href="#">Sign in</a>
@@ -102,11 +117,11 @@ Add `sticky` class to navbar to make it sticky.
     <button class="toggle-navbar" onclick="toggleNavbar()"><span class="menu-sb-icon"></span></button>
   </div>
   <div class="collapse">
-    <div>
+    <div class="left">
       <a href="#">Home</a>
       <a href="#">About</a>
     </div>
-    <div>
+    <div class="right">
       <p><em>Slogan...</em></p>
       <a href="#" class="success">Sign up</a>
       <a href="#">Sign in</a>
@@ -136,11 +151,11 @@ You can add any colour class to navbar.
     <button class="toggle-navbar" onclick="toggleNavbar()"><span class="menu-sb-icon"></span></button>
   </div>
   <div class="collapse">
-    <div>
+    <div class="left">
       <a class="active" href="#">Home</a>
       <a href="#">About</a>
     </div>
-    <div>
+    <div class="right">
       <p><em>Slogan...</em></p>
       <a href="#" class="success">Sign up</a>
       <a href="#">Sign in</a>

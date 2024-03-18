@@ -54,11 +54,11 @@ And, make a navbar this easily:
     <button class="toggle-navbar" onclick="toggleNavbar()"><span class="menu-sb-icon"></span></button>
   </div>
   <div class="collapse">
-    <div>
+    <div class="left">
       <a class="active" href="#">Home</a>
       <a href="#">About</a>
     </div>
-    <div>
+    <div class="right">
       <p><em>Slogan...</em></p>
       <a href="#" class="success">Sign up</a>
       <a href="#">Sign in</a>

@@ -17,6 +17,9 @@
     align-self: stretch;
   }
 
+  & > :where(a, .item) {  @include child-border-radius }
+  & > :where(a, .item):first-child {  border-style: none; }
+
   div {
     display: flex;
     flex-direction: row;
@@ -74,18 +77,27 @@
       border-top-style: none;
       border-left-style: var(--navbar-border-style);
     }
+    & > :where(a, .item):first-child {  
+      @include border-radius('left');
+      border-left: none;
+    }
+    & > :where(a, .item):last-child { 
+      border-radius: 0;
+      border-right-style:  var(--navbar-border-style);
+    }
+
     .toggle-navbar {
       display: none;
     }
     .collapse {
       max-height: initial;
       height: auto;
-      justify-content: space-between;
       flex-grow: 1;
-      :first-child :where(a, .item):last-child {
+      .left :where(a, .item):last-child {
         border-right-style: var(--navbar-border-style);
       }
-      :last-child :where(a, .item):last-child {
+      .right { flex-grow: 1; justify-content: flex-end; }
+      .right :where(a, .item):last-child {
         border-radius: 0 var(--border-radius) var(--border-radius) 0;
       }
     }
