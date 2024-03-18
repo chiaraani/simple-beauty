@@ -1,0 +1,15 @@
+[class*=-sb-icon] {
+  background-color: var(--text-color);
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  mask-size: 1em 1em;
+}
+
+.menu-sb-icon {
+ mask-image: url(../icons/menu.svg);
+}
+
+.close-sb-icon {
+ mask-image: url(../icons/close.svg);
+}

@@ -9,14 +9,14 @@ title: Offcanvas
 
 <button onclick="openOffcanvas('offcanvas1')">Open left offcanvas</button>
 <div class="primary card offcanvas-l-left" id="offcanvas1">
-  <button onclick="closeOffcanvas()" class="close"></button>
+  <button onclick="closeOffcanvas()" class="close"><span class="close-sb-icon"></span></button>
   <p>Left offcanvas</p>
 </div>
 
 
 <button onclick="openOffcanvas('offcanvas2')">Open right offcanvas</button>
 <div class="primary card offcanvas-xl-right" id="offcanvas2">
-  <button onclick="closeOffcanvas()" class="close"></button>
+  <button onclick="closeOffcanvas()" class="close"><span class="close-sb-icon"></span></button>
   <p>right offcanvas</p>
 </div>
 ```
@@ -28,7 +28,7 @@ Just add open class to keep open.
 ```html
 <style>body { height: 10em; }</style>
 <div class="open primary card offcanvas-l-left">
-  <button class="close"></button>
+  <button class="close"><span class="close-sb-icon"></span></button>
   <p>Offcanvas</p>
 </div>
 ```

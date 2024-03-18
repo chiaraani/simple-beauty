@@ -16,8 +16,8 @@ layout: global
     <main class="padding center col-6-xl col-8-l col-10-m" aria-label="Content">
       {% if page.page_index %}
         <div class="hide-xl fluid card sticky"> 
-          <button class="hide-xl canvas" onclick="openOffcanvas('docs-index')">☰ Docs index</button>
-          <button class="hide-l canvas" onclick="openOffcanvas('page-index')">☰ Page index</button>
+          <button class="hide-xl canvas" onclick="openOffcanvas('docs-index')"><span class="menu-sb-icon"></span> Docs index</button>
+          <button class="hide-l canvas" onclick="openOffcanvas('page-index')"><span class="menu-sb-icon"></span> Page index</button>
         </div>
       {% endif %}
       {{ content }}

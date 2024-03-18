@@ -10,7 +10,7 @@ This a navbar:
 <nav class="navbar">
   <div class="header">
     <a href="#" class="site-name">Site name</a>
-    <button class="toggle-navbar" onclick="toggleNavbar()"></button>
+    <button class="toggle-navbar" onclick="toggleNavbar()"><span class="menu-sb-icon"></span></button>
   </div>
   <div class="collapse">
     <div>
@@ -36,7 +36,7 @@ Add `open` class to open `.collapse`.
 <nav class="open navbar">
   <div class="header">
     <a href="#" class="site-name">Site name</a>
-    <button class="toggle-navbar"></button>
+    <button class="toggle-navbar"><span class="menu-sb-icon"></span></button>
   </div>
   <div class="collapse">
     <div>
@@ -64,7 +64,7 @@ Add `fixed` class to navbar, and `navbar-push` class to body or website content.
 <nav class="fixed navbar">
   <div class="header">
     <a href="#" class="site-name">Site name</a>
-    <button class="toggle-navbar" onclick="toggleNavbar()"></button>
+    <button class="toggle-navbar" onclick="toggleNavbar()"><span class="menu-sb-icon"></span></button>
   </div>
   <div class="collapse">
     <div>
@@ -99,7 +99,7 @@ Add `sticky` class to navbar to make it sticky.
 
 <nav class="sticky navbar">
   <div class="header">
-    <button class="toggle-navbar" onclick="toggleNavbar()"></button>
+    <button class="toggle-navbar" onclick="toggleNavbar()"><span class="menu-sb-icon"></span></button>
   </div>
   <div class="collapse">
     <div>
@@ -133,7 +133,7 @@ You can add any colour class to navbar.
 <nav class="canvas navbar">
   <div class="header">
     <a href="#" class="site-name">Site name</a>
-    <button class="toggle-navbar" onclick="toggleNavbar()"></button>
+    <button class="toggle-navbar" onclick="toggleNavbar()"><span class="menu-sb-icon"></span></button>
   </div>
   <div class="collapse">
     <div>

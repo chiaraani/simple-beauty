@@ -109,7 +109,7 @@ Just add `small`  and `big` classes.
 ## Close button
 
 ```html
-<button class="close"></button>
+<button class="close"><span class="close-sb-icon"></span></button>
 ```
 
 
